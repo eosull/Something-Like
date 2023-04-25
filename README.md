@@ -15,13 +15,36 @@ This is some info about this project.
 This section provides information on the design process of the project. It will be outlined using the five planes of UX; **Strategy, Scope, Structure, Skeleton & Surface**.
 
 ## Strategy
-The strategy plane focuses on what is aimed at being acheived, and for whom. Following design thinking practices a problem statement was generated to summarise the needs of a user:
+The strategy plane focuses on what the project aims to acheive, and for whom. Following design thinking practices a problem statement was generated to summarise the needs of a user:
 
 - *I, Eoin, as a lover of music/books/film am trying to find new recommendations for each of these. I find it difficult to connect with works that are algorithmically suggested via streaming apps because so many options are presented. This can feel overwhelming and can lead what is being recommended to feel somewhat disposable. I do not feel the connection I did to the work when for example: a friend gives me a book or an older family member gives me an album.*
 
-Considering how these needs could be met was key in developing the strategy for this project. In this statement, the user is overwhelmed by choices provided by streaming sites and is searching for the connection they feel to media they encounter it as a result of a personalised recommendation. Therefore, the central goal of the site is to **provide a platform for users looking for film, music or book recommendations to share personalised recommendations with one another**.
+Considering how these needs could be met was key in developing the strategy for this project. In this statement, the user is overwhelmed by choices provided by streaming sites and is searching for the connection they feel to media they encounter as a result of a personalised recommendation. Therefore, the central goal of the site is to **provide a platform for users looking for film, music or book recommendations to share personalised recommendations with one another**.
 
 ## Scope
+Building on from the strategy and the goal outlined above, the scope of the project is concerned with the features to be included in the project.
+
+### User Experience
+The site should be:
+- Intuitive and easily navigable
+- Provide feedback to user actions
+- Responsive to different screen sizes
+- Accessible
+
+### Functionality
+The main functionalities of the site are as follows:
+- A user can register and login, becoming authorised.
+- An unauthorised user can view posts and comments on the site.
+- An authorised user can create a categorised post detailing a piece of work they like. This post serves as an invitation for recommendations from other users.
+- An authorised user can comment on a post.
+- An authorised user can edit and delete their posts and comments.
+
+### Content
+The site should contain the following core content:
+- Post previews, post details and categorised posts.
+- Comments underneath posts
+
+The implementation of these features successfully is the MVP for this project and are intended to be built on once they have been acheived. Implemented features and future additions will be detailed further in [Features Section](#features).
 
 ## Structure
 
@@ -31,6 +54,15 @@ Considering how these needs could be met was key in developing the strategy for 
 
 # Agile Implementation
 This is some info about the implementation of Agile processes in the project.
+
+## Sprints
+Working sprints were undertaken with the MVP of the project in mind to complete the development. They are as follows:
+
+### Sprint 1 (17/04/2023-23/04/2023) - [Design](#design)
+This sprint consisted of brainstorming sessions, project requirement consideration and research. Emerging from this was a site concept, basic wireframes, ERD and Epics with user stories.
+
+### Sprint 2 (24/04/2023-30/04/2023) - [Project Setup](https://github.com/eosull/Something-Like/issues/1)
+This sprint consisted of setting up the requirements to develop a full-stack project using an agile methodology. This included setting up a repository, workspace and project board.
 
 # Features
 These are some of the features of the project.
