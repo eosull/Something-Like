@@ -5,6 +5,7 @@
 - [Features](#features)
 - [Tools and Technologies](#tools-and-technologies)
 - [Testing](#testing)
+- [Bugs](#bugs)
 - [Deployment](#deployment)
 - [Credits](#credits)
 
@@ -83,6 +84,9 @@ These are the tools and technologies used in the development of the project.
 
 # Testing
 These are the testing processes that were carried out.
+
+# Bugs
+Deployment to Heroku: build was failing on Heroku and I was met with the following error: *ERROR: Could not build wheels for backports.zoneinfo, which is required to install pyproject.toml-based projects*. A search on slack [found a student](https://code-institute-room.slack.com/archives/CHDVDV2Q4/p1681717148021239) who had faced a similar issue, the cause being heroku is using a new version of Python and needs to be told to use an older version for backports.zoneinfo to run. Good info and solution found on [Stack Overflow](https://stackoverflow.com/questions/71712258/error-could-not-build-wheels-for-backports-zoneinfo-which-is-required-to-insta). Added runtime.txt file in directory and specified use of python-3.8.10 to resolve.
 
 # Deployment
 This is how the project was deployed.
