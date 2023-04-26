@@ -55,6 +55,17 @@ The implementation of these features successfully is the MVP for this project an
 # Agile Implementation
 This is some info about the implementation of Agile processes in the project.
 
+## User Stories
+Below is a table containing project epics and associated user stories. Clicking on the epic title will take you to the Github epic page where you can investigate user stories further and see their tasks and acceptance criteria.
+
+
+| **EPIC**          | **User Story**                                                                                                        |
+|-------------------|-----------------------------------------------------------------------------------------------------------------------|
+| [**Project Setup**](https://github.com/eosull/Something-Like/issues/1) |                                                                                                                       |
+|                   | As a Developer I want to Set up my workspace So that I can begin working on the code                                  |
+|                   | As a Developer I want access to design and prep work so that I can reference it and structure the development process |
+|                   | As a Developer I want to deploy my Django project to Heroku to ensure that everything has been set up correctly       |
+
 ## Sprints
 Working sprints were undertaken with the MVP of the project in mind to complete the development. They are as follows:
 
