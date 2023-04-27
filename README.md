@@ -48,6 +48,26 @@ The site should contain the following core content:
 The implementation of these features successfully is the MVP for this project and are intended to be built on once they have been acheived. Implemented features and future additions will be detailed further in [Features Section](#features).
 
 ## Structure
+The structure of the site was designed with two parts in mind; information design and the interaction design. Information design is concerned with how the information is structured on the site and the interaction design is concerned with how the user navigates this.
+
+The site is designed so the home page is the hub from where the user can access all other features. Certain features are only accessible to authorised users. Unauthorised users will have access to read functionality, whereas create, edit and delete functionality will be limited to users with an account.
+
+The nav elements will always be accessible via the header on the site. Feedback is provided for any action that creates or alters content via the use of confirmation messages.
+
+| ![Information Design Flowchart](/assets/readme_images/information_design_flowchart.png) |
+|:--:|
+|Information Design Flowchart|
+
+An entity relationship diagram was created for the purpose of meeting the MVP of the project, providing data models for: **Users**, **Posts** and **Comments**. Each of these have a primary ID key and multiple foreign keys. The relationships are as follows, outlined as well in diagram below:
+- User to Posts = Only One to Zero or Many
+- User to Comments = Only One to Zero or Many
+- Posts to Comments = Only One to Zero or Many
+
+| ![Data Model ERD](/assets/readme_images/erd.png) |
+|:--:|
+|Data Model ERD|
+
+This model may evolve as the project develops and MVP targets are met, any development will be detailed here.
 
 ## Skeleton
 
