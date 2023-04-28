@@ -114,12 +114,13 @@ This is some info about the implementation of Agile processes in the project.
 Below is a table containing project epics and associated user stories. Clicking on the epic title will take you to the Github epic page where you can investigate user stories further and see their tasks and acceptance criteria.
 
 
-| **EPIC**          | **User Story**                                                                                                        |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------|
-| [**Project Setup**](https://github.com/eosull/Something-Like/issues/1) |                                                                                                                       |
-|                   | As a Developer I want to Set up my workspace So that I can begin working on the code                                  |
-|                   | As a Developer I want access to design and prep work so that I can reference it and structure the development process |
-|                   | As a Developer I want to deploy my Django project to Heroku to ensure that everything has been set up correctly       |
+| **EPIC**          | **User Story**                                                                                                        | **Completed** |
+|-------------------|-----------------------------------------------------------------------------------------------------------------------|---------------|
+| [**Project Setup**](https://github.com/eosull/Something-Like/issues/1) |                                                                                                                       | &check; |
+|                   | As a Developer I want to Set up my workspace So that I can begin working on the code                                  | &check; |
+|                   | As a Developer I want access to design and prep work so that I can reference it and structure the development process | &check; |
+|                   | As a Developer I want to deploy my Django project to Heroku to ensure that everything has been set up correctly       | &check; |
+| [**Site Navigation and Base Templates**](https://github.com/eosull/Something-Like/issues/5) |                                                                                                                       | &cross; |
 
 ## Sprints
 Working sprints were undertaken with the MVP of the project in mind to complete the development. They are as follows:
