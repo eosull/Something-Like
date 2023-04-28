@@ -70,8 +70,42 @@ An entity relationship diagram was created for the purpose of meeting the MVP of
 This model may evolve as the project develops and MVP targets are met, any development will be detailed here.
 
 ## Skeleton
+A simple wireframe of the site was created to visualise navigation, layout and design. Some features included in the wireframe are not mandatory and would be considered nice to have. If these are not included a rationale will be included in the [User Stories](#user-stories) section. This wireframe can be seen below.
+
+| ![Homepage Wireframe](/assets/readme_images/wireframe_home.png) |
+|:--:|
+|Homepage|
+
+| ![Login Wireframe](/assets/readme_images/wireframe_login.png) |
+|:--:|
+|Login|
+
+| ![Register Wireframe](/assets/readme_images/wireframe_register.png) |
+|:--:|
+|Register|
+
+| ![Categories Wireframe](/assets/readme_images/wireframe_categories.png) |
+|:--:|
+|Categories/All Posts|
+
+| ![Post Detail Wireframe](/assets/readme_images/wireframe_postdetail.png) |
+|:--:|
+|Post Detail|
+
+| ![My Posts Wireframe](/assets/readme_images/wireframe_myposts.png) |
+|:--:|
+|My Posts|
+
+| ![New Post Wireframe](/assets/readme_images/wireframe_newpost.png) |
+|:--:|
+|New Post|
+
+| ![Edit Post Wireframe](/assets/readme_images/wireframe_editpost.png) |
+|:--:|
+|Edit Post|
 
 ## Surface
+The surface level of the project, including color schemes, font styling and images will be developed as the site is built. This will be documented here.
 
 # Agile Implementation
 This is some info about the implementation of Agile processes in the project.
@@ -116,4 +150,4 @@ Repository created using the [Code Institute Student Template](https://github.co
 
 Commit messages formatted based on [Conventional Commit Standards](https://www.conventionalcommits.org/en/v1.0.0/#summary) - useful cheatsheet for formatting these messages by Github user Zekfad [Here](https://gist.github.com/Zekfad/f51cb06ac76e2457f11c80ed705c95a3)
 
-Diagrams, flowcharts and wireframes created using [LucidChart](https://www.lucidchart.com/). Of particular use for creation of Entity Relationship Diagrams was their [Youtube tutorial](https://www.youtube.com/watch?v=QpdhBUYk7Kk&ab_channel=LucidSoftware) and [associated article](https://www.lucidchart.com/pages/how-to-draw-ERD).
+Diagrams, flowcharts and wireframes created using [LucidChart](https://www.lucidchart.com/). Of particular use for creation of Entity Relationship Diagram was their [Youtube tutorial](https://www.youtube.com/watch?v=QpdhBUYk7Kk&ab_channel=LucidSoftware) and [associated article](https://www.lucidchart.com/pages/how-to-draw-ERD).
