@@ -63,9 +63,15 @@ An entity relationship diagram was created for the purpose of meeting the MVP of
 - User to Comments = Only One to Zero or Many
 - Posts to Comments = Only One to Zero or Many
 
-| ![Data Model ERD](/assets/readme_images/erd.png) |
+| ![Data Model ERD mk.1](/assets/readme_images/erd.png) |
 |:--:|
-|Data Model ERD|
+|Data Model ERD 1st design|
+
+After 1st Mentor meeting (project inception stage), a few alterations were suggested for the data model. The alterations can be seen in the model below. They consist of the creation of a categories model to be used for storing category information and mapped to multiple posts and the addition of an edited key in the post and comment model to show if they have been edited.
+
+| ![Data Model ERD mk.2](/assets/readme_images/erd_2.png) |
+|:--:|
+|Data Model ERD 2nd design|
 
 This model may evolve as the project develops and MVP targets are met, any development will be detailed here.
 
@@ -147,6 +153,9 @@ Deployment to Heroku: build was failing on Heroku and I was met with the followi
 This is how the project was deployed.
 
 # Credits
+
+Many thanks to my Code Institute mentor Adegbenga Adeye who provided feedback and support throughout the development of this project.
+
 Repository created using the [Code Institute Student Template](https://github.com/Code-Institute-Org/gitpod-full-template)
 
 Commit messages formatted based on [Conventional Commit Standards](https://www.conventionalcommits.org/en/v1.0.0/#summary) - useful cheatsheet for formatting these messages by Github user Zekfad [Here](https://gist.github.com/Zekfad/f51cb06ac76e2457f11c80ed705c95a3)
