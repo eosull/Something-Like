@@ -73,6 +73,12 @@ After 1st Mentor meeting (project inception stage), a few alterations were sugge
 |:--:|
 |Data Model ERD 2nd design|
 
+Upon revision of ERD and Django data models, the decision was made to implement a custom data model that extends the in built Django User model. This decision was made in order to allow extra fields to be added with greater ease in future development of the data model. Additional fields were also added to the Category and Comments model.
+
+| ![Data Model ERD mk.3](/assets/readme_images/erd_3.png) |
+|:--:|
+|Data Model ERD 3rd design|
+
 This model may evolve as the project develops and MVP targets are met, any development will be detailed here.
 
 ## Skeleton
@@ -127,6 +133,8 @@ Below is a table containing project epics and associated user stories. Clicking 
 |                   | As a Developer I want access to design and prep work so that I can reference it and structure the development process | &check; |
 |                   | As a Developer I want to deploy my Django project to Heroku to ensure that everything has been set up correctly       | &check; |
 | [**Site Navigation and Base Templates**](https://github.com/eosull/Something-Like/issues/5) |                                                                                                                       | &cross; |
+|                   | As a Site Admin I want to create a database so that I can begin to consider implementing CRUD functionality.          | &check; |
+|                   | As a Site Admin I want to Access the admin panel so that I can Interact with database models and edit content.        | &cross; |
 
 ## Sprints
 Working sprints were undertaken with the MVP of the project in mind to complete the development. They are as follows:
@@ -134,8 +142,11 @@ Working sprints were undertaken with the MVP of the project in mind to complete 
 ### Sprint 1 (17/04/2023-23/04/2023) - [Design](#design)
 This sprint consisted of brainstorming sessions, project requirement consideration and research. Emerging from this was a site concept, basic wireframes, ERD and Epics with user stories.
 
-### Sprint 2 (24/04/2023-30/04/2023) - [Project Setup](https://github.com/eosull/Something-Like/issues/1)
+### Sprint 2 (24/04/2023-30/04/2023) - [Project Setup](https://github.com/eosull/Something-Like/milestone/1)
 This sprint consisted of setting up the requirements to develop a full-stack project using an agile methodology. This included setting up a repository, workspace and project board.
+
+### Sprint 3 (01/05/2023-08/05/2023) - [Admin Site/Database Build Sprint](https://github.com/eosull/Something-Like/milestone/2)
+This Sprint covered the creation of database models for the site and the building of the administration site. This included adding the data models for users, comments, posts and categorys. The creation of a superuser and building of an admin site to edit database was also included.
 
 # Features
 These are some of the features of the project.
@@ -161,3 +172,7 @@ Repository created using the [Code Institute Student Template](https://github.co
 Commit messages formatted based on [Conventional Commit Standards](https://www.conventionalcommits.org/en/v1.0.0/#summary) - useful cheatsheet for formatting these messages by Github user Zekfad [Here](https://gist.github.com/Zekfad/f51cb06ac76e2457f11c80ed705c95a3)
 
 Diagrams, flowcharts and wireframes created using [LucidChart](https://www.lucidchart.com/). Of particular use for creation of Entity Relationship Diagram was their [Youtube tutorial](https://www.youtube.com/watch?v=QpdhBUYk7Kk&ab_channel=LucidSoftware) and [associated article](https://www.lucidchart.com/pages/how-to-draw-ERD).
+
+Resources used in the creation of the data model include:
+- [UUID as Primary Key](https://tech.serhatteker.com/post/2020-01/uuid-primary-key/)
+- [Custom User Model Using Django Default User](https://learndjango.com/tutorials/django-custom-user-model#:~:text=There%20are%20two%20modern%20ways,know%20what%20you're%20doing.)
