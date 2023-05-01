@@ -31,9 +31,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["something-like-pp4.herokuapp.com", "localhost"]
-
-CSRF_TRUSTED_ORIGINS = ['https://8000-eosull-somethinglike-hrdjmz45bwr.ws-eu96.gitpod.io']
+ALLOWED_HOSTS = ["http://something-like-pp4.herokuapp.com", 'localhost']
+CSRF_TRUSTED_ORIGINS = ["http://something-like-pp4.herokuapp.com", 'http://127.0.0.1:8000/', 'https://8000-eosull-somethinglike-hrdjmz45bwr.ws-eu96b.gitpod.io']
 
 # Application definition
 
@@ -46,6 +45,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'django_summernote',
     'accounts',
     'blog',
 ]
