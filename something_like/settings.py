@@ -33,6 +33,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["something-like-pp4.herokuapp.com", "localhost"]
 
+CSRF_TRUSTED_ORIGINS = ['https://8000-eosull-somethinglike-hrdjmz45bwr.ws-eu96.gitpod.io']
 
 # Application definition
 
