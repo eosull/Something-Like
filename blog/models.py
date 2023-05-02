@@ -14,10 +14,11 @@ class Category(models.Model):
 class Post(models.Model):
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True, null=True)
     author = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='blog_posts')
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
-    title = models.CharField(max_length=200, unique=True)
     body_text = models.TextField()
     edited = False
 
@@ -35,6 +36,7 @@ class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
     created_at = models.DateTimeField(auto_now_add=True)
     body_text = models.TextField()
+    approved = models.BooleanField(default=False)
     edited = False
 
     class Meta:
