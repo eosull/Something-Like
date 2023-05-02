@@ -8,3 +8,10 @@ class PostList(generic.ListView):
     queryset = Post.objects.order_by('-created_at')
     template_name = 'index.html'
     paginate_by = 6
+
+
+class ExplorePosts(generic.ListView):
+    model = Post
+    queryset = Post.objects.order_by('-created_at')
+    template_name = 'explore.html'
+    paginate_by = 9
