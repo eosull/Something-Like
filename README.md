@@ -79,6 +79,12 @@ Upon revision of ERD and Django data models, the decision was made to implement 
 |:--:|
 |Data Model ERD 3rd design|
 
+After facing difficulties implementing login/register functionality, the decision was taken to drop the current user model and to use the default Django user model combined with AllAuth for authentication. Updated ERD is below.
+
+| ![Data Model ERD mk.4](/assets/readme_images/erd_4.png) |
+|:--:|
+|Data Model ERD 4rd design|
+
 This model may evolve as the project develops and MVP targets are met, any development will be detailed here.
 
 ## Skeleton
@@ -170,6 +176,8 @@ These are the testing processes that were carried out.
 
 # Bugs
 Deployment to Heroku: build was failing on Heroku and I was met with the following error: *ERROR: Could not build wheels for backports.zoneinfo, which is required to install pyproject.toml-based projects*. A search on slack [found a student](https://code-institute-room.slack.com/archives/CHDVDV2Q4/p1681717148021239) who had faced a similar issue, the cause being heroku is using a new version of Python and needs to be told to use an older version for backports.zoneinfo to run. Good info and possible solution found on [Stack Overflow](https://stackoverflow.com/questions/71712258/error-could-not-build-wheels-for-backports-zoneinfo-which-is-required-to-insta). Added runtime.txt file in directory and specified use of python-3.11.3 to resolve. This didn't work as I was getting the same error. Found more people facing the same issue on Slack and avoiding the install of backports if python version is greater that 3.9 [was suggested](https://code-institute-room.slack.com/archives/C026PTF46F5/p1677505066005429). This worked and project was successfully deployed to Heroku.
+
+Custom User Model: The initial plan for development was to create a custom user model that would allow for further customation as the project developed. This was created in a separate accounts app. Upon trying to implement login/register functionality this was creating problems with connecting urls, views and templates as well as taking up a lot of development time. The decision was taken to remove this accounts app and stick to the perfectly adequete Django default user model and use AllAuth for authentication in order to keep development moving and to reach the MVP sooner.
 
 # Deployment
 This is how the project was deployed.
