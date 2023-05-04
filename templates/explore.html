@@ -28,7 +28,7 @@
                         <div class="col-md-6">
                             <div class="card mb-6">
                                 <div class="card-body">
-                                    <a href="{% url 'post_detail' post.slug %}">
+                                    <a class="nav-link" href="{% url 'post_detail' post.slug %}">
                                         <h2 class="card-title">{{ post.title }}</h2>
                                     </a>
                                     <p class="card-text">{{ post.author }}</p>
