@@ -141,14 +141,17 @@ Below is a table containing project epics and associated user stories. Clicking 
 | [**Data Models and Django Admin Site**](https://github.com/eosull/Something-Like/issues/5) |                                                                                                                       | &check; |
 |                   | As a Site Admin I want to create a database so that I can begin to consider implementing CRUD functionality.          | &check; |
 |                   | As a Site Admin I want to Access the admin panel so that I can Interact with database models and edit content.        | &check; |
-| [**Site Navigation and Base Templates**](https://github.com/eosull/Something-Like/issues/8) |                                                                                                                       | &cross; |
-|                   | As a Developer I want to create a base template so that I can extend this across all pages on site.                   | &cross; |
-|                   | As a User I want to arrive on a landing page that previews content so that I can get a sense of what the site is about.                                                                                                                     | &cross; |
-|                   | As a User I want to visit a page on the site where all posts are displayed so that I can view all posts and select to view in more detail if desired.                                                                                                                   | &cross; |
-|                   | As a User I want to click on a post and be taken to a post detail page so that I can View the post in more detail and see data not available in preview.                                                                                                                   | &cross; |
-|                   | As a Registered User I want to visit the login page so that I can login to my account.                                | &cross; |
-|                   | As an Unregistered User I want to visit the registration page so that I can register to create an account.            | &cross; |
-|                   | As a User I want the links on the site to take me to where I want to go so that I can navigate intuitively throughout the site and not get confused.                                                                                                                                   | &cross; |
+| [**Site Navigation and Base Templates**](https://github.com/eosull/Something-Like/issues/8) |                                                                                                                       | &check; |
+|                   | As a Developer I want to create a base template so that I can extend this across all pages on site.                   | &check; |
+|                   | As a User I want to arrive on a landing page that previews content so that I can get a sense of what the site is about.                                                                                                                     | &check; |
+|                   | As a User I want to visit a page on the site where all posts are displayed so that I can view all posts and select to view in more detail if desired.                                                                                                                   | &check; |
+|                   | As a User I want to click on a post and be taken to a post detail page so that I can View the post in more detail and see data not available in preview.                                                                                                                   | &check; |
+|                   | As a Registered User I want to visit the login page so that I can login to my account.                                | &check; |
+|                   | As an Unregistered User I want to visit the registration page so that I can register to create an account.            | &check; |
+|                   | As a User I want the links on the site to take me to where I want to go so that I can navigate intuitively throughout the site and not get confused.                                                                                                                                   | &check; |
+| [**CRUD Functionality**](https://github.com/eosull/Something-Like/issues/16) |                                                                                                                       | &cross; |
+|                   | As an Authorised User I want to Create, Read, Update and Delete Posts So that I can Create Content for other users to engage with.                                                                                                                       | &cross; |
+|                   | As an Authorised User I want to Create, Read, Update and Delete Comments So that I can Create Content for other users to engage with.                                                                                                                       | &cross; |
 
 ## Sprints
 Working sprints were undertaken with the MVP of the project in mind to complete the development. They are as follows:
@@ -164,6 +167,9 @@ This Sprint covered the creation of database models for the site and the buildin
 
 ### Sprint 4 Site Navigation and Templates (02/05/2023-05/05/2023) - [Site Navigation and Templates](https://github.com/eosull/Something-Like/milestone/3)
 This sprint covered the creation of views, templates and navigation links in order to create a navigable structure to the site. The end goal of this sprint was to have a site structure where content could be displayed and navigated through.
+
+### Sprint 5 Front End CRUD Functionality (04/05/2023-09/05/2023) - [CRUD Functionality](https://github.com/eosull/Something-Like/milestone/4)
+This sprint covered the implementation of CRUD functionality for authorised users via front-end forms. This includes the creation, editing and deleting of posts and comments.
 
 # Features
 These are some of the features of the project.
