@@ -20,6 +20,7 @@ class ExplorePosts(generic.ListView):
 class PostDetail(View):
 
     def get(self, request, slug, *arg, **kwargs):
+
         queryset = Post.objects
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by('created_at')
