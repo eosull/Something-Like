@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 
+{% load crispy_forms_tags %}
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-2 text-center">
@@ -20,6 +22,18 @@
                     <p>{{ comment.author }} on {{ comment.created_at }}</p>
                     <p>{{ comment.body_text }}</p>
                     {% endfor %}
+                    {% if commented %}
+                    <div class="alert alert-success">Your Comment is awaiting approval</div>
+                    {% else %}
+                    {% if user.is_authenticated %}
+                    <h3>Add a comment:</h3>
+                    <form method="post">
+                    {{ comment_form | crispy }}
+                        {% csrf_token %}
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                    </form>
+                    {% endif %}
+                    {% endif %}
                 </div>
             </div>
         </div>

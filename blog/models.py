@@ -4,7 +4,7 @@ import uuid
 
 
 class Category(models.Model):
-    id = models.IntegerField(primary_key=True)
+
     type = models.CharField(max_length=200, unique=True)
 
     def __str__(self):
@@ -13,7 +13,6 @@ class Category(models.Model):
 
 class Post(models.Model):
 
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True, null=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
@@ -31,7 +30,6 @@ class Post(models.Model):
 
 class Comment(models.Model):
 
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments')
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
     created_at = models.DateTimeField(auto_now_add=True)

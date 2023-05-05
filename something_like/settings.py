@@ -35,7 +35,8 @@ ALLOWED_HOSTS = ["http://something-like-pp4.herokuapp.com", 'localhost']
 CSRF_TRUSTED_ORIGINS = ["http://something-like-pp4.herokuapp.com",
                         'http://127.0.0.1:8000/',
                         'https://8000-eosull-somethinglike-hrdjmz45bwr.ws-eu96.gitpod.io',
-                        'https://8000-eosull-somethinglike-hrdjmz45bwr.ws-eu96b.gitpod.io',]
+                        'https://8000-eosull-somethinglike-hrdjmz45bwr.ws-eu96b.gitpod.io',
+                        'https://8000-eosull-somethinglike-bsbvjmkvd4c.ws-eu96b.gitpod.io',]
 
 # Application definition
 
@@ -53,6 +54,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'django_summernote',
+    'crispy_forms',
     'blog',
 ]
 
@@ -60,6 +62,10 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
