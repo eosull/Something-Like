@@ -1,7 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
+from django.http import HttpResponseRedirect
 from django.views import generic, View
+
 from .models import Post
-from .forms import CommentForm
+from .forms import CommentForm, PostForm
 
 
 class PostList(generic.ListView):
@@ -16,6 +18,42 @@ class ExplorePosts(generic.ListView):
     queryset = Post.objects.order_by('-created_at')
     template_name = 'explore.html'
     paginate_by = 6
+
+
+class NewPost(View):
+
+    def get(self, request, *arg, **kwargs):
+
+        return render(
+            request,
+            'new_post.html',
+            {
+                "new_post_form": PostForm(),
+            }
+        )
+
+    def post(self, request, *arg, **kwargs):
+
+        new_post_form = PostForm(data=request.POST)
+
+        if new_post_form.is_valid():
+            new_post_form.instance.email = request.user.email
+            new_post_form.instance.name = request.user.username
+            new_post_form.instance.author_id = request.user.id
+            new_post_form.instance.slug = new_post_form.instance.title.replace(' ', '-').lower()
+            new_post = new_post_form.save(commit=False)
+            new_post.save()
+        else:
+            new_post_form = PostForm()
+
+        return render(
+            request,
+            'new_post.html',
+            {
+                "new_post_form": PostForm(),
+            },
+           
+        )
 
 
 class PostDetail(View):
