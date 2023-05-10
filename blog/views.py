@@ -43,6 +43,7 @@ class NewPost(View):
             new_post_form.instance.slug = new_post_form.instance.title.replace(' ', '-').lower()
             new_post = new_post_form.save(commit=False)
             new_post.save()
+            return redirect('post_detail', slug=new_post.slug)
         else:
             new_post_form = PostForm()
 
@@ -54,6 +55,19 @@ class NewPost(View):
             },
            
         )
+
+    def edit(request, slug):
+        post = get_object_or_404(Post, slug=slug)
+        if request.method == 'POST':
+            edit_post_form = PostForm(request.POST, instance=post)
+            if edit_post_form.is_valid():
+                edit_post_form.save()
+                return redirect('post_detail', slug=post.slug)
+        edit_post_form = PostForm(instance=post)
+        context = {
+            'edit_post_form': edit_post_form
+        }
+        return render(request, "edit_post.html", context)
 
 
 class PostDetail(View):
@@ -104,3 +118,4 @@ class PostDetail(View):
                 "comment_form": comment_form,
             },
         )
+
