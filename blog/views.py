@@ -53,7 +53,6 @@ class NewPost(View):
             {
                 "new_post_form": PostForm(),
             },
-           
         )
 
     def edit(request, slug):
@@ -65,9 +64,15 @@ class NewPost(View):
                 return redirect('post_detail', slug=post.slug)
         edit_post_form = PostForm(instance=post)
         context = {
-            'edit_post_form': edit_post_form
+            'edit_post_form': edit_post_form,
+            'post': post,
         }
         return render(request, "edit_post.html", context)
+
+    def delete(request, slug):
+        post = get_object_or_404(Post, slug=slug)
+        post.delete()
+        return redirect('home')
 
 
 class PostDetail(View):
