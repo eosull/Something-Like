@@ -171,6 +171,9 @@ This sprint covered the creation of views, templates and navigation links in ord
 ### Sprint 5 Front End CRUD Functionality (04/05/2023-09/05/2023) - [CRUD Functionality](https://github.com/eosull/Something-Like/milestone/4)
 This sprint covered the implementation of CRUD functionality for authorised users via front-end forms. This includes the creation, editing and deleting of posts and comments. Full CRUD functionality for posts was acheived, comment editing and deleting is still to be acheived.
 
+### Sprint 6 Front End Styling Iteration 1 (11/05/2023-16/05/2023) - [Front End Iteration 1](https://github.com/eosull/Something-Like/milestone/5)
+This sprint covered the front end design for the first working iteration of the site. This will include structuring, mobile responsiveness, colour schemes and typogrophy.
+
 # Features
 These are some of the features of the project.
 
