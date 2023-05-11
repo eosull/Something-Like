@@ -150,7 +150,7 @@ Below is a table containing project epics and associated user stories. Clicking 
 |                   | As an Unregistered User I want to visit the registration page so that I can register to create an account.            | &check; |
 |                   | As a User I want the links on the site to take me to where I want to go so that I can navigate intuitively throughout the site and not get confused.                                                                                                                                   | &check; |
 | [**CRUD Functionality**](https://github.com/eosull/Something-Like/issues/16) |                                                                                                                       | &cross; |
-|                   | As an Authorised User I want to Create, Read, Update and Delete Posts So that I can Create Content for other users to engage with.                                                                                                                       | &cross; |
+|                   | As an Authorised User I want to Create, Read, Update and Delete Posts So that I can Create Content for other users to engage with.                                                                                                                       | &check; |
 |                   | As an Authorised User I want to Create, Read, Update and Delete Comments So that I can Create Content for other users to engage with.                                                                                                                       | &cross; |
 
 ## Sprints
@@ -169,7 +169,7 @@ This Sprint covered the creation of database models for the site and the buildin
 This sprint covered the creation of views, templates and navigation links in order to create a navigable structure to the site. The end goal of this sprint was to have a site structure where content could be displayed and navigated through.
 
 ### Sprint 5 Front End CRUD Functionality (04/05/2023-09/05/2023) - [CRUD Functionality](https://github.com/eosull/Something-Like/milestone/4)
-This sprint covered the implementation of CRUD functionality for authorised users via front-end forms. This includes the creation, editing and deleting of posts and comments.
+This sprint covered the implementation of CRUD functionality for authorised users via front-end forms. This includes the creation, editing and deleting of posts and comments. Full CRUD functionality for posts was acheived, comment editing and deleting is still to be acheived.
 
 # Features
 These are some of the features of the project.
