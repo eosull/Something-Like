@@ -71,8 +71,19 @@ class NewPost(View):
 
     def delete(request, slug):
         post = get_object_or_404(Post, slug=slug)
-        post.delete()
-        return redirect('home')
+
+        if request.method == 'POST':
+            post.delete()
+            return redirect('home')
+
+        else:
+            return render(
+                request,
+                'delete_post.html',
+                {
+                    'post': post
+                }
+            )
 
 
 class PostDetail(View):
