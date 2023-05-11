@@ -14,6 +14,12 @@
         <a href="{% url 'delete' post.slug %}" class="btn btn-danger">Delete</a>
 </form>
 {% else %}
-<p>Please <a href="{% url 'account_login' %}">Login</a> or <a href="{% url 'account_signup' %}">Register</a> to post</p>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8 offset-md-2 mt-4 text-center">
+        <p>Please <a href="{% url 'account_login' %}">Login</a> or <a href="{% url 'account_signup' %}">Register</a> to edit posts</p> 
+      </div>
+    </div>
+  </div>
 {% endif %}
 {% endblock content %}
