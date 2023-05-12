@@ -152,6 +152,8 @@ Below is a table containing project epics and associated user stories. Clicking 
 | [**CRUD Functionality**](https://github.com/eosull/Something-Like/issues/16) |                                                                                                                       | &cross; |
 |                   | As an Authorised User I want to Create, Read, Update and Delete Posts So that I can Create Content for other users to engage with.                                                                                                                       | &check; |
 |                   | As an Authorised User I want to Create, Read, Update and Delete Comments So that I can Create Content for other users to engage with.                                                                                                                       | &cross; |
+| [**Front End Design**](https://github.com/eosull/Something-Like/issues/23) |                                                                                                                       | &cross; | 
+|                   | As A User I want to Use a site that meets accessibility guidelines, UX design principles, is intuitive and evokes a positive emotional response so that the site is simple and enjoyable to use.                                                                                                | &cross; |       
 
 ## Sprints
 Working sprints were undertaken with the MVP of the project in mind to complete the development. They are as follows:
