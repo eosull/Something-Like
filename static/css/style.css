@@ -1,0 +1,13 @@
+body {
+    font-family: 'Roboto Mono', sans-serif;
+    font-weight: 200;
+}
+
+.logo {
+    font-weight: 700;
+}
+
+.navbar-nav {
+    font-weight: 500;
+    letter-spacing: 3px;
+}

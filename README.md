@@ -125,6 +125,9 @@ A simple wireframe of the site was created to visualise navigation, layout and d
 ## Surface
 The surface level of the project, including color schemes, font styling and images will be developed as the site is built. This will be documented here.
 
+### Font Styling
+Google Fonts was used to import fonts. Initially a simplistic Roboto Mono was chosen to keep the site looking clean. Different font weights were used to highlight specific elements with a heavier weight for titles, headings and nav links and a lighter weight for post content and messages.ß
+
 # Agile Implementation
 This is some info about the implementation of Agile processes in the project.
 
@@ -209,3 +212,5 @@ Diagrams, flowcharts and wireframes created using [LucidChart](https://www.lucid
 Resources used in the creation of the data model include:
 - [UUID as Primary Key](https://tech.serhatteker.com/post/2020-01/uuid-primary-key/)
 - [Custom User Model Using Django Default User](https://learndjango.com/tutorials/django-custom-user-model#:~:text=There%20are%20two%20modern%20ways,know%20what%20you're%20doing.)
+
+[Google Fonts](https://fonts.google.com/) was used to import fonts for the project.
