@@ -125,6 +125,11 @@ A simple wireframe of the site was created to visualise navigation, layout and d
 ## Surface
 The surface level of the project, including color schemes, font styling and images will be developed as the site is built. This will be documented here.
 
+### Colour Scheme
+ - The background of the site is a light grey #bebcc2
+ - The post preview cards are an off-white #fcfcfc
+ - The bootstrap built in primary button has been made a lighter blue #6596cd
+
 ### Font Styling
 Google Fonts was used to import fonts. Initially a simplistic Roboto Mono was chosen to keep the site looking clean. Different font weights were used to highlight specific elements with a heavier weight for titles, headings and nav links and a lighter weight for post content and messages.ß
 

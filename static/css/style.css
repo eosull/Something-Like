@@ -1,6 +1,9 @@
+/* Base Template and sitewide styling */
+
 body {
     font-family: 'Roboto Mono', sans-serif;
     font-weight: 200;
+    background-color: #bebcc2
 }
 
 .logo {
@@ -10,4 +13,28 @@ body {
 .navbar-nav {
     font-weight: 500;
     letter-spacing: 3px;
+}
+
+.btn-primary {
+    color: #000000;
+    font-weight: 300;
+    background-color: #6596cd;
+    border: none;
+}
+
+.btn-danger {
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #4a89d1;
+}
+
+.btn-danger:hover {
+    color: #000000;
+}
+
+/* Post Preview Cards */
+.card-body {
+    background-color: #fcfcfc;
 }

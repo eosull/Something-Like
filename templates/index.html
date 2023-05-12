@@ -3,9 +3,27 @@
 {% block content %}
 <div class="container-fluid">
 
-    <div class="row">
-        <div class="col col-md-4 mx-auto text-center">
-            <a class="btn btn-primary" href="{% url 'new_post' %}">New Post</a>
+    <div class="px-4 py-5 my-5 text-center">
+        <div class="row">
+            <div class="col-8 my-auto">
+                <h2>Personalised Recommendations for Lovers of Music, Films, Tv and Books</h2>
+            </div>
+            <div class="col-4">
+                <div class="row">
+                    <div class="col col-md-4 mx-auto text-center">
+                        <hr>
+                        <p>Have a favourite album/show/film/book?</p>
+                        <p>Create a post and tell everyone why</p>
+                        <p>Let's start the conversation!</p>
+                        {% if user.is_authenticated %}
+                        <a class="btn btn-primary" href="{% url 'new_post' %}">New Post</a>
+                        {% else %}
+                        <a class="btn btn-primary" href="{% url 'account_signup' %}">Sign Up</a>
+                        {% endif %}
+                        <hr>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -41,5 +59,8 @@
         </ul>
     </nav>
     {% endif %}
+
+
+
 </div>
 {% endblock %}
