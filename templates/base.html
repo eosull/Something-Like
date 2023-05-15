@@ -22,7 +22,17 @@
             <h1 class="logo">Something Like...</h1>
             </a>
 
-            <ul class="navbar-nav">
+            <button type="button" 
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" 
+            class="navbar-toggler" 
+            aria-controls="navbarNav" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="{% url 'home' %}">Home</a>
                 </li>
@@ -42,6 +52,7 @@
                 </li>
                 {% endif %}
             </ul>
+        </div>
 
         </div>
     </nav>
