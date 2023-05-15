@@ -15,8 +15,17 @@ body {
     letter-spacing: 3px;
 }
 
-.btn-primary {
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.account-nav-link {
     color: #000000;
+    text-decoration: underline;
+}
+
+.btn-primary {
+    color: #060606;
     font-weight: 300;
     background-color: #6596cd;
     border: none;

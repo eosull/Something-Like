@@ -12,7 +12,7 @@
       <h3>{% trans "Sign In" %}</h3>
 
       <p>{% blocktrans %}Welcome Back. If you don't have an account then
-      <a href="{{ signup_url }}">sign up</a> to get started.{% endblocktrans %}</p>
+      <a class="account-nav-link" href="{{ signup_url }}">sign up</a> to get started.{% endblocktrans %}</p>
       
       <form class="login" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
