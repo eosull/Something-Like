@@ -161,7 +161,7 @@ Below is a table containing project epics and associated user stories. Clicking 
 |                   | As an Authorised User I want to Create, Read, Update and Delete Posts So that I can Create Content for other users to engage with.                                                                                                                       | &check; |
 |                   | As an Authorised User I want to Create, Read, Update and Delete Comments So that I can Create Content for other users to engage with.                                                                                                                       | &cross; |
 | [**Front End Design**](https://github.com/eosull/Something-Like/issues/23) |                                                                                                                       | &cross; | 
-|                   | As A User I want to Use a site that meets accessibility guidelines, UX design principles, is intuitive and evokes a positive emotional response so that the site is simple and enjoyable to use.                                                                                                | &cross; |       
+|                   | Iteration 1: As A User I want to Use a site that meets accessibility guidelines, UX design principles, is intuitive and evokes a positive emotional response so that the site is simple and enjoyable to use.                                                                                                | &check; |       
 
 ## Sprints
 Working sprints were undertaken with the MVP of the project in mind to complete the development. They are as follows:
@@ -192,6 +192,14 @@ These are the tools and technologies used in the development of the project.
 
 # Testing
 These are the testing processes that were carried out.
+
+## Iteration 1 Testing 
+
+Lighthouse Testing was conducted on the first iteration of the site to detect accessibility issues with the initial design. A score of 100 was acheived with nothing to address at this stage of development.
+
+| ![Iteration 1 Lighthouse](/assets/readme_images/iteration_1_lighthouse.png) |
+|:--:|
+|Iteration 1 Lighthouse Test|
 
 # Bugs
 Deployment to Heroku: build was failing on Heroku and I was met with the following error: *ERROR: Could not build wheels for backports.zoneinfo, which is required to install pyproject.toml-based projects*. A search on slack [found a student](https://code-institute-room.slack.com/archives/CHDVDV2Q4/p1681717148021239) who had faced a similar issue, the cause being heroku is using a new version of Python and needs to be told to use an older version for backports.zoneinfo to run. Good info and possible solution found on [Stack Overflow](https://stackoverflow.com/questions/71712258/error-could-not-build-wheels-for-backports-zoneinfo-which-is-required-to-insta). Added runtime.txt file in directory and specified use of python-3.11.3 to resolve. This didn't work as I was getting the same error. Found more people facing the same issue on Slack and avoiding the install of backports if python version is greater that 3.9 [was suggested](https://code-institute-room.slack.com/archives/C026PTF46F5/p1677505066005429). This worked and project was successfully deployed to Heroku.
