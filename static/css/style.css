@@ -1,10 +1,11 @@
+/* Base Template and sitewide styling */
+
 body {
     font-family: 'Roboto Mono', sans-serif;
     font-weight: 200;
     background-color: #bebcc2
 }
 
-/* Base Template and sitewide styling */
 .logo {
     font-weight: 700;
 }
