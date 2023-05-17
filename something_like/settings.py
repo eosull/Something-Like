@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'django_summernote',
+    'fontawesomefree',
     'crispy_forms',
     'blog',
 ]
