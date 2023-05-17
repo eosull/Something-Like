@@ -50,3 +50,6 @@ body {
     box-shadow: 0 0 5px 1px #6596cd;
 }
 
+.info-card p {
+    padding: 0;
+}
