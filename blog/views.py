@@ -6,17 +6,14 @@ from .models import Post
 from .forms import CommentForm, PostForm
 
 
-class PostList(generic.ListView):
-    model = Post
-    queryset = Post.objects.order_by('-created_at')
-    template_name = 'index.html'
+class IndexList(generic.ListView):
+    queryset = Post.objects.all()
+    template_name = "index.html"
     paginate_by = 3
 
-
-class ExplorePosts(generic.ListView):
-    model = Post
-    queryset = Post.objects.order_by('-created_at')
-    template_name = 'explore.html'
+class ExploreList(generic.ListView):
+    queryset = Post.objects.all()
+    template_name = "explore.html"
     paginate_by = 6
 
 
