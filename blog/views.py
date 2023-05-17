@@ -11,6 +11,7 @@ class IndexList(generic.ListView):
     template_name = "index.html"
     paginate_by = 3
 
+
 class ExploreList(generic.ListView):
     model = Post
     template_name = "explore.html"

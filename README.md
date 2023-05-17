@@ -227,3 +227,5 @@ Resources used in the creation of the data model include:
 - [Custom User Model Using Django Default User](https://learndjango.com/tutorials/django-custom-user-model#:~:text=There%20are%20two%20modern%20ways,know%20what%20you're%20doing.)
 
 [Google Fonts](https://fonts.google.com/) was used to import fonts for the project.
+
+[Font Awesome](https://fontawesome.com/docs/web/use-with/python-django) used for icons on the site
