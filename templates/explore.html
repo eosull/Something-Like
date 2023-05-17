@@ -9,11 +9,9 @@
             <h3>Filter</h3>
             <hr>
             <h4>Category:</h4>
-            <p>Music</p>
-            <p>Films</p>
-            <p>Tv</p>
-            <p>Books</p>
-            <p>All</p>
+            {% for category in category_list %}
+                <p>{{ category }}</p>
+            {% endfor %}
             <hr>
             <h4>Date:</h4>
             <p>Oldest First</p>

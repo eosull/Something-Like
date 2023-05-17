@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponseRedirect
 from django.views import generic, View
 
-from .models import Post
+from .models import Post, Category
 from .forms import CommentForm, PostForm
 
 
@@ -12,9 +12,16 @@ class IndexList(generic.ListView):
     paginate_by = 3
 
 class ExploreList(generic.ListView):
-    queryset = Post.objects.all()
+    model = Post
     template_name = "explore.html"
     paginate_by = 6
+
+    def get_context_data(self, **kwargs):
+        context = super(ExploreList, self).get_context_data(**kwargs)
+
+        context['post_list'] = Post.objects.all()
+        context['category_list'] = Category.objects.all()
+        return context
 
 
 class NewPost(View):
@@ -90,7 +97,7 @@ class PostDetail(View):
         queryset = Post.objects
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by('created_at')
-
+        
         return render(
             request,
             "post_detail.html",
