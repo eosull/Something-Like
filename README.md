@@ -142,6 +142,7 @@ Below is a table containing project epics and associated user stories. Clicking 
 
 | **EPIC**          | **User Story**                                                                                                        | **Completed** |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------|---------------|
+|**_Iteration 1_**|
 | [**Project Setup**](https://github.com/eosull/Something-Like/issues/1) |                                                                                                                       | &check; |
 |                   | As a Developer I want to Set up my workspace So that I can begin working on the code                                  | &check; |
 |                   | As a Developer I want access to design and prep work so that I can reference it and structure the development process | &check; |
@@ -157,11 +158,23 @@ Below is a table containing project epics and associated user stories. Clicking 
 |                   | As a Registered User I want to visit the login page so that I can login to my account.                                | &check; |
 |                   | As an Unregistered User I want to visit the registration page so that I can register to create an account.            | &check; |
 |                   | As a User I want the links on the site to take me to where I want to go so that I can navigate intuitively throughout the site and not get confused.                                                                                                                                   | &check; |
-| [**CRUD Functionality**](https://github.com/eosull/Something-Like/issues/16) |                                                                                                                       | &cross; |
+| [**CRUD Functionality**](https://github.com/eosull/Something-Like/issues/16) |                                                                                                                       | &check; |
 |                   | As an Authorised User I want to Create, Read, Update and Delete Posts So that I can Create Content for other users to engage with.                                                                                                                       | &check; |
-|                   | As an Authorised User I want to Create, Read, Update and Delete Comments So that I can Create Content for other users to engage with.                                                                                                                       | &cross; |
-| [**Front End Design**](https://github.com/eosull/Something-Like/issues/23) |                                                                                                                       | &cross; | 
-|                   | Iteration 1: As A User I want to Use a site that meets accessibility guidelines, UX design principles, is intuitive and evokes a positive emotional response so that the site is simple and enjoyable to use.                                                                                                | &check; |       
+| [**Front End Design**](https://github.com/eosull/Something-Like/issues/23) |                                                                                                                       | &check; | 
+|                   | As A User I want to Use a site that meets accessibility guidelines, UX design principles, is intuitive and evokes a positive emotional response so that the site is simple and enjoyable to use.                                                                                                | &check; |       
+|**_Iteration 2_**|
+| [**Post Creation, display and navigation**](https://github.com/eosull/Something-Like/issues/30) |                                                                                                                       | &cross; |
+|                   | As a User I want to create engaging posts so that I can begin conversations with other users about art that I enjoy                                 | &cross; |
+|                   | As a User I want to Arrange the content shown to me on the explore page so that I can View categories of posts that interest me                                  | &cross; |
+|                   | As a User I want to see suggested posts related to the content I'm viewing so that I can explore and engage with the content further                                  | &cross; |
+| [**Comment Creation, Display and Editing**](https://github.com/eosull/Something-Like/issues/32) |                                                                                                                       | &cross; |
+|                   | As an Authorised User I want to Create, Read, Update and Delete comments So that I can Create Content for other users to engage with.                                 | &cross; |
+|                   | As a User I want to comment underneath posts so that I can engage with other users' content on the site                               | &cross; |
+| [**UX and Front End Design**](https://github.com/eosull/Something-Like/issues/34) |                                                                                                                       | &cross; |
+|                   | As a User I want to receive feedback anytime the database of the site is engaged with so that I am aware of the consequences of actions and am alerted to actions taken                                | &cross; |
+|                   | As a User I want to be met with dynamic and engaging content so that I can enjoy the site content and am motivated to add to it                               | &cross; |
+| [**Site Testing**](https://github.com/eosull/Something-Like/issues/37) |                                                                                                                       | &cross; |
+|                   | As a Site Admin I want to test my code so that I can ensure it meets accessibility, functionality, usability, responsiveness and data management standards as well as meeting project MVP targets                             | &cross; |
 
 ## Sprints
 Working sprints were undertaken with the MVP of the project in mind to complete the development. They are as follows:
@@ -183,6 +196,9 @@ This sprint covered the implementation of CRUD functionality for authorised user
 
 ### Sprint 6 Front End Styling Iteration 1 (11/05/2023-16/05/2023) - [Front End Iteration 1](https://github.com/eosull/Something-Like/milestone/5)
 This sprint covered the front end design for the first working iteration of the site. This will include structuring, mobile responsiveness, colour schemes and typogrophy.
+
+### Sprint 7 Iteration 2 Sprint (19/05/2023-02/06/2023) - [Iteration 2 Sprint](https://github.com/eosull/Something-Like/milestone/6)
+After Sprint 6, the decision was taken to broaden the scope of Sprints, Epics and User Stories. This included a lengthening of sprint time and less rigid tasks in User Stories. The focus has now shifted from individual functionality and structural elements to an iteration based workflow. The core structure of the site has been completed and from this point on the working sprints will be with the next iteration in mind. The first iteration was focused on functionality and meeting core MVP targets. This iteration builds on this, adds features and aims to create a more engaging product.
 
 # Features
 These are some of the features of the project.
