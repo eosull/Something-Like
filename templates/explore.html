@@ -31,7 +31,7 @@
                                     </a>
                                     <p class="card-text">{{ post.author }}</p>
                                     <p class="card-text">{{ post.category }}</p>
-                                    <p class="card-text">{{ post.created_at }}</p>
+                                    <p class="card-text">{{ post.created_at }} | {{ post.comments.count }} <i class="fa-regular fa-comment"></i> | {{ post.number_of_likes }} <i class="fa-solid fa-thumbs-up"></i></p>
                                 </div>
                             </div>
                         </div>

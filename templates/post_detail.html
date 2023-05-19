@@ -10,7 +10,7 @@
                 <div class="col-10">
 
                     <h1>{{ post.title }}</h1>
-                    <p>{{ post.author }} | {{ post.created_at }}</p>
+                    <p>{{ post.author }} | {{ post.created_at }} | {{ post.number_of_likes }} Likes</p>
                     {% if post.author == request.user %}
                         <form action="{% url 'edit' post.slug %}">
                             <button type="submit" class="btn btn-primary" value="Edit Post">Edit</button>
@@ -19,6 +19,27 @@
                     <p></p>
                     <hr>
                     <p>{{ post.body_text | safe }}</p>
+                    {% if user.is_authenticated %}
+                    <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                        {% csrf_token %}
+
+                        {% if liked %}
+
+                        <button type="submit" name="post_id" value="{{ post.slug }}" class="btn btn-primary">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                        </button>
+
+                        {% else %}
+
+                        <button type="submit" name="post_id" value="{{ post.slug }}" class="btn btn-primary">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                        </button>
+
+                        {% endif %}
+                    </form>
+                    {% else %}
+                    <p><i class="fa-solid fa-thumbs-up"></i> {{ post.number_of_likes }}</p>
+                    {% endif %}
                     <h2>Comments:</h2>
                     {% for comment in comments %}
                     <hr>
