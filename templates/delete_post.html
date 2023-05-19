@@ -10,7 +10,7 @@
             {{ post.title }} | {{ post.created_at }}
             <hr>
         </p>
-        <form action="" method="post">
+        <form action="#" method="post">
             {% csrf_token %}
             <input type="submit" value="Delete" class="btn btn-danger">
             <a href="{% url 'edit' post.slug %}" class="btn btn-primary">Cancel</a>
