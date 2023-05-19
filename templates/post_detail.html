@@ -12,9 +12,9 @@
                     <h1>{{ post.title }}</h1>
                     <p>{{ post.author }} | {{ post.created_at }}</p>
                     {% if post.author == request.user %}
-                        <a href="{% url 'edit' post.slug %}">
-                            <button class="btn btn-primary">Edit</button>
-                        </a>
+                        <form action="{% url 'edit' post.slug %}">
+                            <button type="submit" class="btn btn-primary" value="Edit Post">Edit</button>
+                        </form>
                     {% endif %}
                     <p></p>
                     <hr>

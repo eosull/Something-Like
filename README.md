@@ -201,6 +201,20 @@ Lighthouse Testing was conducted on the first iteration of the site to detect ac
 |:--:|
 |Iteration 1 Lighthouse Test|
 
+The code at this stage of development was passed into the [W3 HTML Validator](https://validator.w3.org/), with 2 solvable issues being presented - button hierarchy on Edit Post page and form action on Delete Post page. Both of these issues were resolved.
+
+| ![Iteration 1 HTML Button Error](/assets/readme_images/iteration1_button_html_error.png) |
+|:--:|
+|Iteration 1 HTML Button Error|
+
+| ![Iteration 1 HTML Form Action Error](/assets/readme_images/iteration1_form_action_error.png) |
+|:--:|
+|Iteration 1 HTML Form Action Error|
+
+The other issues highlighted by the validator were related to the use of Django templating in the HTML files.
+
+Python testing will commence at the completion of Iteration 2 of the site.
+
 # Bugs
 Deployment to Heroku: build was failing on Heroku and I was met with the following error: *ERROR: Could not build wheels for backports.zoneinfo, which is required to install pyproject.toml-based projects*. A search on slack [found a student](https://code-institute-room.slack.com/archives/CHDVDV2Q4/p1681717148021239) who had faced a similar issue, the cause being heroku is using a new version of Python and needs to be told to use an older version for backports.zoneinfo to run. Good info and possible solution found on [Stack Overflow](https://stackoverflow.com/questions/71712258/error-could-not-build-wheels-for-backports-zoneinfo-which-is-required-to-insta). Added runtime.txt file in directory and specified use of python-3.11.3 to resolve. This didn't work as I was getting the same error. Found more people facing the same issue on Slack and avoiding the install of backports if python version is greater that 3.9 [was suggested](https://code-institute-room.slack.com/archives/C026PTF46F5/p1677505066005429). This worked and project was successfully deployed to Heroku.
 
@@ -229,3 +243,5 @@ Resources used in the creation of the data model include:
 [Google Fonts](https://fonts.google.com/) was used to import fonts for the project.
 
 [Font Awesome](https://fontawesome.com/docs/web/use-with/python-django) used for icons on the site
+
+[W3 Validation](https://validator.w3.org/) used to validate HTML code
