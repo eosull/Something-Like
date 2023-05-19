@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.http import HttpResponseRedirect
 from django.views import generic, View
 
@@ -98,6 +98,9 @@ class PostDetail(View):
         queryset = Post.objects
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by('created_at')
+        liked = False
+        if post.likes.filter(id=self.request.user.id).exists():
+            liked = True
         
         return render(
             request,
@@ -108,6 +111,7 @@ class PostDetail(View):
                 "comments": comments,
                 "commented": False,
                 "comment_form": CommentForm(),
+                "liked": liked,
             },
         )
 
@@ -140,3 +144,14 @@ class PostDetail(View):
             },
         )
 
+class PostLike(View):
+
+    def post(self, request, slug):
+        post = get_object_or_404(Post, slug=slug)
+
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))

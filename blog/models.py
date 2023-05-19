@@ -19,6 +19,7 @@ class Post(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     body_text = models.TextField()
+    likes = models.ManyToManyField(User, related_name="post_like", blank=True)
     edited = False
 
     class Meta:
@@ -26,6 +27,9 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+    
+    def number_of_likes(self):
+        return self.likes.count()
 
 
 class Comment(models.Model):
