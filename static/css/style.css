@@ -53,3 +53,12 @@ body {
 .info-card p {
     padding: 0;
 }
+
+/* Crispy Form Customisation */
+.asteriskField {
+    display: none;
+}
+
+.new-post-title{
+    background-color: #4a89d1;
+}
