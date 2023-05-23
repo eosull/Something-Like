@@ -18,9 +18,9 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
+    edited_at = models.DateTimeField(auto_now=True)
     body_text = models.TextField()
     likes = models.ManyToManyField(User, related_name="post_like", blank=True)
-    edited = False
 
     class Meta:
         ordering = ['category']
@@ -30,6 +30,12 @@ class Post(models.Model):
     
     def number_of_likes(self):
         return self.likes.count()
+
+    def edited(self):
+        if self.created_at.replace(microsecond=0) == self.edited_at.replace(microsecond=0):
+            return False
+        else:
+            return True 
 
 
 class Comment(models.Model):

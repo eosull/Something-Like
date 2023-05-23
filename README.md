@@ -238,6 +238,12 @@ Custom User Model: The initial plan for development was to create a custom user 
 
 Commenting: When trying to submit a comment I kept getting a Django error message telling me the comment form field 'author_id' was null and this violated not-null constraint. To resolve this I added the following line in the post method of blog/views.py to use the id in the request to fill this field: comment_form.instance.author_id = request.user.id .
 
+Editing: I used 2 auto-generated time-stamps (one set at creation and one that changes with each edit) and a comparison function to find out whether or not posts had been edited. These were never equal so would never display as not edited. Using the console to inspect values I figured out the issue was with microsecond DateTimeField value (see image below). I used .replace(microsecond=0) in the comparison function to only make the comparison between date and hour/minute/seconds and the edited functionality worked.
+
+| ![Microsecond Discrepancy](/assets/readme_images/bug_microsecond_timestamp.png) |
+|:--:|
+|Microsecond Discrepancy For Created Time and Edited Time|
+
 
 # Deployment
 This is how the project was deployed.

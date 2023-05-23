@@ -9,6 +9,7 @@ from .forms import CommentForm, PostForm
 class IndexList(generic.ListView):
     queryset = Post.objects.all()
     template_name = "index.html"
+    ordering = ['-created_at']
     paginate_by = 3
 
 

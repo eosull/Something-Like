@@ -10,7 +10,11 @@
                 <div class="col-10">
 
                     <h1>{{ post.title }}</h1>
-                    <p>{{ post.author }} | {{ post.created_at }} | {{ post.number_of_likes }} Likes</p>
+                    <p>{{ post.author }} | {{ post.created_at }} | {{ post.number_of_likes }} Likes
+                        {% if post.edited %}
+                           | Edited {{ post.edited_at }}
+                        {% endif %}
+                    </p>
                     {% if post.author == request.user %}
                         <form action="{% url 'edit' post.slug %}">
                             <button type="submit" class="btn btn-primary" value="Edit Post">Edit</button>
