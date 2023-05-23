@@ -8,12 +8,11 @@
     <div class="col-10">
         <h2>New Post</h2>
         <form method="post">
-            {{ new_post_form | crispy }}
+            {% crispy new_post_form new_post_form.helper %}
                 {% csrf_token %}
                 {% if redirect_field_value %}
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
-                <button class="btn btn-primary" type="submit">Submit</button>
         </form>
     </div>
 </div>
