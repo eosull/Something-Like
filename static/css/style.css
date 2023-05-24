@@ -3,7 +3,7 @@
 body {
     font-family: 'Roboto Mono', sans-serif;
     font-weight: 200;
-    background-color: #bebcc2
+    background-color: #fdf2f2
 }
 
 .logo {
@@ -45,7 +45,7 @@ body {
 
 /* Post Preview Cards */
 .card-body {
-    background-color: #fcfcfc;
+    background-color: #6596cd49;
     border-radius: 5px;
     box-shadow: 0 0 5px 1px #6596cd;
 }
@@ -59,6 +59,16 @@ body {
     display: none;
 }
 
-.new-post-title{
-    background-color: #4a89d1;
+.new-post-form-container {
+    background-color: #bbb7b78d;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.new-post-form-inputs {
+    background-color: #6596cd49;
+    border-radius: 10px;
+    border: none;
+    margin: 20px auto 20px auto;
+    box-shadow: 0 0 5px 1px #6596cd;
 }
