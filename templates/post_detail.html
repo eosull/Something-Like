@@ -6,23 +6,26 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col">
-            <div class="row">
-                <div class="col-10">
-
-                    <h1>{{ post.title }}</h1>
-                    <p>{{ post.author }} | {{ post.created_at }} | {{ post.number_of_likes }} Likes
-                        {% if post.edited %}
-                           | Edited {{ post.edited_at }}
-                        {% endif %}
-                    </p>
-                    {% if post.author == request.user %}
-                        <form action="{% url 'edit' post.slug %}">
-                            <button type="submit" class="btn btn-primary" value="Edit Post">Edit</button>
-                        </form>
-                    {% endif %}
-                    <p></p>
+            <div class="row justify-content-center mt-5">
+                <div class="col-6">
+                    <h2>{{ post.title }}</h2>
+                    <p class="d-inline">{{ post.category }}</p>
+                    <p class="d-inline float-end">{{ post.comments.count }} <i class="fa-regular fa-comment"> </i> {{ post.number_of_likes }} <i class="fa-solid fa-thumbs-up"></i></p>
                     <hr>
-                    <p>{{ post.body_text | safe }}</p>
+                    <div class="post-details w-100">
+                        <p class="d-inline">{{ post.author }}</p>
+                        <p class="d-inline float-end">
+                            {% if post.edited %}
+                            <i class="fa-regular fa-user-pen"> </i>
+                            {% endif %}
+                            {{ post.created_at }}
+                        </p>
+                        </p>
+                    </div>
+                
+                    <p class="font-weight-bold mt-5 mb-5 lead">{{ post.body_text | safe }}</p>
+
+
                     {% if user.is_authenticated %}
                     <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
                         {% csrf_token %}
@@ -40,21 +43,23 @@
                         </button>
 
                         {% endif %}
-                    </form>
-                    {% else %}
-                    <p><i class="fa-solid fa-thumbs-up"></i> {{ post.number_of_likes }}</p>
+                        {% if post.author == request.user %}
+                        <form action="{% url 'edit' post.slug %}">
+                            <button type="submit" class="btn btn-primary" value="Edit Post">Edit</button>
+                        </form>
                     {% endif %}
-                    <h2>Comments:</h2>
-                    {% for comment in comments %}
+                    </form>
+                    {% endif %}
                     <hr>
+                    <div class="mt-5">
+                    {% for comment in comments %}
                     <p>{{ comment.author }} on {{ comment.created_at }}</p>
-                    <p>{{ comment.body_text }}</p>
+                    <p><em>{{ comment.body_text }}</em></p>
                     {% endfor %}
                     {% if commented %}
                     <div class="alert alert-success">Your Comment is awaiting approval</div>
                     {% else %}
                     {% if user.is_authenticated %}
-                    <h3>Add a comment:</h3>
                     <form method="post">
                     {{ comment_form | crispy }}
                         {% csrf_token %}
@@ -62,6 +67,7 @@
                     </form>
                     {% endif %}
                     {% endif %}
+                    </div>
                 </div>
             </div>
         </div>

@@ -54,6 +54,11 @@ body {
     padding: 0;
 }
 
+/* Post Detail Info */
+.post-details {
+    display: inline-block;
+}
+
 /* Crispy Form Customisation */
 .asteriskField {
     display: none;
