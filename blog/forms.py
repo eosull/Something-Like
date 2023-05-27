@@ -39,4 +39,17 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('body_text',)
+ 
         
+class PostCategoryFilterForm(forms.Form):
+
+    CATEGORIES = (
+        ("All", "All"),
+        ("Music", "Music"),
+        ("Tv", "Tv"),
+        ("Films", "Films"),
+        ("Books", "Books"),
+        ("Test", "Test"),
+    )
+
+    category = forms.ChoiceField(choices = CATEGORIES)

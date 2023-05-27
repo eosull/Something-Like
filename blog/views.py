@@ -3,7 +3,7 @@ from django.http import HttpResponseRedirect
 from django.views import generic, View
 
 from .models import Post, Category
-from .forms import CommentForm, PostForm
+from .forms import CommentForm, PostForm, PostCategoryFilterForm
 
 
 class IndexList(generic.ListView):
@@ -13,6 +13,19 @@ class IndexList(generic.ListView):
     paginate_by = 3
 
 
+def explore(request):
+    category = request.GET.get('category')
+    posts = Post.objects.all()
+    if category:
+        if category != 'All':
+            posts = posts.filter(category__type=category)
+    context = {
+        'form' : PostCategoryFilterForm,
+        'post_list' : posts,
+        'category_list' : Category.objects.all()
+    }
+    return render(request, 'explore.html', context)
+
 class ExploreList(generic.ListView):
     model = Post
     template_name = "explore.html"
@@ -21,6 +34,7 @@ class ExploreList(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super(ExploreList, self).get_context_data(**kwargs)
 
+        context['form'] = PostCategoryFilterForm()
         context['post_list'] = Post.objects.all()
         context['category_list'] = Category.objects.all()
         return context

@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'django_summernote',
     'fontawesomefree',
     'crispy_forms',
+    'django_filters',
     'blog',
 ]
 
