@@ -15,12 +15,16 @@ class IndexList(generic.ListView):
 
 def explore(request):
     category = request.GET.get('category')
+    date_order = request.GET.get('date_order')
     posts = Post.objects.all()
     if category:
         if category != 'All':
             posts = posts.filter(category__type=category)
+    if date_order:
+        posts= posts.order_by('-created_at')
+    
     context = {
-        'form' : PostCategoryFilterForm,
+        'form' : PostCategoryFilterForm(),
         'post_list' : posts,
         'category_list' : Category.objects.all()
     }

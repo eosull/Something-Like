@@ -52,4 +52,20 @@ class PostCategoryFilterForm(forms.Form):
         ("Test", "Test"),
     )
 
-    category = forms.ChoiceField(choices = CATEGORIES)
+    DATE_ORDER = (
+        ("newest", "Newest First"),
+        ("", "Oldest First"),
+    )
+
+    category = forms.ChoiceField(
+        widget=forms.RadioSelect,
+        choices = CATEGORIES,
+        required = False
+    )
+    
+    date_order = forms.ChoiceField(
+        widget = forms.RadioSelect,
+        choices = DATE_ORDER,
+        initial = False,
+        required = False
+    )
