@@ -64,6 +64,7 @@ class PostCategoryFilterForm(forms.Form):
     )
     
     date_order = forms.ChoiceField(
+        label = 'Order By',
         widget = forms.RadioSelect,
         choices = DATE_ORDER,
         initial = False,
