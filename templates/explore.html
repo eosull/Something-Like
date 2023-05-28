@@ -5,11 +5,14 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-xs-12 col-md-2">
-            <form method='GET' action="{% url 'explore' %}">
-                {{ form.as_p }}
-                <input type="submit" value="Filter" class="btn btn-primary"></input>
-            </form>
+        <div class="col-s-6 col-md-2">
+            <a class="btn btn-primary d-md-none" data-bs-toggle="collapse" href="#filter-form-collapse" role="button" aria-expanded="false" aria-controls="collapse-filter-form">Filter</a>
+            <div class="filter-form-container collapse d-md-block" id="filter-form-collapse">
+                <form method='GET' action="{% url 'explore' %}">
+                    {{ form.as_p }}
+                    <input type="submit" value="Apply" class="btn btn-primary"></input>
+                </form>
+            </div>
         </div>
         <div class="col-xs-12 col-md-10">
             <div class="row">
