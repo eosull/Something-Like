@@ -74,10 +74,10 @@
                         <div class="alert alert-success">Your Comment is awaiting approval</div>
                         {% else %}
                         {% if user.is_authenticated %}
-                        <form method="post">
+                        <form class="mt-5" method="post">
                         {{ comment_form | crispy }}
                             {% csrf_token %}
-                            <button class="btn btn-primary" type="submit">Submit</button>
+                            <button class="btn btn-primary mt-2" type="submit">Submit</button>
                         </form>
                         {% endif %}
                         {% endif %}
