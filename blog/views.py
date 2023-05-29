@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.http import HttpResponseRedirect
 from django.views import generic, View
 
-from .models import Post, Category
+from .models import Post, Category, Comment
 from .forms import CommentForm, PostForm, PostCategoryFilterForm
 
 
@@ -21,14 +21,15 @@ def explore(request):
         if category != 'All':
             posts = posts.filter(category__type=category)
     if date_order:
-        posts= posts.order_by('-created_at')
+        posts = posts.order_by('-created_at')
     
     context = {
-        'form' : PostCategoryFilterForm(),
-        'post_list' : posts,
-        'category_list' : Category.objects.all()
+        'form': PostCategoryFilterForm(),
+        'post_list': posts,
+        'category_list': Category.objects.all()
     }
     return render(request, 'explore.html', context)
+
 
 class ExploreList(generic.ListView):
     model = Post
@@ -117,6 +118,7 @@ class PostDetail(View):
         queryset = Post.objects
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by('created_at')
+
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -163,6 +165,7 @@ class PostDetail(View):
             },
         )
 
+
 class PostLike(View):
 
     def post(self, request, slug):
@@ -172,5 +175,18 @@ class PostLike(View):
             post.likes.remove(request.user)
         else:
             post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+class CommentLike(View):
+
+    def post(self, request, slug, id):
+        comment = get_object_or_404(Comment, id=id)
+
+        if comment.likes.filter(id=request.user.id).exists():
+            comment.likes.remove(request.user)
+        else:
+            comment.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
