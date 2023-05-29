@@ -35,11 +35,26 @@ class PostForm(forms.ModelForm):
 
 
 class CommentForm(forms.ModelForm):
+
     class Meta:
         model = Comment
         fields = ('body_text',)
- 
-        
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        placeholders = {
+            'body_text': 'Add a recommendation or join the conversation....'
+        }
+
+        for field in self.fields:
+            placeholder = placeholders[field]
+            self.fields[field].widget.attrs['rows'] = 2
+            self.fields[field].widget.attrs['placeholder'] = placeholder
+            self.fields[field].widget.attrs['class'] = 'comment-form-input'
+            self.fields[field].label = False
+
+      
 class PostCategoryFilterForm(forms.Form):
 
     CATEGORIES = (
@@ -58,14 +73,14 @@ class PostCategoryFilterForm(forms.Form):
 
     category = forms.ChoiceField(
         widget=forms.RadioSelect,
-        choices = CATEGORIES,
-        required = False
+        choices=CATEGORIES,
+        required=False
     )
     
     date_order = forms.ChoiceField(
-        label = 'Order By',
-        widget = forms.RadioSelect,
-        choices = DATE_ORDER,
-        initial = False,
-        required = False
+        label='Order By',
+        widget=forms.RadioSelect,
+        choices=DATE_ORDER,
+        initial=False,
+        required=False
     )

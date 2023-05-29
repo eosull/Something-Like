@@ -2,7 +2,7 @@
 
 body {
     font-weight: 200;
-    background-color: #fdf2f2
+    background-color: #fdf2f2;
 }
 
 .logo {
@@ -58,7 +58,7 @@ body {
     display: inline-block;
 }
 
-/* Crispy Form Customisation */
+/* Form Customisation */
 .asteriskField {
     display: none;
 }
@@ -75,4 +75,9 @@ body {
     border: none;
     margin: 20px auto 20px auto;
     box-shadow: 0 0 5px 1px #6596cd;
+}
+
+.comment-form-input {
+    border: none;
+    background-color: #85858520;
 }
