@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.http import HttpResponseRedirect
 from django.views import generic, View
+from django.contrib import messages
 
 from .models import Post, Category, Comment
 from .forms import CommentForm, PostForm, PostCategoryFilterForm
@@ -68,6 +69,7 @@ class NewPost(View):
             new_post_form.instance.slug = new_post_form.instance.title.replace(' ', '-').lower()
             new_post = new_post_form.save(commit=False)
             new_post.save()
+            messages.success(request, f'Post: {new_post_form.instance.title} created successfully')
             return redirect('post_detail', slug=new_post.slug)
         else:
             new_post_form = PostForm()
@@ -86,6 +88,7 @@ class NewPost(View):
             edit_post_form = PostForm(request.POST, instance=post)
             if edit_post_form.is_valid():
                 edit_post_form.save()
+                messages.success(request, f'{post.title} edited successfully')
                 return redirect('post_detail', slug=post.slug)
         edit_post_form = PostForm(instance=post)
         context = {
@@ -99,6 +102,7 @@ class NewPost(View):
 
         if request.method == 'POST':
             post.delete()
+            messages.error(request, f'Post: {post.title} deleted succesfully')
             return redirect('home')
 
         else:
