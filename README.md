@@ -54,9 +54,13 @@ The site is designed so the home page is the hub from where the user can access 
 
 The nav elements will always be accessible via the header on the site. Feedback is provided for any action that creates or alters content via the use of confirmation messages.
 
-| ![Information Design Flowchart](/assets/readme_images/information_design_flowchart.png) |
+| ![Information Design Flowchart mk.1](/assets/readme_images/information_design_flowchart.png) |
 |:--:|
-|Information Design Flowchart|
+|Information Design Flowchart MK.1|
+
+| ![Information Design Flowchart mk.2](/assets/readme_images/information_design_flowchart_2.png) |
+|:--:|
+|Information Design Flowchart MK.2|
 
 An entity relationship diagram was created for the purpose of meeting the MVP of the project, providing data models for: **Users**, **Posts** and **Comments**. Each of these have a primary ID key and multiple foreign keys. The relationships are as follows, outlined as well in diagram below:
 - User to Posts = Only One to Zero or Many
@@ -83,7 +87,13 @@ After facing difficulties implementing login/register functionality, the decisio
 
 | ![Data Model ERD mk.4](/assets/readme_images/erd_4.png) |
 |:--:|
-|Data Model ERD 4rd design|
+|Data Model ERD 4th design|
+
+Likes have been added to both the Comment and Post data model while edited time has been added to Post data model.
+
+| ![Data Model ERD mk.5](/assets/readme_images/erd_5.png) |
+|:--:|
+|Data Model ERD 4th design|
 
 This model may evolve as the project develops and MVP targets are met, any development will be detailed here.
 
