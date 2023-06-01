@@ -8,7 +8,7 @@ class Category(models.Model):
     type = models.CharField(max_length=200, unique=True)
 
     def __str__(self):
-        return f"Category is {self.type}"
+        return self.type
 
 
 class Post(models.Model):
@@ -26,7 +26,7 @@ class Post(models.Model):
         ordering = ['category']
 
     def __str__(self):
-        return f"Title is {self.title}"
+        return self.title
     
     def number_of_likes(self):
         return self.likes.count()

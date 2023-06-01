@@ -11,7 +11,7 @@ class CategoryTestCase(TestCase):
     def test_type_return(self):
         # Category __str__ return category type
         category = Category.objects.get(type="Music")
-        self.assertEqual(category.__str__(), "Category is Music")
+        self.assertEqual(category.__str__(), "Music")
 
 
 class PostTestCase(TestCase):
@@ -25,7 +25,7 @@ class PostTestCase(TestCase):
     def test_title_return(self):
         # Post __str__ function return post title
         post = Post.objects.get(title="Test Case")
-        self.assertEqual(post.__str__(), "Title is Test Case")
+        self.assertEqual(post.__str__(), "Test Case")
 
     def test_post_like_number(self):
         # Post number_of_likes returns like number (0 on creation)
