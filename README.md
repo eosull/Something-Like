@@ -221,11 +221,15 @@ These are the testing processes that were carried out.
 
 ## Iteration 1 Testing 
 
+### Accessibility 
+
 Lighthouse Testing was conducted on the first iteration of the site to detect accessibility issues with the initial design. A score of 100 was acheived with nothing to address at this stage of development.
 
 | ![Iteration 1 Lighthouse](/assets/readme_images/iteration_1_lighthouse.png) |
 |:--:|
 |Iteration 1 Lighthouse Test|
+
+### HTML 
 
 The code at this stage of development was passed into the [W3 HTML Validator](https://validator.w3.org/), with 2 solvable issues being presented - button hierarchy on Edit Post page and form action on Delete Post page. Both of these issues were resolved.
 
@@ -243,9 +247,50 @@ Python testing will commence at the completion of Iteration 2 of the site.
 
 ## Iteration 2 Testing
 
+### Python
+
+Manual testing was completed to ensure views, urls and templates were hooked up properly. Forms were also tested to ensure they functioned as intended.
+
 The [Django testing modules](https://docs.djangoproject.com/en/4.2/topics/testing/overview/) were used to automate testing of python code. These use the Python standard library module unittest. A separate testing database is used while test cases are run and then deleted. For testing the views the django Client module was used simulating get and post requests. I used a [combination of coverage and django-nose](https://django-testing-docs.readthedocs.io/en/latest/coverage.html) to measure test coverage for my app as I built the tests.
 
 The first tests were built for the models in the test_models.py file, testing methods like string return and counting functionality. Then the basic functionality for the views such as redirects and correct template usage were built in test_views.py.
+
+This resulted in the models having 100% test coverage and views having 62% coverage, as seen in ouput below. This will be developed on further in Iteration 3.
+
+| ![Iteration 1 Coverage Report](/assets/readme_images/coverage_report_1.png) |
+|:--:|
+|Iteration 1 Python Testing Coverage|
+
+### Javascript
+
+Javascript automated testing using Jest was not implemented in this Iteration due to the minimal amount of JS present (One function to time out messages). This was manually tested and further JS added will be subject to automated testing.
+
+### HTML 
+
+The code at this stage of development was passed into the [W3 HTML Validator](https://validator.w3.org/), some small issues were presented such as extra closing tags and unecessary closing slash on input elements. These were resolved and no issues currently showing. 
+
+### CSS
+
+CSS code was passed into the [Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/). No errors were found.
+
+### Accessibility 
+
+Running lighthouse test on the site at this stage produced a score of 100 for accessibility.
+
+| ![Iteration 2 Lighthouse](/assets/readme_images/iteration_2_lighthouse.png) |
+|:--:|
+|Iteration 2 Lighthouse Test|
+
+### Site Goal testing
+
+#### User Experience
+The site should is intuitive and easily navigable, provides feedback to user actions, responsive to different screen sizes and accessible.
+
+#### Functionality
+A user can register and login, becoming authorised. They can then create a categorised post detailing a piece of work they like. They can also comment on other posts as well as edit and delete their posts and comments. Unauthorised users can view posts and comments on the site.
+
+#### Content
+The site contains core content of post previews, post details categorised posts and comments underneath posts
 
 # Bugs
 Deployment to Heroku: build was failing on Heroku and I was met with the following error: *ERROR: Could not build wheels for backports.zoneinfo, which is required to install pyproject.toml-based projects*. A search on slack [found a student](https://code-institute-room.slack.com/archives/CHDVDV2Q4/p1681717148021239) who had faced a similar issue, the cause being heroku is using a new version of Python and needs to be told to use an older version for backports.zoneinfo to run. Good info and possible solution found on [Stack Overflow](https://stackoverflow.com/questions/71712258/error-could-not-build-wheels-for-backports-zoneinfo-which-is-required-to-insta). Added runtime.txt file in directory and specified use of python-3.11.3 to resolve. This didn't work as I was getting the same error. Found more people facing the same issue on Slack and avoiding the install of backports if python version is greater that 3.9 [was suggested](https://code-institute-room.slack.com/archives/C026PTF46F5/p1677505066005429). This worked and project was successfully deployed to Heroku.
@@ -283,3 +328,5 @@ Resources used in the creation of the data model include:
 [Font Awesome](https://fontawesome.com/docs/web/use-with/python-django) used for icons on the site
 
 [W3 Validation](https://validator.w3.org/) used to validate HTML code
+
+[Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) used to validate CSS code
