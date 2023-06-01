@@ -60,6 +60,8 @@ INSTALLED_APPS = [
     'fontawesomefree',
     'crispy_forms',
     'django_filters',
+    'coverage',
+    'django_nose',
     'blog',
 ]
 
@@ -114,18 +116,28 @@ WSGI_APPLICATION = 'something_like.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+if 'TESTING' in os.environ:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+            'USER': 'django'
+        }
+    }
+else:
+    DATABASES = {
+        'default':
+            dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    }
 
-DATABASES = {
-    'default':
-        dj_database_url.parse(os.environ.get("DATABASE_URL"))
-}
 
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+
+NOSE_ARGS = [
+    '--with-coverage',
+    '--cover-package=blog',
+    '--cover-html',
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
