@@ -231,6 +231,12 @@ The other issues highlighted by the validator were related to the use of Django 
 
 Python testing will commence at the completion of Iteration 2 of the site.
 
+## Iteration 2 Testing
+
+The [Django testing modules](https://docs.djangoproject.com/en/4.2/topics/testing/overview/) were used to automate testing of python code. These use the Python standard library module unittest. A separate testing database is used while test cases are run and then deleted. For testing the views the django Client module was used simulating get and post requests. I used a [combination of coverage and django-nose](https://django-testing-docs.readthedocs.io/en/latest/coverage.html) to measure test coverage for my app as I built the tests.
+
+The first tests were built for the models in the test_models.py file, testing methods like string return and counting functionality. Then the basic functionality for the views such as redirects and correct template usage were built in test_views.py.
+
 # Bugs
 Deployment to Heroku: build was failing on Heroku and I was met with the following error: *ERROR: Could not build wheels for backports.zoneinfo, which is required to install pyproject.toml-based projects*. A search on slack [found a student](https://code-institute-room.slack.com/archives/CHDVDV2Q4/p1681717148021239) who had faced a similar issue, the cause being heroku is using a new version of Python and needs to be told to use an older version for backports.zoneinfo to run. Good info and possible solution found on [Stack Overflow](https://stackoverflow.com/questions/71712258/error-could-not-build-wheels-for-backports-zoneinfo-which-is-required-to-insta). Added runtime.txt file in directory and specified use of python-3.11.3 to resolve. This didn't work as I was getting the same error. Found more people facing the same issue on Slack and avoiding the install of backports if python version is greater that 3.9 [was suggested](https://code-institute-room.slack.com/archives/C026PTF46F5/p1677505066005429). This worked and project was successfully deployed to Heroku.
 

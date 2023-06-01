@@ -32,20 +32,6 @@ def explore(request):
     return render(request, 'explore.html', context)
 
 
-class ExploreList(generic.ListView):
-    model = Post
-    template_name = "explore.html"
-    paginate_by = 6
-
-    def get_context_data(self, **kwargs):
-        context = super(ExploreList, self).get_context_data(**kwargs)
-
-        context['form'] = PostCategoryFilterForm()
-        context['post_list'] = Post.objects.all()
-        context['category_list'] = Category.objects.all()
-        return context
-
-
 class NewPost(View):
 
     def get(self, request, *arg, **kwargs):
