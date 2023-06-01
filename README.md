@@ -58,7 +58,7 @@ The nav elements will always be accessible via the header on the site. Feedback 
 |:--:|
 |Information Design Flowchart MK.1|
 
-| ![Information Design Flowchart mk.2](/assets/readme_images/information_design_flowchart_2.png) |
+| ![Information Design Flowchart mk.2](/assets/readme_images/information_flowchart_2.png) |
 |:--:|
 |Information Design Flowchart MK.2|
 
@@ -93,7 +93,7 @@ Likes have been added to both the Comment and Post data model while edited time 
 
 | ![Data Model ERD mk.5](/assets/readme_images/erd_5.png) |
 |:--:|
-|Data Model ERD 4th design|
+|Data Model ERD 5th design|
 
 This model may evolve as the project develops and MVP targets are met, any development will be detailed here.
 
