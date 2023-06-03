@@ -43,10 +43,25 @@ body {
 }
 
 /* Post Preview Cards */
-.card-body {
-    background-color: #6596cd49;
-    border-radius: 5px;
-    box-shadow: 0 0 5px 1px #6596cd;
+
+.Music-post{
+    color: #4266f5;
+}
+
+.Tv-post{
+    color: #f5c542;
+}
+
+.Test-post{
+    color: #42f5b6;
+}
+
+.Films-post{
+    color: #f56342;
+}
+
+.Books-post{
+    color: #f5427e
 }
 
 .info-card p {
@@ -80,4 +95,18 @@ body {
 .comment-form-input {
     border: none;
     background-color: #85858520;
+}
+
+/* Explore Filter Form */
+
+form li {
+    list-style: none;
+}
+
+li label {
+    margin: 10px 20px 10px 0;
+}
+
+li div {
+    display: inline-block;
 }
