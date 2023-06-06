@@ -7,7 +7,7 @@
 - [Testing](#testing)
 - [Bugs](#bugs)
 - [Deployment](#deployment)
-- [Credits](#credits)
+- [Credits/References](#credits-and-references)
 
 # About
 This is some info about this project.
@@ -309,7 +309,8 @@ Editing: I used 2 auto-generated time-stamps (one set at creation and one that c
 # Deployment
 This is how the project was deployed.
 
-# Credits
+
+# Credits and References
 
 Many thanks to my Code Institute mentor Adegbenga Adeye who provided feedback and support throughout the development of this project.
 
@@ -330,3 +331,5 @@ Resources used in the creation of the data model include:
 [W3 Validation](https://validator.w3.org/) used to validate HTML code
 
 [Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) used to validate CSS code
+
+Rolodex Effect on site homepage was based on code [posted on codepen.io](https://codepen.io/orchard/pen/LoNdQZ?page=1) by user Adam Orchard.
