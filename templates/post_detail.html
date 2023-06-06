@@ -13,7 +13,12 @@
                     <p class="d-inline float-end">{{ post.comments.count }} <i class="fa-regular fa-comment"> </i> {{ post.number_of_likes }} <i class="fa-solid fa-thumbs-up"></i></p>
                     <hr>
                     <div class="post-details w-100">
-                        <p class="d-inline">{{ post.author }}</p>
+                        <div class="d-inline float-start">
+                            <div class="post-profile-img text-center">
+                                <p class="fw-bolder">{{ post.author }}</p>
+                            </div>
+                        </div>
+
                         <p class="d-inline float-end">
                             {% if post.edited %}
                             <i class="fa-regular fa-user-pen"></i>

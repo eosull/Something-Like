@@ -333,3 +333,5 @@ Resources used in the creation of the data model include:
 [Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) used to validate CSS code
 
 Rolodex Effect on site homepage was based on code [posted on codepen.io](https://codepen.io/orchard/pen/LoNdQZ?page=1) by user Adam Orchard.
+
+Avatars generated using [Boring Avatars](https://github.com/boringdesigners/boring-avatars-service) by Boring Designers
