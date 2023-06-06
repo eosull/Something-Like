@@ -1,3 +1,6 @@
+:root{
+    --line-height: 2em;
+}
 /* Base Template and sitewide styling */
 
 body {
@@ -41,6 +44,52 @@ body {
 .btn-danger:hover {
     color: #000000;
 }
+
+/* Index Looping rolodex effect.
+Sourced and modified to suit site from Codepen user Adam Orchard
+https://codepen.io/orchard/pen/LoNdQZ?page=1 */
+
+.rolodex{
+    height: var(--line-height);
+    overflow: hidden;
+}
+
+.rolodex ul {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    height: var(--line-height);
+    list-style: none;
+}
+
+.rolodex p,
+.rolodex ul,
+.rolodex li {
+    float: center;
+    line-height: var(--line-height);
+}
+
+.rolodex li {
+    content: "\a0";
+}
+
+.roll {
+    animation: 10s infinite alternate roll-up-one;
+}
+
+  @keyframes roll-up-one {
+    0% {
+         transform: translateY(0%);
+        }
+    20% {
+        transform: translateY(0%);
+    }
+    80% { 
+        transform: translateY(-300%);
+     }
+    100% {
+        transform: translateY(-300%);
+    }
+  }
 
 /* Post Preview Cards */
 
