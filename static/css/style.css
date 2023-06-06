@@ -129,6 +129,18 @@ https://codepen.io/orchard/pen/LoNdQZ?page=1 */
 }
 
 /* Post Detail Info */
+.post-profile-img {
+    height: 60px;
+    width: 60px;
+    background-image: url("https://source.boringavatars.com/bauhaus/60");
+}
+
+.post-profile-img p {
+    position: absolute;
+    margin: 15px;
+    color: white;
+}
+
 .post-details {
     display: inline-block;
 }
