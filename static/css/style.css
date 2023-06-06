@@ -110,7 +110,18 @@ https://codepen.io/orchard/pen/LoNdQZ?page=1 */
 }
 
 .Books-post{
-    color: #f5427e
+    color: #f5427e;
+}
+
+/* Landing Page styling */
+
+.latest-post-section {
+    background-color: #6596cd23;
+}
+
+.landing-card {
+    background-color: #fdf2f2;
+    border: none;
 }
 
 .info-card p {

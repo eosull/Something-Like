@@ -8,10 +8,8 @@ from .forms import CommentForm, PostForm, PostCategoryFilterForm
 
 
 class IndexList(generic.ListView):
-    queryset = Post.objects.all()
+    queryset = Post.objects.order_by('created_at').reverse()[:3]
     template_name = "index.html"
-    ordering = ['-created_at']
-    paginate_by = 3
 
 
 def explore(request):
