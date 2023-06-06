@@ -3,43 +3,45 @@
 {% block content %}
 <div class="container-fluid">
 
-    <div class="px-4 my-4 text-center">
-        <div class="row">
-            <div class="col-xs-12 col-md-6 col-lg-8 my-auto">
-                <h2>Personalised Recommendations for Lovers of</h2>
-                <div class="fs-2 fw-bolder rolodex">
-                    <ul class="roll">
-                        <li class="Music-post">Music</li>
-                        <li class="Films-post">Films</li>
-                        <li class="Tv-post">Tv</li>
-                        <li class="Books">Books</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-xs-12 col-md-6 col-lg-4 my-auto">
-                <div class="info-card">
-                    <p>Have a favourite album, show, film or book?</p>
-                    <p>Create a post and tell everyone why</p>
-                    <p>Let's start the conversation!</p>
-                    {% if user.is_authenticated %}
-                    <a class="btn btn-primary" href="{% url 'new_post' %}">New Post</a>
-                    {% else %}
-                    <a class="btn btn-primary" href="{% url 'account_signup' %}">Sign Up</a>
-                    {% endif %}
-                </div>
+    <div class="row px-4 my-4 text-center">
+
+        <div class="col-xs-12 col-md-6 col-lg-8 my-auto">
+            <h2>Personalised Recommendations for Lovers of</h2>
+            <div class="fs-2 fw-bolder rolodex">
+                <ul class="roll">
+                    <li class="Music-post">Music</li>
+                    <li class="Films-post">Films</li>
+                    <li class="Tv-post">Tv</li>
+                    <li class="Books-post">Books</li>
+                </ul>
             </div>
         </div>
+
+        <div class="col-xs-12 col-md-6 col-lg-4 my-auto">
+            <div class="info-card">
+                <p>Have a favourite album, show, film or book?</p>
+                <p>Create a post and tell everyone why</p>
+                <p>Let's start the conversation!</p>
+                {% if user.is_authenticated %}
+                    <a class="btn btn-primary" href="{% url 'new_post' %}">New Post</a>
+                {% else %}
+                    <a class="btn btn-primary" href="{% url 'account_signup' %}">Sign Up</a>
+                {% endif %}
+            </div>
+        </div>
+
     </div>
 
-    <div class="row">
-        <div class="col-12 mt-3 left">
+    <div class="row px-4 my-4 latest-post-section">
+        <div class="col-12 mt-3">
             <div class="row">
+                <h2 class="text-center fw-light">Latest Posts</h2>
                 {% for post in post_list %}
                 <div class="col-md-4">
-                    <div class="card mb-4">
+                    <div class="card landing-card mb-4 py-2">
                         <div class="card-body px-5 py-5">
                             <a class="nav-link" href="{% url 'post_detail' post.slug %}">
-                                <h2 class="card-title">{{ post.title }}</h2>
+                                <h3 class="card-title fw-lighter">{{ post.title }}</h2>
                             </a>
                             <p class="card-text">{{ post.author }}</p>
                             <p class="card-text">{{ post.created_at }} | {{ post.comments.count }} <i class="fa-regular fa-comment"></i> | {{ post.number_of_likes }} <i class="fa-solid fa-thumbs-up"></i></p>
@@ -50,21 +52,6 @@
             </div>
         </div>
     </div>
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; Previous </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> Next &raquo;</a></li>
-
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
-
-
 
 </div>
 {% endblock %}
