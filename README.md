@@ -136,12 +136,14 @@ A simple wireframe of the site was created to visualise navigation, layout and d
 The surface level of the project, including color schemes, font styling and images will be developed as the site is built. This will be documented here.
 
 ### Colour Scheme
- - The background of the site is a light grey #bebcc2
- - The post preview cards are an off-white #fcfcfc
- - The bootstrap built in primary button has been made a lighter blue #6596cd
+The site has core colouring of an off-white and black for background and text, with pops of colour in dynamic and interactive elements. The colour palette for these elements were generated using [Colormind](http://colormind.io/) and can be seen in the image below. Each of these colours are assigned to a category. In addition, the avatars generated using [Boring Avatars](https://github.com/boringdesigners/boring-avatars-service) provide nice colour on the post detail page. This will be customised to be generated from the site colour palette in future iterations.
+
+| ![Colormind Color Palette](/assets/readme_images/color_pallete_iteration_2.png) |
+|:--:|
+|Colormind Colour Palette|
 
 ### Font Styling
-Google Fonts was used to import fonts. Initially a simplistic Roboto Mono was chosen to keep the site looking clean. Different font weights were used to highlight specific elements with a heavier weight for titles, headings and nav links and a lighter weight for post content and messages.ß
+Google Fonts was used to import fonts. Initially a simplistic Roboto Mono was chosen to keep the site looking clean. Different font weights were used to highlight specific elements with a heavier weight for titles, headings and nav links and a lighter weight for post content and messages. The Roboto Mono was removed and default bootstrap font is now in place as it is most suited to site design. If a more appropriate font is found it will be added.
 
 # Agile Implementation
 This is some info about the implementation of Agile processes in the project.
@@ -173,18 +175,25 @@ Below is a table containing project epics and associated user stories. Clicking 
 | [**Front End Design**](https://github.com/eosull/Something-Like/issues/23) |                                                                                                                       | &check; | 
 |                   | As A User I want to Use a site that meets accessibility guidelines, UX design principles, is intuitive and evokes a positive emotional response so that the site is simple and enjoyable to use.                                                                                                | &check; |       
 |**_Iteration 2_**|
+| [**Post Creation, display and navigation**](https://github.com/eosull/Something-Like/issues/30) |                                                                                                                       | &check; |
+|                   | As a User I want to create engaging posts so that I can begin conversations with other users about art that I enjoy                                 | &check; |
+|                   | As a User I want to Arrange the content shown to me on the explore page so that I can View categories of posts that interest me                                  | &check; |
+| [**Comment Creation, Display and Editing**](https://github.com/eosull/Something-Like/issues/32) |                                                                                                                       | &check; |
+|                   | As an Authorised User I want to Create and Read comments So that I can Create Content for other users to engage with.                                 | &check; |
+|                   | As a User I want to comment underneath posts so that I can engage with other users' content on the site                               | &check; |
+| [**UX and Front End Design**](https://github.com/eosull/Something-Like/issues/34) |                                                                                                                       | &check; |
+|                   | As a User I want to receive feedback anytime the database of the site is engaged with so that I am aware of the consequences of actions and am alerted to actions taken                                | &check; |
+|                   | As a User I want to be met with dynamic and engaging content so that I can enjoy the site content and am motivated to add to it                               | &check; |
+| [**Site Testing**](https://github.com/eosull/Something-Like/issues/37) |                                                                                                                       | &check; |
+|                   | As a Site Admin I want to test my code so that I can ensure it meets accessibility, functionality, usability, responsiveness and data management standards as well as meeting project MVP targets                             | &check; |
+|**_Iteration 3_**|
 | [**Post Creation, display and navigation**](https://github.com/eosull/Something-Like/issues/30) |                                                                                                                       | &cross; |
-|                   | As a User I want to create engaging posts so that I can begin conversations with other users about art that I enjoy                                 | &cross; |
-|                   | As a User I want to Arrange the content shown to me on the explore page so that I can View categories of posts that interest me                                  | &cross; |
 |                   | As a User I want to see suggested posts related to the content I'm viewing so that I can explore and engage with the content further                                  | &cross; |
 | [**Comment Creation, Display and Editing**](https://github.com/eosull/Something-Like/issues/32) |                                                                                                                       | &cross; |
-|                   | As an Authorised User I want to Create, Read, Update and Delete comments So that I can Create Content for other users to engage with.                                 | &cross; |
-|                   | As a User I want to comment underneath posts so that I can engage with other users' content on the site                               | &cross; |
+|                   | As an Authorised User I want to Update and Delete comments So that I can edit content I have created.                                 | &cross; |
 | [**UX and Front End Design**](https://github.com/eosull/Something-Like/issues/34) |                                                                                                                       | &cross; |
-|                   | As a User I want to receive feedback anytime the database of the site is engaged with so that I am aware of the consequences of actions and am alerted to actions taken                                | &cross; |
-|                   | As a User I want to be met with dynamic and engaging content so that I can enjoy the site content and am motivated to add to it                               | &cross; |
 | [**Site Testing**](https://github.com/eosull/Something-Like/issues/37) |                                                                                                                       | &cross; |
-|                   | As a Site Admin I want to test my code so that I can ensure it meets accessibility, functionality, usability, responsiveness and data management standards as well as meeting project MVP targets                             | &cross; |
+
 
 ## Sprints
 Working sprints were undertaken with the MVP of the project in mind to complete the development. They are as follows:
@@ -209,6 +218,9 @@ This sprint covered the front end design for the first working iteration of the 
 
 ### Sprint 7 Iteration 2 Sprint (19/05/2023-02/06/2023) - [Iteration 2 Sprint](https://github.com/eosull/Something-Like/milestone/6)
 After Sprint 6, the decision was taken to broaden the scope of Sprints, Epics and User Stories. This included a lengthening of sprint time and less rigid tasks in User Stories. The focus has now shifted from individual functionality and structural elements to an iteration based workflow. The core structure of the site has been completed and from this point on the working sprints will be with the next iteration in mind. The first iteration was focused on functionality and meeting core MVP targets. This iteration builds on this, adds features and aims to create a more engaging product.
+
+### Sprint 8 Iteration 3 Sprint (07/06/2023-19/06/2023) - [Iteration 3 Sprint](https://github.com/eosull/Something-Like/milestone/7)
+Iteration 3 Sprint, details tbc.
 
 # Features
 These are some of the features of the project.
@@ -309,7 +321,6 @@ Editing: I used 2 auto-generated time-stamps (one set at creation and one that c
 # Deployment
 This is how the project was deployed.
 
-
 # Credits and References
 
 Many thanks to my Code Institute mentor Adegbenga Adeye who provided feedback and support throughout the development of this project.
@@ -335,3 +346,5 @@ Resources used in the creation of the data model include:
 Rolodex Effect on site homepage was based on code [posted on codepen.io](https://codepen.io/orchard/pen/LoNdQZ?page=1) by user Adam Orchard.
 
 User Avatars generated using [Boring Avatars](https://github.com/boringdesigners/boring-avatars-service) by Boring Designers
+
+Site colour palette generated using [Colormind](http://colormind.io/)
