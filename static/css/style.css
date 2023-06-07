@@ -1,15 +1,25 @@
 :root{
     --line-height: 2em;
+    --white: #fdf2f2;
+    --grey: #a8a4a464;
+    --black: #100f0f;
+    --d-blue: #6381A6;
+    --d-blue-opaque: #6381a674;
+    --l-blue: #66B6AF;
+    --green: #EDDA68;
+    --orange: #D78649;
+    --red: #EC6369;
+
 }
 /* Base Template and sitewide styling */
 
 body {
     font-weight: 200;
-    background-color: #fdf2f2;
+    color: var(--black);
+    background-color: var(--white);
 }
 
 .logo {
-    font-weight: 700;
 }
 
 .navbar-nav {
@@ -22,14 +32,14 @@ body {
 }
 
 .account-nav-link {
-    color: #000000;
+    color: var(--black);
     text-decoration: underline;
 }
 
 .btn-primary {
-    color: #060606;
+    color: var(--white);
     font-weight: 300;
-    background-color: #6596cd;
+    background-color: var(--d-blue);
     border: none;
 }
 
@@ -38,11 +48,11 @@ body {
 }
 
 .btn-primary:hover {
-    background-color: #4a89d1;
+    background-color: var(--d-blue-opaque);
 }
 
 .btn-danger:hover {
-    color: #000000;
+    color: var(--black)
 }
 
 /* Index Looping rolodex effect.
@@ -94,33 +104,33 @@ https://codepen.io/orchard/pen/LoNdQZ?page=1 */
 /* Post Preview Cards */
 
 .Music-post{
-    color: #4266f5;
+    color: var(--l-blue);
 }
 
 .Tv-post{
-    color: #f5c542;
+    color: var(--green);
 }
 
 .Test-post{
-    color: #42f5b6;
+    color: var(--d-blue);
 }
 
 .Films-post{
-    color: #f56342;
+    color: var(--orange);
 }
 
 .Books-post{
-    color: #f5427e;
+    color: var(--red);
 }
 
 /* Landing Page styling */
 
 .latest-post-section {
-    background-color: #6596cd23;
+    background-color: var(--d-blue-opaque);
 }
 
 .landing-card {
-    background-color: #fdf2f2;
+    background-color: var(--white);
     border: none;
 }
 
@@ -138,7 +148,7 @@ https://codepen.io/orchard/pen/LoNdQZ?page=1 */
 .post-profile-img p {
     position: absolute;
     margin: 15px;
-    color: white;
+    color: var(--white);
 }
 
 .post-details {
@@ -151,22 +161,22 @@ https://codepen.io/orchard/pen/LoNdQZ?page=1 */
 }
 
 .new-post-form-container {
-    background-color: #bbb7b78d;
+    background-color: var(--d-blue-opaque);
     padding: 50px;
     border-radius: 10px;
 }
 
 .new-post-form-inputs {
-    background-color: #6596cd49;
+    background-color: var(--white);
     border-radius: 10px;
     border: none;
     margin: 20px auto 20px auto;
-    box-shadow: 0 0 5px 1px #6596cd;
+    box-shadow: 0 0 5px 1px var(--l-blue);
 }
 
 .comment-form-input {
     border: none;
-    background-color: #85858520;
+    background-color: var(--grey);
 }
 
 /* Explore Filter Form */
