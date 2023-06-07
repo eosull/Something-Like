@@ -334,4 +334,4 @@ Resources used in the creation of the data model include:
 
 Rolodex Effect on site homepage was based on code [posted on codepen.io](https://codepen.io/orchard/pen/LoNdQZ?page=1) by user Adam Orchard.
 
-Avatars generated using [Boring Avatars](https://github.com/boringdesigners/boring-avatars-service) by Boring Designers
+User Avatars generated using [Boring Avatars](https://github.com/boringdesigners/boring-avatars-service) by Boring Designers
