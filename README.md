@@ -189,10 +189,16 @@ Below is a table containing project epics and associated user stories. Clicking 
 |**_Iteration 3_**|
 | [**Post Creation, display and navigation**](https://github.com/eosull/Something-Like/issues/30) |                                                                                                                       | &cross; |
 |                   | As a User I want to see suggested posts related to the content I'm viewing so that I can explore and engage with the content further                                  | &cross; |
+|                   | As a User I want to Intuitively navigate and create posts so that I can create and engage with content on the site                                  | &cross; |
 | [**Comment Creation, Display and Editing**](https://github.com/eosull/Something-Like/issues/32) |                                                                                                                       | &cross; |
 |                   | As an Authorised User I want to Update and Delete comments So that I can edit content I have created.                                 | &cross; |
+|                   | As a User I want to intuitively read and contribute comments so that I can join in the conversation                                | &cross; |
 | [**UX and Front End Design**](https://github.com/eosull/Something-Like/issues/34) |                                                                                                                       | &cross; |
+|                   | As a User I want to be met with content that evokes a positive emotional response so that I enjoy navigating and interacting with the site                              | &cross; |
 | [**Site Testing**](https://github.com/eosull/Something-Like/issues/37) |                                                                                                                       | &cross; |
+|                   | As a Site Admin I want to test my code so that I can ensure it meets accessibility, functionality, usability, responsiveness and data management standards as well as meeting project MVP targets                             | &cross; |
+| [**Clean and Prestentable Code**](https://github.com/eosull/Something-Like/issues/68) |                                                                                                                       | &cross; |
+|                   | As a Site Admin I want my code and documentation to be clean and readable so anyone viewing the code can understand and navigate the code easily                             | &cross; |
 
 
 ## Sprints
@@ -220,7 +226,7 @@ This sprint covered the front end design for the first working iteration of the 
 After Sprint 6, the decision was taken to broaden the scope of Sprints, Epics and User Stories. This included a lengthening of sprint time and less rigid tasks in User Stories. The focus has now shifted from individual functionality and structural elements to an iteration based workflow. The core structure of the site has been completed and from this point on the working sprints will be with the next iteration in mind. The first iteration was focused on functionality and meeting core MVP targets. This iteration builds on this, adds features and aims to create a more engaging product.
 
 ### Sprint 8 Iteration 3 Sprint (07/06/2023-19/06/2023) - [Iteration 3 Sprint](https://github.com/eosull/Something-Like/milestone/7)
-Iteration 3 Sprint, details tbc.
+Iteration 3 Sprint. This sprint inherits Epics from iteration 2 that deals with core site content and adds iteration specific user stories to these. New epics that deal with submission preparation are also created as the project comes into the final month of development. Included in this sprint is development on the automated tested started in iteration 2 and continuing manual testing.  It also includes work on the core site content of posts and comments (creation and display). The Front end development will continue and a code tidy up including refactoring, commenting and structuring will begin.
 
 # Features
 These are some of the features of the project.
