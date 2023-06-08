@@ -186,9 +186,23 @@ form li {
 }
 
 li label {
-    margin: 10px 20px 10px 0;
+    margin: 0 20px 0 0;
 }
 
 li div {
     display: inline-block;
+}
+
+#id_category {
+    margin: 10px 0 10px 0;
+}
+
+#id_date_order {
+    margin: 10px 0 10px 0;
+}
+
+/* Explore page styling */
+
+.explore-details {
+    font-size: .9rem;
 }
