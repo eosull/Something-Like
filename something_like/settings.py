@@ -39,7 +39,7 @@ CSRF_TRUSTED_ORIGINS = ["http://something-like-pp4.herokuapp.com",
                         'https://8000-eosull-somethinglike-hrdjmz45bwr.ws-eu96b.gitpod.io',
                         'https://8000-eosull-somethinglike-bsbvjmkvd4c.ws-eu96b.gitpod.io',
                         'https://8000-eosull-somethinglike-bsbvjmkvd4c.ws-eu97.gitpod.io',
-                        'https://8000-eosull-somethinglike-eaqot6kiyaa.ws-eu98.gitpod.io',]
+                        'https://8000-eosull-somethinglike-eaqot6kiyaa.ws-eu99.gitpod.io',]
 
 # Application definition
 
@@ -57,7 +57,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'django_summernote',
-    'fontawesomefree',
     'crispy_forms',
     'django_filters',
     'coverage',

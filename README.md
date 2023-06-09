@@ -343,7 +343,7 @@ Resources used in the creation of the data model include:
 
 [Google Fonts](https://fonts.google.com/) was used to import fonts for the project.
 
-[Font Awesome](https://fontawesome.com/docs/web/use-with/python-django) used for icons on the site
+[Bootstrap Icons](https://icons.getbootstrap.com/) used for icons on the site
 
 [W3 Validation](https://validator.w3.org/) used to validate HTML code
 
