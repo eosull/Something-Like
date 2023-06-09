@@ -41,10 +41,11 @@
                     <div class="card landing-card mb-4 py-2">
                         <div class="card-body px-5 py-5">
                             <a class="nav-link" href="{% url 'post_detail' post.slug %}">
-                                <h3 class="card-title fw-lighter">{{ post.title }}</h2>
+                                <h3 class="card-title fw-bolder">{{ post.title }}</h2>
                             </a>
                             <p class="card-text">{{ post.author }}</p>
-                            <p class="card-text">{{ post.created_at }} | {{ post.comments.count }} <i class="fa-regular fa-comment"></i> | {{ post.number_of_likes }} <i class="fa-solid fa-thumbs-up"></i></p>
+                            <p class="card-text d-inline">{{ post.created_at.date|date:"d/m/Y" }}</p>
+                            <p class="card-text d-inline float-end">{{ post.comments.count }} <i class="bi bi-chat-left"></i>   {{ post.number_of_likes }}<i class="bi bi-hand-thumbs-up"></i></p>
                         </div>
                     </div>
                 </div>
