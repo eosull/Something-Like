@@ -10,7 +10,7 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ('title', 'category', 'body_text',)
         help_texts = {
-            'category' : ('Category'),
+            'category': ('Category'),
         }
 
     def __init__(self, *args, **kwargs):
@@ -29,6 +29,7 @@ class PostForm(forms.ModelForm):
         for field in self.fields:
 
             placeholder = placeholders[field]
+            self.fields[field].widget.attrs['rows'] = 6
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'new-post-form-inputs'
             self.fields[field].label = False
