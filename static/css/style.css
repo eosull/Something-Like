@@ -47,6 +47,14 @@ body {
     border: none;
 }
 
+.crud-button {
+
+}
+
+.crud-button:hover {
+    color: var(--l-blue);
+}
+
 .btn-primary:hover {
     background-color: var(--d-blue-opaque);
 }
@@ -126,11 +134,11 @@ https://codepen.io/orchard/pen/LoNdQZ?page=1 */
 /* Landing Page styling */
 
 .latest-post-section {
-    background-color: var(--d-blue-opaque);
+    background-image: linear-gradient(to bottom, var(--white), var(--d-blue-opaque));
 }
 
 .landing-card {
-    background-color: var(--white);
+    background-color: transparent;
     border: none;
 }
 

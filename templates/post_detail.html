@@ -35,21 +35,21 @@
 
                         {% if post_liked %}
 
-                        <button type="submit" name="post_id" value="{{ post.slug }}" class="btn btn-primary">
-                            {{ post.number_of_likes }} <i class="bi bi-hand-thumbs-up-fill"></i>
+                        <button type="submit" name="post_id" value="{{ post.slug }}" class="btn">
+                            {{ post.number_of_likes }} <i class="bi bi-hand-thumbs-up-fill crud-button"></i>
                         </button>
 
                         {% else %}
 
-                        <button type="submit" name="post_id" value="{{ post.slug }}" class="btn btn-primary">
-                            {{ post.number_of_likes }} <i class="bi bi-hand-thumbs-up"></i>
+                        <button type="submit" name="post_id" value="{{ post.slug }}" class="btn">
+                            {{ post.number_of_likes }} <i class="bi bi-hand-thumbs-up crud-button"></i>
                         </button>
 
                         {% endif %}  
                     </form>
                     {% if post.author == request.user %}
                         <form class="d-inline" action="{% url 'edit' post.slug %}">
-                            <button type="submit" class="btn btn-primary" value="Edit Post"><i class="bi bi-pencil-square"></i></button>
+                            <button type="submit" class="btn crud-button" value="Edit Post"><i class="bi bi-pencil-square"></i></button>
                         </form>
                         {% endif %}
                     {% endif %}
@@ -65,7 +65,7 @@
                                     <form action="{% url 'comment_like' post.slug comment.id %}" method="post" class="d-inline float-end">
                                         {% csrf_token %}
                                             <button class="btn" type="submit" name="comment_id" value="{{ post.slug }}">
-                                                {{ comment.number_of_likes }} <i class="bi bi-hand-thumbs-up"></i>
+                                                {{ comment.number_of_likes }} <i class="bi bi-hand-thumbs-up crud-button"></i>
                                             </button>
                                     </form>
                                 {% endif %}
@@ -79,7 +79,7 @@
                         <form class="mt-5" method="post">
                         {{ comment_form | crispy }}
                             {% csrf_token %}
-                            <button class="btn btn-primary mt-2" type="submit">Submit</button>
+                            <button class="btn crud-button d-inline float-end fs-5" type="submit"><i class="bi bi-send"></i></button>
                         </form>
                         {% endif %}
                         {% endif %}
