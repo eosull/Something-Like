@@ -50,7 +50,7 @@ class CommentForm(forms.ModelForm):
 
         for field in self.fields:
             placeholder = placeholders[field]
-            self.fields[field].widget.attrs['rows'] = 2
+            self.fields[field].widget.attrs['rows'] = 1
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'comment-form-input'
             self.fields[field].label = False
