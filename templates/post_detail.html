@@ -79,7 +79,7 @@
                         <form class="mt-5" method="post">
                         {{ comment_form | crispy }}
                             {% csrf_token %}
-                            <button class="btn crud-button d-inline float-end fs-5" type="submit"><i class="bi bi-send"></i></button>
+                            <button class="btn crud-button d-inline float-end fs-5 submit-comment-button" type="submit"><i class="bi bi-send"></i></button>
                         </form>
                         {% endif %}
                         {% endif %}

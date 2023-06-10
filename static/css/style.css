@@ -174,19 +174,14 @@ https://codepen.io/orchard/pen/LoNdQZ?page=1 */
     border-radius: 10px;
 }
 
-.new-post-form-inputs {
+.new-post-form-inputs,
+.comment-form-input {
     background-color: transparent;
     border: none;
     border-radius: 0px;
     border-bottom: 5px solid var(--d-blue);
     margin: 10px auto 10px auto;
     color: var(--black);
-    height: auto;
-}
-
-.comment-form-input {
-    border: none;
-    background-color: var(--grey);
 }
 
 /* Explore Filter Form */
