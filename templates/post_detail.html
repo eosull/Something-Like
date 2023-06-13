@@ -58,11 +58,11 @@
                     <div class="mt-2">
                         {% for comment in comments %}
                             <div class="mt-2 mb-2">
-                                <p class="d-inline">{{ comment.author }}</p>
+                                <p class="d-inline fw-bolder">{{ comment.author }}</p>
                                 <p class="d-inline float-end">{{ comment.created_at.date|date:"d/m/Y" }}</p><br>
-                                <p class="d-inline fw-bolder">{{ comment.body_text }}</p>
+                                <p class="d-inline">{{ comment.body_text }}</p>
                                 {% if user.is_authenticated %}
-                                    <form action="{% url 'comment_like' post.slug comment.id %}" method="post" class="d-inline float-end">
+                                    <form action="{% url 'comment_like' post.slug comment.id %}" method="post">
                                         {% csrf_token %}
                                             <button class="btn" type="submit" name="comment_id" value="{{ post.slug }}">
                                                 {{ comment.number_of_likes }} <i class="bi bi-hand-thumbs-up crud-button"></i>
