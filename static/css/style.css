@@ -211,9 +211,8 @@ https://codepen.io/orchard/pen/LoNdQZ?page=1 */
 
 .new-post-form-inputs,
 .comment-form-input {
-    background-color: transparent;
-    border: none;
-    border-radius: 0px;
+    background-color: var(--white);
+    border-radius: 5px;
     border-bottom: 5px solid var(--d-blue);
     margin: 10px auto 10px auto;
     color: var(--black);

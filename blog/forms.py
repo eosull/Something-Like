@@ -69,7 +69,7 @@ class PostCategoryFilterForm(forms.Form):
 
     DATE_ORDER = (
         ("newest", "Newest First"),
-        ("", "Oldest First"),
+        ("oldest", "Oldest First"),
     )
 
     category = forms.ChoiceField(
