@@ -15,11 +15,14 @@ class IndexList(generic.ListView):
 def explore(request):
     category = request.GET.get('category')
     date_order = request.GET.get('date_order')
+    print(date_order)
     posts = Post.objects.all()
     if category:
         if category != 'All':
             posts = posts.filter(category__type=category)
-    if date_order:
+    if date_order == 'oldest':
+        posts = posts.order_by('created_at')
+    else:
         posts = posts.order_by('-created_at')
     
     context = {
@@ -111,7 +114,6 @@ class PostDetail(View):
         if post.likes.filter(id=self.request.user.id).exists():
             post_liked = True
 
-        
         return render(
             request,
             "post_detail.html",
