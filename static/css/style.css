@@ -6,7 +6,7 @@
     --d-blue: #6381A6;
     --d-blue-opaque: #6381a674;
     --l-blue: #66B6AF;
-    --green: #EDDA68;
+    --green: #4c7f43;
     --orange: #D78649;
     --red: #EC6369;
 
@@ -82,10 +82,6 @@ https://codepen.io/orchard/pen/LoNdQZ?page=1 */
 .rolodex li {
     float: center;
     line-height: var(--line-height);
-}
-
-.rolodex li {
-    width: 20rem;
 }
 
 .roll {
@@ -165,8 +161,12 @@ https://codepen.io/orchard/pen/LoNdQZ?page=1 */
     /* background: linear-gradient(0deg, var(--white) 0%, var(--grey) 100%); */
 }
 
+.index-button-bank a {
+    padding: 40px;
+}
+
 .index-post-design {
-    background-image: url("https://source.boringavatars.com/bauhaus/400?colors=66B6AF,EDDA68,D78649,EC6369,6381a674");
+    background-image: url("https://source.boringavatars.com/bauhaus/400?colors=66B6AF,4c7f43,D78649,EC6369,6381a674");
 }
 
 .landing-card {

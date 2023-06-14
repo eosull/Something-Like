@@ -7,7 +7,7 @@
 
         <div class="col-xs-12 col-md-6 col-lg-8 my-auto">
             <h2 class="fw-lighter">Personalised Recommendations for Lovers of</h2>
-            <div class="fs-1 fw-bolder rolodex">
+            <div class="fs-1 fw-bolder rolodex text-center">
                 <ul class="roll">
                     <li class="Music-post">Music</li>
                     <li class="Films-post">Films</li>
@@ -20,8 +20,7 @@
         <div class="col-xs-12 col-md-6 col-lg-4 my-auto">
             <div class="info-card">
                 <p>Have a favourite album, show, film or book?</p>
-                <p>Create a post and tell everyone why</p>
-                <p>Let's start the conversation!</p>
+                <p>Share it and let others recommend your next favourite!</p>
                 {% if user.is_authenticated %}
                     <a class="btn btn-primary" href="{% url 'new_post' %}">New Post</a>
                 {% else %}
@@ -36,11 +35,11 @@
             <div class="col-12">
                 <h3 class=" text-center fw-lighter my-3">Explore</h3>
                 <div class="d-flex flex-sm-column flex-md-row justify-content-evenly index-button-bank">
-                    <a class="btn btn-primary" href="{% url 'explore' %}">All Posts</a>
-                    <a class="btn btn-primary Music-post-explore" href="{% url 'explore' %}?category={{ 'Music' }}">Music Posts</a>
-                    <a class="btn btn-primary Tv-post-explore" href="{% url 'explore' %}?category={{ 'Tv' }}">Tv Posts</a>
-                    <a class="btn btn-primary Films-post-explore" href="{% url 'explore' %}?category={{ 'Films' }}">Film Posts</a>
-                    <a class="btn btn-primary Books-post-explore" href="{% url 'explore' %}?category={{ 'Books' }}">Book Posts</a>
+                    <a class="btn btn-primary mt-4" href="{% url 'explore' %}">All Posts</a>
+                    <a class="btn btn-primary Music-post-explore mt-4" href="{% url 'explore' %}?category={{ 'Music' }}">Music Posts</a>
+                    <a class="btn btn-primary Tv-post-explore mt-4" href="{% url 'explore' %}?category={{ 'Tv' }}">Tv Posts</a>
+                    <a class="btn btn-primary Films-post-explore mt-4" href="{% url 'explore' %}?category={{ 'Films' }}">Film Posts</a>
+                    <a class="btn btn-primary Books-post-explore mt-4" href="{% url 'explore' %}?category={{ 'Books' }}">Book Posts</a>
                 </div>
             </div>
         </div>
