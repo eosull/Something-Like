@@ -19,9 +19,6 @@ body {
     background-color: var(--white);
 }
 
-.logo {
-}
-
 .navbar-nav {
     font-weight: 500;
     letter-spacing: 3px;
@@ -88,7 +85,7 @@ https://codepen.io/orchard/pen/LoNdQZ?page=1 */
 }
 
 .rolodex li {
-    content: "\a0";
+    width: 20rem;
 }
 
 .roll {
@@ -132,15 +129,53 @@ https://codepen.io/orchard/pen/LoNdQZ?page=1 */
     color: var(--red);
 }
 
+/* Explore Buttons */
+.index-button-bank {
+    display: flex;
+}
+
+.Music-post-explore{
+    background-color: var(--l-blue);
+}
+
+.Tv-post-explore{
+    background-color: var(--green);
+}
+
+.Test-post-explore{
+    background-color: var(--d-blue);
+}
+
+.Films-post-explore{
+    background-color: var(--orange);
+}
+
+.Books-post-explore{
+    background-color: var(--red);
+}
 /* Landing Page styling */
 
-.latest-post-section {
-    background-image: linear-gradient(to bottom, var(--white), var(--d-blue-opaque));
+.index-banner {
+    height: 20rem;
+    /* background: linear-gradient(0deg, var(--grey) 0%, var(--white) 100%); */
+}
+
+.index-bottom {
+    /* height: 40rem; */
+    /* background: linear-gradient(0deg, var(--white) 0%, var(--grey) 100%); */
+}
+
+.index-post-design {
+    background-image: url("https://source.boringavatars.com/bauhaus/400?colors=66B6AF,EDDA68,D78649,EC6369,6381a674");
 }
 
 .landing-card {
     background-color: transparent;
     border: none;
+}
+
+.index-card-body {
+    background-color: rgba(255, 255, 255, 0.355);
 }
 
 .info-card p {
@@ -151,7 +186,7 @@ https://codepen.io/orchard/pen/LoNdQZ?page=1 */
 .post-profile-img {
     height: 60px;
     width: 60px;
-    background-image: url("https://source.boringavatars.com/bauhaus/60");
+    background-image: url("https://source.boringavatars.com/bauhaus/60?colors=66B6AF,EDDA68,D78649,EC6369,6381a674");
 }
 
 .post-profile-img p {
