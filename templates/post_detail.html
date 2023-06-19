@@ -18,12 +18,12 @@
                             </div>
                         </div>
 
-                        <p class="d-inline float-end">
+                        <div class="d-inline float-end">
                             {% if post.edited %}
-                            <i class="bi bi-pencil d-inline"></i>
+                            <i class="bi bi-pencil d-inline edited-message-trigger"></i>
                             {% endif %}
-                            {{ post.created_at.date|date:"d/m/Y" }}
-                        </p>
+                            <p class="d-inline">{{ post.created_at.date|date:"d/m/Y" }}</p>
+                        </div>
                     </div>
                 
                     <p class="font-weight-bold mt-5 mb-5 lead">{{ post.body_text | safe }}</p>
