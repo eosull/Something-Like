@@ -153,12 +153,6 @@ https://codepen.io/orchard/pen/LoNdQZ?page=1 */
 
 .index-banner {
     height: 20rem;
-    /* background: linear-gradient(0deg, var(--grey) 0%, var(--white) 100%); */
-}
-
-.index-bottom {
-    /* height: 40rem; */
-    /* background: linear-gradient(0deg, var(--white) 0%, var(--grey) 100%); */
 }
 
 .index-button-bank a {
