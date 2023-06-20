@@ -3,8 +3,10 @@
 {% block content %}
 <div class="container-fluid">
 
+    <!-- Index page banner (Top section of page) -->
     <div class="row px-1 py-4 mt-4 text-center index-banner">
 
+        <!-- Animated list showing category types -->
         <div class="col-xs-12 col-md-6 col-lg-8 my-auto">
             <h2 class="fw-lighter">Personalised Recommendations for Lovers of</h2>
             <div class="fs-1 fw-bolder rolodex text-center">
@@ -17,33 +19,44 @@
             </div>
         </div>
 
+        <!-- Link to login, register or create new post if logged in -->
         <div class="col-xs-12 col-md-6 col-lg-4 my-auto">
             <div class="info-card">
                 <p>Have a favourite album, show, film or book?</p>
                 <p>Share it and let others recommend your next favourite!</p>
                 {% if user.is_authenticated %}
-                    <a class="btn btn-primary" href="{% url 'new_post' %}">New Post</a>
+                <a class="btn btn-primary" href="{% url 'new_post' %}">New Post</a>
                 {% else %}
-                    <a class="btn btn-primary" href="{% url 'account_signup' %}">Sign Up</a>
+                <a class="btn btn-primary" href="{% url 'account_signup' %}">Sign Up</a>
                 {% endif %}
             </div>
         </div>
     </div>
+
     <hr>
+
+    <!-- Category link buttons using flex-column & flex-md-row for responsiveness -->
     <div class="row">
         <div class="row px-4 my-3 index-buttons">
             <div class="col-12">
                 <h3 class=" text-center fw-lighter my-3">Explore</h3>
                 <div class="d-flex flex-column flex-md-row justify-content-evenly index-button-bank">
                     <a class="btn btn-primary mt-4" href="{% url 'explore' %}">All Posts</a>
-                    <a class="btn btn-primary Music-post-explore mt-4" href="{% url 'explore' %}?category={{ 'Music' }}">Music Posts</a>
-                    <a class="btn btn-primary Tv-post-explore mt-4" href="{% url 'explore' %}?category={{ 'Tv' }}">Tv Posts</a>
-                    <a class="btn btn-primary Films-post-explore mt-4" href="{% url 'explore' %}?category={{ 'Films' }}">Film Posts</a>
-                    <a class="btn btn-primary Books-post-explore mt-4" href="{% url 'explore' %}?category={{ 'Books' }}">Book Posts</a>
+                    <a class="btn btn-primary Music-post-explore mt-4"
+                        href="{% url 'explore' %}?category={{ 'Music' }}">Music Posts</a>
+                    <a class="btn btn-primary Tv-post-explore mt-4" href="{% url 'explore' %}?category={{ 'Tv' }}">Tv
+                        Posts</a>
+                    <a class="btn btn-primary Films-post-explore mt-4"
+                        href="{% url 'explore' %}?category={{ 'Films' }}">Film Posts</a>
+                    <a class="btn btn-primary Books-post-explore mt-4"
+                        href="{% url 'explore' %}?category={{ 'Books' }}">Book Posts</a>
                 </div>
             </div>
         </div>
+
         <hr>
+
+        <!-- Latest post list, displaying 3 most recent posts -->
         <div class="row px-1 my-1 latest-post-section">
             <div class="col-12 mt-3">
                 <div class="row">
@@ -57,7 +70,9 @@
                                 </a>
                                 <p class="card-text">{{ post.author }}</p>
                                 <p class="card-text d-inline">{{ post.created_at.date|date:"d/m/Y" }}</p>
-                                <p class="card-text d-inline float-end">{{ post.comments.count }} <i class="bi bi-chat-left"></i>   {{ post.number_of_likes }}<i class="bi bi-hand-thumbs-up"></i></p>
+                                <p class="card-text d-inline float-end">{{ post.comments.count }} <i
+                                        class="bi bi-chat-left"></i> {{ post.number_of_likes }}<i
+                                        class="bi bi-hand-thumbs-up"></i></p>
                             </div>
                         </div>
                     </div>
@@ -65,6 +80,7 @@
                 </div>
             </div>
         </div>
-</div>
+
+    </div>
 </div>
 {% endblock %}

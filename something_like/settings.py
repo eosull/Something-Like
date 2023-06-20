@@ -32,6 +32,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# Adding Allowed_Hosts and Trusted Origins for development servers
 ALLOWED_HOSTS = ["something-like-pp4.herokuapp.com", '8000-eosull-somethinglike-eaqot6kiyaa.ws-eu100.gitpod.io', 'localhost']
 CSRF_TRUSTED_ORIGINS = ["http://something-like-pp4.herokuapp.com",
                         'http://127.0.0.1:8000/',

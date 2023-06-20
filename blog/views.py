@@ -108,14 +108,18 @@ class NewPost(View):
         }
         return render(request, "edit_post.html", context)
 
+    # Delete post, taking slug to specify post
     def delete(request, slug):
+        # Finding post based on slug
         post = get_object_or_404(Post, slug=slug)
 
+        # If method is POST, delete post and return delete message
         if request.method == 'POST':
             post.delete()
             messages.error(request, f'Post: {post.title} deleted succesfully')
+            # Redirect to home after delete
             return redirect('home')
-
+        # Return delete confirmation page
         else:
             return render(
                 request,
@@ -126,18 +130,23 @@ class NewPost(View):
             )
 
 
+# Inherit Django View class for Post Detail view
 class PostDetail(View):
 
+    # Get function for displaying content
     def get(self, request, slug, *arg, **kwargs):
 
+        # Get post based on slug, comments taken from this post
         queryset = Post.objects
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by('created_at')
 
+        # Checking if user has liked post
         post_liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             post_liked = True
 
+        # Return context for use in template declared
         return render(
             request,
             "post_detail.html",
@@ -151,14 +160,18 @@ class PostDetail(View):
             },
         )
 
+    # Post function for adding comments
     def post(self, request, slug, *arg, **kwargs):
 
+        # Get post based on slug, comments taken from this post
         queryset = Post.objects
         post = get_object_or_404(queryset, slug=slug)
         comments = post.comments.filter(approved=True).order_by('created_at')
 
+        # Defining comment form using imported form
         comment_form = CommentForm(data=request.POST)
 
+        # If form valid fill info with user's details and save
         if comment_form.is_valid():
             comment_form.instance.email = request.user.email
             comment_form.instance.name = request.user.username
@@ -166,9 +179,11 @@ class PostDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
+        # Else post empty form
         else:
             comment_form = CommentForm()
 
+        # Return context for use in template declared
         return render(
             request,
             "post_detail.html",
@@ -181,27 +196,37 @@ class PostDetail(View):
         )
 
 
+# Inherit Django View class to create Post Liking view
 class PostLike(View):
 
     def post(self, request, slug):
+        # Getting post based on slug
         post = get_object_or_404(Post, slug=slug)
 
+        # If user has liked post, clicking button unlikes
+        # and vice-versa
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
         else:
             post.likes.add(request.user)
 
+        # Reload post detail page
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
+# Inherit Django View class to create Comment Liking view
 class CommentLike(View):
 
     def post(self, request, slug, id):
+        # Getting comment based on id
         comment = get_object_or_404(Comment, id=id)
 
+        # If user has liked comment, clicking button unlikes
+        # and vice-versa
         if comment.likes.filter(id=request.user.id).exists():
             comment.likes.remove(request.user)
         else:
             comment.likes.add(request.user)
 
+        # Reload post detail page
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))

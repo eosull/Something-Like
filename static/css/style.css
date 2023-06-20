@@ -1,4 +1,6 @@
-:root{
+/* Styling variables including colour scheme */
+
+:root {
     --line-height: 2em;
     --white: #fdf2f2;
     --grey: #a8a4a464;
@@ -11,6 +13,7 @@
     --red: #EC6369;
 
 }
+
 /* Base Template and sitewide styling */
 
 body {
@@ -59,96 +62,8 @@ body {
 .form-control:focus {
     background-color: transparent;
     box-shadow: none;
-} 
-
-/* Index Looping rolodex effect.
-Sourced and modified to suit site from Codepen user Adam Orchard
-https://codepen.io/orchard/pen/LoNdQZ?page=1 */
-
-.rolodex{
-    height: var(--line-height);
-    overflow: hidden;
 }
 
-.rolodex ul {
-    margin-block-start: 0px;
-    margin-block-end: 0px;
-    height: var(--line-height);
-    list-style: none;
-}
-
-.rolodex p,
-.rolodex ul,
-.rolodex li {
-    float: center;
-    line-height: var(--line-height);
-}
-
-.roll {
-    animation: 10s infinite alternate roll-up-one;
-}
-
-  @keyframes roll-up-one {
-    0% {
-         transform: translateY(0%);
-        }
-    20% {
-        transform: translateY(0%);
-    }
-    80% { 
-        transform: translateY(-300%);
-     }
-    100% {
-        transform: translateY(-300%);
-    }
-  }
-
-/* Post Preview Cards */
-
-.Music-post{
-    color: var(--l-blue);
-}
-
-.Tv-post{
-    color: var(--green);
-}
-
-.Test-post{
-    color: var(--d-blue);
-}
-
-.Films-post{
-    color: var(--orange);
-}
-
-.Books-post{
-    color: var(--red);
-}
-
-/* Explore Buttons */
-.index-button-bank {
-    display: flex;
-}
-
-.Music-post-explore{
-    background-color: var(--l-blue);
-}
-
-.Tv-post-explore{
-    background-color: var(--green);
-}
-
-.Test-post-explore{
-    background-color: var(--d-blue);
-}
-
-.Films-post-explore{
-    background-color: var(--orange);
-}
-
-.Books-post-explore{
-    background-color: var(--red);
-}
 /* Landing Page styling */
 
 .index-banner {
@@ -176,40 +91,103 @@ https://codepen.io/orchard/pen/LoNdQZ?page=1 */
     padding: 0;
 }
 
-/* Post Detail Info */
-.post-profile-img {
-    height: 60px;
-    width: 60px;
-    background-image: url("https://source.boringavatars.com/bauhaus/60?colors=66B6AF,EDDA68,D78649,EC6369,6381a674");
+/* Post Preview Cards */
+
+.Music-post {
+    color: var(--l-blue);
 }
 
-.post-profile-img p {
-    position: absolute;
-    margin: 15px;
-    color: var(--white);
+.Tv-post {
+    color: var(--green);
 }
 
-.post-details {
-    display: inline-block;
+.Test-post {
+    color: var(--d-blue);
 }
 
-/* Form Customisation */
-.asteriskField {
-    display: none;
+.Films-post {
+    color: var(--orange);
 }
 
-.new-post-form-container {
-    background-color: transparent;
-    border-radius: 10px;
+.Books-post {
+    color: var(--red);
 }
 
-.new-post-form-inputs,
-.comment-form-input {
-    background-color: var(--white);
-    border-radius: 5px;
-    border-bottom: 5px solid var(--d-blue);
-    margin: 10px auto 10px auto;
-    color: var(--black);
+/* Explore Buttons */
+
+.index-button-bank {
+    display: flex;
+}
+
+.Music-post-explore {
+    background-color: var(--l-blue);
+}
+
+.Tv-post-explore {
+    background-color: var(--green);
+}
+
+.Test-post-explore {
+    background-color: var(--d-blue);
+}
+
+.Films-post-explore {
+    background-color: var(--orange);
+}
+
+.Books-post-explore {
+    background-color: var(--red);
+}
+
+/* Index Looping rolodex effect.
+Sourced and modified to suit site from Codepen user Adam Orchard
+https://codepen.io/orchard/pen/LoNdQZ?page=1 */
+
+.rolodex {
+    height: var(--line-height);
+    overflow: hidden;
+}
+
+.rolodex ul {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    height: var(--line-height);
+    list-style: none;
+}
+
+.rolodex p,
+.rolodex ul,
+.rolodex li {
+    float: center;
+    line-height: var(--line-height);
+}
+
+.roll {
+    animation: 10s infinite alternate roll-up-one;
+}
+
+@keyframes roll-up-one {
+    0% {
+        transform: translateY(0%);
+    }
+
+    20% {
+        transform: translateY(0%);
+    }
+
+    80% {
+        transform: translateY(-300%);
+    }
+
+    100% {
+        transform: translateY(-300%);
+    }
+}
+
+/* Explore page styling */
+
+.explore-details {
+    font-size: .9rem;
 }
 
 /* Explore Filter Form */
@@ -234,8 +212,40 @@ li div {
     margin: 10px 0 10px 0;
 }
 
-/* Explore page styling */
+/* Post Detail Info */
 
-.explore-details {
-    font-size: .9rem;
+.post-profile-img {
+    height: 60px;
+    width: 60px;
+    background-image: url("https://source.boringavatars.com/bauhaus/60?colors=66B6AF,EDDA68,D78649,EC6369,6381a674");
+}
+
+.post-profile-img p {
+    position: absolute;
+    margin: 15px;
+    color: var(--white);
+}
+
+.post-details {
+    display: inline-block;
+}
+
+/* Form Customisation */
+
+.asteriskField {
+    display: none;
+}
+
+.new-post-form-container {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.new-post-form-inputs,
+.comment-form-input {
+    background-color: var(--white);
+    border-radius: 5px;
+    border-bottom: 5px solid var(--d-blue);
+    margin: 10px auto 10px auto;
+    color: var(--black);
 }
