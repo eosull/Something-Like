@@ -1,34 +1,39 @@
 {% extends 'base.html' %}
 {% block content %}
 
-
+<!-- Defensive check if user is authorized to create new posts -->
 {% if user.is_authenticated %}
 {% load crispy_forms_tags %}
-<div class="row justify-content-center">
-    <div class="col-10">
-      <div class="new-post-form-info text-center">
-        <h2>New Post</h2>
-        <p>Let other users know what you like, and why, so they can let you know what you might like next!</p>
-      </div>
-      <div class="new-post-form-container">
-        <form method="post">
-            {% crispy new_post_form new_post_form.helper %}
-                {% csrf_token %}
-                {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" >
-                {% endif %}
-        </form>
-      </div>
-    </div>
-</div>
 
-{% else %}
-<div class="container-fluid">
-    <div class="row">
-      <div class="col-md-8 offset-md-2 mt-4 text-center">
-        <p>Please <a href="{% url 'account_login' %}">Login</a> or <a href="{% url 'account_signup' %}">Register</a> to edit posts</p> 
-      </div>
+<div class="row justify-content-center">
+  <div class="col-10">
+    <div class="new-post-form-info text-center">
+      <h2>New Post</h2>
+      <p>Let other users know what you like, and why, so they can let you know what you might like next!</p>
+    </div>
+
+    <!-- Loading new post form created using django crispy forms -->
+    <div class="new-post-form-container">
+      <form method="post">
+        {% crispy new_post_form new_post_form.helper %}
+        {% csrf_token %}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
+        {% endif %}
+      </form>
     </div>
   </div>
+</div>
+
+<!-- If user not authorized to create new posts ask to login or register -->
+{% else %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 offset-md-2 mt-4 text-center">
+      <p>Please <a href="{% url 'account_login' %}">Login</a> or <a href="{% url 'account_signup' %}">Register</a> to
+        edit posts</p>
+    </div>
+  </div>
+</div>
 {% endif %}
 {% endblock content %}

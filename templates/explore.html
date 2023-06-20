@@ -5,8 +5,10 @@
 
 <div class="container-fluid">
     <div class="row">
+        <!-- Collapsable filter form for filtering posts -->
         <div class="col-s-6 col-md-8 offset-md-2 text-center">
-            <a class="btn btn-primary d-md-none" data-bs-toggle="collapse" href="#filter-form-collapse" role="button" aria-expanded="false" aria-controls="filter-form-collapse">Filter</a>
+            <a class="btn btn-primary d-md-none" data-bs-toggle="collapse" href="#filter-form-collapse" role="button"
+                aria-expanded="false" aria-controls="filter-form-collapse">Filter</a>
             <div class="filter-form-container collapse d-md-block" id="filter-form-collapse">
                 <h3>Filter</h3>
                 <form class="d-inline" method='GET' action="{% url 'explore' %}">
@@ -18,6 +20,7 @@
             </div>
         </div>
     </div>
+    <!-- Displaying posts in a list form with links to each -->
     <div class="row">
         <div class="col-xs-12 col-md-10 offset-md-1">
             <div class="row">
@@ -27,13 +30,16 @@
                         <hr class="mt-1 mb-1">
                         <div class="col-md-12">
                             <div class="card-body">
-                                    <a class="nav-link" href="{% url 'post_detail' post.slug %}">
-                                        <h2 class="card-title d-inline fs-5 fw-light">{{ post.title }}</h2>
-                                        <p class="card-text fw-lighter d-inline float-end explore-details">{{ post.created_at.date|date:"d/m/Y" }}</p>
-                                    </a>
-                                    <p class="card-text d-inline float-start fw-bold mx-2 {{post.category}}-post">|</p>
-                                    <p class="card-text d-inline" id="preview-category"> {{ post.category }}</p>
-                                    <p class="card-text d-inline float-end explore-details">{{ post.comments.count }} <i class="bi bi-chat-left"></i>   {{ post.number_of_likes }} <i class="bi bi-hand-thumbs-up"></i></p>
+                                <a class="nav-link" href="{% url 'post_detail' post.slug %}">
+                                    <h2 class="card-title d-inline fs-5 fw-light">{{ post.title }}</h2>
+                                    <p class="card-text fw-lighter d-inline float-end explore-details">
+                                        {{ post.created_at.date|date:"d/m/Y" }}</p>
+                                </a>
+                                <p class="card-text d-inline float-start fw-bold mx-2 {{post.category}}-post">|</p>
+                                <p class="card-text d-inline" id="preview-category"> {{ post.category }}</p>
+                                <p class="card-text d-inline float-end explore-details">{{ post.comments.count }} <i
+                                        class="bi bi-chat-left"></i> {{ post.number_of_likes }} <i
+                                        class="bi bi-hand-thumbs-up"></i></p>
                             </div>
                         </div>
                         {% endfor %}

@@ -8,6 +8,8 @@
         <div class="col">
             <div class="row justify-content-center mt-5">
                 <div class="col-sm-10 col-md-8">
+
+                    <!-- Display post details -->
                     <h2>{{ post.title }}</h2>
                     <p class="d-inline">{{ post.category }}</p>
                     <hr>
@@ -18,6 +20,7 @@
                             </div>
                         </div>
 
+                        <!-- Show edited icon if post has been edited -->
                         <div class="d-inline float-end">
                             {% if post.edited %}
                             <i class="bi bi-pencil d-inline edited-message-trigger"></i>
@@ -25,61 +28,69 @@
                             <p class="d-inline">{{ post.created_at.date|date:"d/m/Y" }}</p>
                         </div>
                     </div>
-                
+
                     <p class="font-weight-bold mt-5 mb-5 lead">{{ post.body_text | safe }}</p>
 
-
+                    <!-- If user is logged in, display like functionality -->
                     {% if user.is_authenticated %}
                     <form class="d-inline" action="{% url 'post_like' post.slug %}" method="post">
                         {% csrf_token %}
 
+                        <!-- Like button changes colour depending on whether user has liked post -->
                         {% if post_liked %}
-
                         <button type="submit" name="post_id" value="{{ post.slug }}" class="btn">
                             {{ post.number_of_likes }} <i class="bi bi-hand-thumbs-up-fill crud-button"></i>
                         </button>
-
                         {% else %}
-
                         <button type="submit" name="post_id" value="{{ post.slug }}" class="btn">
                             {{ post.number_of_likes }} <i class="bi bi-hand-thumbs-up crud-button"></i>
                         </button>
-
-                        {% endif %}  
-                    </form>
-                    {% if post.author == request.user %}
-                        <form class="d-inline" action="{% url 'edit' post.slug %}">
-                            <button type="submit" class="btn crud-button" value="Edit Post"><i class="bi bi-pencil-square"></i></button>
-                        </form>
                         {% endif %}
+                    </form>
+
+                    <!-- If user is author of post display edit post functionality -->
+                    {% if post.author == request.user %}
+                    <form class="d-inline" action="{% url 'edit' post.slug %}">
+                        <button type="submit" class="btn crud-button" value="Edit Post"><i
+                                class="bi bi-pencil-square"></i></button>
+                    </form>
                     {% endif %}
+                    {% endif %}
+                    
                     <hr>
 
+                    <!-- Display list of comments -->
                     <div class="mt-2">
                         {% for comment in comments %}
-                            <div class="mt-2 mb-2">
-                                <p class="d-inline fw-bolder">{{ comment.author }}</p>
-                                <p class="d-inline float-end">{{ comment.created_at.date|date:"d/m/Y" }}</p><br>
-                                <p class="d-inline">{{ comment.body_text }}</p>
-                                {% if user.is_authenticated %}
-                                    <form action="{% url 'comment_like' post.slug comment.id %}" method="post">
-                                        {% csrf_token %}
-                                            <button class="btn" type="submit" name="comment_id" value="{{ post.slug }}">
-                                                {{ comment.number_of_likes }} <i class="bi bi-hand-thumbs-up crud-button"></i>
-                                            </button>
-                                    </form>
-                                {% endif %}
-                            </div>
+                        <div class="mt-2 mb-2">
+                            <p class="d-inline fw-bolder">{{ comment.author }}</p>
+                            <p class="d-inline float-end">{{ comment.created_at.date|date:"d/m/Y" }}</p><br>
+                            <p class="d-inline">{{ comment.body_text }}</p>
+
+                            <!-- If user is logged in display like functionality -->
+                            {% if user.is_authenticated %}
+                            <form action="{% url 'comment_like' post.slug comment.id %}" method="post">
+                                {% csrf_token %}
+                                <button class="btn" type="submit" name="comment_id" value="{{ post.slug }}">
+                                    {{ comment.number_of_likes }} <i class="bi bi-hand-thumbs-up crud-button"></i>
+                                </button>
+                            </form>
+                            {% endif %}
+                        </div>
                         {% endfor %}
 
+                        <!-- If user's comment is awating approval notify them -->
                         {% if commented %}
                         <div class="alert alert-success">Your Comment is awaiting approval</div>
                         {% else %}
+
+                        <!-- Otherwise allow them to submit a new comment -->
                         {% if user.is_authenticated %}
                         <form class="mt-5" method="post">
-                        {{ comment_form | crispy }}
+                            {{ comment_form | crispy }}
                             {% csrf_token %}
-                            <button class="btn crud-button d-inline float-end fs-5 submit-comment-button" type="submit"><i class="bi bi-send"></i></button>
+                            <button class="btn crud-button d-inline float-end fs-5 submit-comment-button"
+                                type="submit"><i class="bi bi-send"></i></button>
                         </form>
                         {% endif %}
                         {% endif %}
