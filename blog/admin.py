@@ -3,6 +3,7 @@ from .models import Post, Category, Comment
 from django_summernote.admin import SummernoteModelAdmin
 
 
+# Register Post Model Admin Panel
 @admin.register(Post)
 class PostAdmin(SummernoteModelAdmin):
 
@@ -12,6 +13,7 @@ class PostAdmin(SummernoteModelAdmin):
     summernote_fields = 'body_text'
 
 
+# Register Comment Model Admin Panel
 @admin.register(Comment)
 class CommentAdmin(admin.ModelAdmin):
 
@@ -23,4 +25,5 @@ class CommentAdmin(admin.ModelAdmin):
         queryset.update(approved=True)
 
 
+# Register Category Model Admin Panel
 admin.site.register(Category)
