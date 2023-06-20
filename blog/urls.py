@@ -18,5 +18,6 @@ urlpatterns = [
     # Add like to post
     path('<slug:slug>', views.PostLike.as_view(), name='post_like'),
     # Add like to comment
-    path('<slug:slug>/<int:id>', views.CommentLike.as_view(), name='comment_like'),
+    path('<slug:slug>/<int:id>', views.CommentLike.as_view(),
+         name='comment_like'),
 ]

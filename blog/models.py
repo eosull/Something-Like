@@ -21,7 +21,8 @@ class Post(models.Model):
     slug = models.SlugField(max_length=200, unique=True, null=True)
     # Author assigned to post by pulling from User model,
     # on delete = CASCADE to delete user content if account deleted
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='blog_posts')
+    author = models.ForeignKey(User, on_delete=models.CASCADE,
+                               related_name='blog_posts')
     # Category defined by selecting one of the 'type' category model options
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     # created_at assigned on creation of post
@@ -51,10 +52,11 @@ class Post(models.Model):
     # Microsecond value to 0 for both.
     # See readme bugs section for more info on why
     def edited(self):
-        if self.created_at.replace(microsecond=0) == self.edited_at.replace(microsecond=0):
+        if self.created_at.replace(
+           microsecond=0) == self.edited_at.replace(microsecond=0):
             return False
         else:
-            return True 
+            return True
 
 
 # Comment Model
@@ -62,10 +64,12 @@ class Comment(models.Model):
 
     # Author assigned to post by pulling from User model,
     # on delete = CASCADE to delete user content if account deleted
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments')
+    author = models.ForeignKey(User, on_delete=models.CASCADE,
+                               related_name='comments')
     # Post assigned to post by pulling from Post model,
     # on delete = CASCADE to delete post content if post deleted
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
+    post = models.ForeignKey(Post, on_delete=models.CASCADE,
+                             related_name='comments')
     # Created at time assigned on creation
     created_at = models.DateTimeField(auto_now_add=True)
     # Comment body text in text field
@@ -73,7 +77,8 @@ class Comment(models.Model):
     # Comment approved boolean
     approved = models.BooleanField(default=False)
     # Likes field so user can leave a like on a comment
-    likes = models.ManyToManyField(User, related_name="comment_like", blank=True)
+    likes = models.ManyToManyField(User, related_name="comment_like",
+                                   blank=True)
 
     # Ordered by creation time, oldest first
     class Meta:

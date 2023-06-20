@@ -43,8 +43,10 @@ class EditPostViewTestCase(TestCase):
     def setUp(self):
         # Creating test case category, user and post
         category = Category.objects.create(type="Test")
-        user = User.objects.create_user(username='testuser', password='password')
-        self.post = Post.objects.create(title="Test Post", author=user, category=category, slug='test-post')
+        user = User.objects.create_user(username='testuser',
+                                        password='password')
+        self.post = Post.objects.create(title="Test Post", author=user,
+                                        category=category, slug='test-post')
         self.client = Client()
         self.url = reverse('edit', args=['test-post'])
 
@@ -59,8 +61,10 @@ class DeletePostViewTestCase(TestCase):
     def setUp(self):
         # Creating test case category, user and post
         category = Category.objects.create(type="Test")
-        user = User.objects.create_user(username='testuser', password='password')
-        self.post = Post.objects.create(title="Test Post", author=user, category=category, slug='test-post')
+        user = User.objects.create_user(username='testuser',
+                                        password='password')
+        self.post = Post.objects.create(title="Test Post", author=user,
+                                        category=category, slug='test-post')
         self.client = Client()
         self.url = reverse('delete', args=['test-post'])
 
@@ -75,8 +79,10 @@ class PostDetailViewTestCase(TestCase):
     def setUp(self):
         # Creating test case category, user and post
         category = Category.objects.create(type="Test")
-        user = User.objects.create_user(username='testuser', password='password')
-        self.post = Post.objects.create(title="Test Post", author=user, category=category, slug='test-post')
+        user = User.objects.create_user(username='testuser',
+                                        password='password')
+        self.post = Post.objects.create(title="Test Post", author=user,
+                                        category=category, slug='test-post')
         self.client = Client()
         self.url = reverse('post_detail', args=['test-post'])
 
@@ -91,8 +97,11 @@ class PostLikeViewTestCase(TestCase):
     def setUp(self):
         # Creating test case category, user and post
         self.category = Category.objects.create(type="Test")
-        self.user = User.objects.create_user(username='testuser', password='password')
-        self.post = Post.objects.create(title="Test Post", author=self.user, category=self.category, slug='test-post')
+        self.user = User.objects.create_user(username='testuser',
+                                             password='password')
+        self.post = Post.objects.create(title="Test Post", author=self.user,
+                                        category=self.category,
+                                        slug='test-post')
         self.client = Client()
         self.url = reverse('post_like', args=['test-post'])
 
@@ -107,9 +116,13 @@ class CommentLikeViewTestCase(TestCase):
     def setUp(self):
         # Creating test case category, user and post
         self.category = Category.objects.create(type="Test")
-        self.user = User.objects.create_user(username='testuser', password='password')
-        self.post = Post.objects.create(title="Test Post", author=self.user, category=self.category, slug='test-post')
-        self.comment = Comment.objects.create(author=self.user, post=self.post, body_text="Test Comment")
+        self.user = User.objects.create_user(username='testuser',
+                                             password='password')
+        self.post = Post.objects.create(title="Test Post", author=self.user,
+                                        category=self.category,
+                                        slug='test-post')
+        self.comment = Comment.objects.create(author=self.user, post=self.post,
+                                              body_text="Test Comment")
         self.client = Client()
         self.url = reverse('comment_like', args=['test-post', self.comment.id])
 
