@@ -66,12 +66,14 @@ class NewPost(View):
             new_post_form.instance.name = request.user.username
             new_post_form.instance.author_id = request.user.id
             # slug generated from title
-            new_post_form.instance.slug = new_post_form.instance.title.replace(' ', '-').lower()
+            new_post_form.instance.slug = new_post_form.instance.title.replace(
+                ' ', '-').lower()
             # saving new post
             new_post = new_post_form.save(commit=False)
             new_post.save()
             # Notify user of successful post creation
-            messages.success(request, f'Post: {new_post_form.instance.title} created successfully')
+            messages.success(
+                request, f'Post: {new_post_form.instance.title} created')
             # Redirect user to the new post page
             return redirect('post_detail', slug=new_post.slug)
         # If form not valid empty form

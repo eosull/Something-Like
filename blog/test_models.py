@@ -17,10 +17,12 @@ class CategoryTestCase(TestCase):
 class PostTestCase(TestCase):
     def setUp(self):
         # Creating test post instance, including test user and category
-        self.user = User.objects.create_user(username='testuser', password='password')
+        self.user = User.objects.create_user(username='testuser',
+                                             password='password')
         self.category = Category.objects.create(type="Test")
         Post.objects.create(title="Test Case", author=self.user,
-                            category=self.category, body_text="Test body content")
+                            category=self.category,
+                            body_text="Test body content")
 
     def test_title_return(self):
         # Post __str__ function return post title
@@ -33,7 +35,8 @@ class PostTestCase(TestCase):
         self.assertEqual(post.number_of_likes(), 0)
 
     def test_post_edited_status(self):
-        # Post edited function returns True if edited time different to created time
+        # Post edited function returns True if
+        # edited time different to created time
         post = Post.objects.get(title="Test Case")
         self.assertEqual(post.edited(), False)
         # Adding 1 day to edited time to simulate editing
@@ -43,12 +46,17 @@ class PostTestCase(TestCase):
 
 class CommentTestCase(TestCase):
     def setUp(self):
-        # Creating test comment instance including test user and post including test poster and category
-        self.user = User.objects.create_user(username='testuser', password='password')
-        post_user = User.objects.create_user(username='poster', password='password')
+        # Creating test comment instance including
+        # test user and post including test poster and category
+        self.user = User.objects.create_user(username='testuser',
+                                             password='password')
+        post_user = User.objects.create_user(username='poster',
+                                             password='password')
         post_category = Category.objects.create(type="Test")
-        self.post = Post.objects.create(title="Test Post", author=post_user, category=post_category)
-        Comment.objects.create(author=self.user, post=self.post, body_text="Test Comment")
+        self.post = Post.objects.create(title="Test Post", author=post_user,
+                                        category=post_category)
+        Comment.objects.create(author=self.user, post=self.post,
+                               body_text="Test Comment")
 
     def test_comment_return(self):
         # Comment __str__ returns comment and user
