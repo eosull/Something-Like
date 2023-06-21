@@ -239,7 +239,7 @@ These are the testing processes that were carried out.
 
 ## Iteration 1 Testing 
 
-### Accessibility 
+### Accessibility 
 
 Lighthouse Testing was conducted on the first iteration of the site to detect accessibility issues with the initial design. A score of 100 was acheived with nothing to address at this stage of development.
 
@@ -247,7 +247,7 @@ Lighthouse Testing was conducted on the first iteration of the site to detect ac
 |:--:|
 |Iteration 1 Lighthouse Test|
 
-### HTML 
+### HTML 
 
 The code at this stage of development was passed into the [W3 HTML Validator](https://validator.w3.org/), with 2 solvable issues being presented - button hierarchy on Edit Post page and form action on Delete Post page. Both of these issues were resolved.
 
@@ -279,19 +279,19 @@ This resulted in the models having 100% test coverage and views having 62% cover
 |:--:|
 |Iteration 1 Python Testing Coverage|
 
-### Javascript
+### Javascript
 
 Javascript automated testing using Jest was not implemented in this Iteration due to the minimal amount of JS present (One function to time out messages). This was manually tested and further JS added will be subject to automated testing.
 
-### HTML 
+### HTML 
 
 The code at this stage of development was passed into the [W3 HTML Validator](https://validator.w3.org/), some small issues were presented such as extra closing tags and unecessary closing slash on input elements. These were resolved and no issues currently showing. 
 
-### CSS
+### CSS
 
 CSS code was passed into the [Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/). No errors were found.
 
-### Accessibility 
+### Accessibility 
 
 Running lighthouse test on the site at this stage produced a score of 100 for accessibility.
 
@@ -299,7 +299,7 @@ Running lighthouse test on the site at this stage produced a score of 100 for ac
 |:--:|
 |Iteration 2 Lighthouse Test|
 
-### Site Goal testing
+### Site Goal testing
 
 #### User Experience
 The site should is intuitive and easily navigable, provides feedback to user actions, responsive to different screen sizes and accessible.
@@ -309,6 +309,42 @@ A user can register and login, becoming authorised. They can then create a categ
 
 #### Content
 The site contains core content of post previews, post details categorised posts and comments underneath posts
+
+## Iteration 3 Testing
+
+### Python
+
+Manual testing was again performed to ensure views, urls and templates were hooked up properly. Forms were also tested to ensure they still functioned as intended.
+
+No additional automated testing was added in this iteration, it will be developed on further if time is available in iteration 4.
+
+### Javascript
+
+JS functionality tested manual and functioning. No automated tests developed.
+
+### HTML 
+
+The code at this stage of development was passed into the [W3 HTML Validator](https://validator.w3.org/), no issues were found.
+
+### CSS
+
+CSS code was passed into the [Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/). The following error was presented, where 'center' had been used as a value for float when this is not a valid value. Removing this line removed the error and meant the code passed.
+
+| ![Iteration 3 CSS](/assets/readme_images/iteration_3_CSS_error.png) |
+|:--:|
+|Iteration 3 CSS Error|
+
+### Accessibility 
+
+Running lighthouse test on the site at this stage produced a score of 97 for accessibility. The failing issues were related to contrast ratio between background and foreground elements. This will be addressed in Iteration 4 development.
+
+| ![Iteration 3 Lighthouse](/assets/readme_images/iteration_3_lighthouse.png) |
+|:--:|
+|Iteration 3 Lighthouse Test|
+
+### Site Goal testing
+
+The site still meets the goals set out at the beginning of development, as laid out in Iteration 2 Site Goal Testing.
 
 # Bugs
 Deployment to Heroku: build was failing on Heroku and I was met with the following error: *ERROR: Could not build wheels for backports.zoneinfo, which is required to install pyproject.toml-based projects*. A search on slack [found a student](https://code-institute-room.slack.com/archives/CHDVDV2Q4/p1681717148021239) who had faced a similar issue, the cause being heroku is using a new version of Python and needs to be told to use an older version for backports.zoneinfo to run. Good info and possible solution found on [Stack Overflow](https://stackoverflow.com/questions/71712258/error-could-not-build-wheels-for-backports-zoneinfo-which-is-required-to-insta). Added runtime.txt file in directory and specified use of python-3.11.3 to resolve. This didn't work as I was getting the same error. Found more people facing the same issue on Slack and avoiding the install of backports if python version is greater that 3.9 [was suggested](https://code-institute-room.slack.com/archives/C026PTF46F5/p1677505066005429). This worked and project was successfully deployed to Heroku.
@@ -323,6 +359,7 @@ Editing: I used 2 auto-generated time-stamps (one set at creation and one that c
 |:--:|
 |Microsecond Discrepancy For Created Time and Edited Time|
 
+Static File Heroku Delivery: Static files not being delivered to Heroku, so live site appears with no styling. **Must be addressed**
 
 # Deployment
 This is how the project was deployed.
