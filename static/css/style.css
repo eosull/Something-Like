@@ -158,7 +158,6 @@ https://codepen.io/orchard/pen/LoNdQZ?page=1 */
 .rolodex p,
 .rolodex ul,
 .rolodex li {
-    float: center;
     line-height: var(--line-height);
 }
 
