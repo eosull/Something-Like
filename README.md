@@ -187,18 +187,24 @@ Below is a table containing project epics and associated user stories. Clicking 
 | [**Site Testing**](https://github.com/eosull/Something-Like/issues/37) |                                                                                                                       | &check; |
 |                   | As a Site Admin I want to test my code so that I can ensure it meets accessibility, functionality, usability, responsiveness and data management standards as well as meeting project MVP targets                             | &check; |
 |**_Iteration 3_**|
-| [**Post Creation, display and navigation**](https://github.com/eosull/Something-Like/issues/30) |                                                                                                                       | &cross; |
-|                   | As a User I want to see suggested posts related to the content I'm viewing so that I can explore and engage with the content further                                  | &cross; |
-|                   | As a User I want to Intuitively navigate and create posts so that I can create and engage with content on the site                                  | &cross; |
-| [**Comment Creation, Display and Editing**](https://github.com/eosull/Something-Like/issues/32) |                                                                                                                       | &cross; |
-|                   | As an Authorised User I want to Update and Delete comments So that I can edit content I have created.                                 | &cross; |
-|                   | As a User I want to intuitively read and contribute comments so that I can join in the conversation                                | &cross; |
+| [**Post Creation, display and navigation**](https://github.com/eosull/Something-Like/issues/30) |                                                                                                                       | &check; |
+|                   | As a User I want to Intuitively navigate and create posts so that I can create and engage with content on the site                                  | &check; |
+| [**Comment Creation, Display and Editing**](https://github.com/eosull/Something-Like/issues/32) |                                                                                                                       | &check; |
+|                   | As a User I want to intuitively read and contribute comments so that I can join in the conversation                                | &check; |
+| [**UX and Front End Design**](https://github.com/eosull/Something-Like/issues/34) |                                                                                                                       | &check; |
+|                   | As a User I want to be met with content that evokes a positive emotional response so that I enjoy navigating and interacting with the site                              | &check; |
+| [**Site Testing**](https://github.com/eosull/Something-Like/issues/37) |                                                                                                                       | &check; |
+|                   | As a Site Admin I want to test my code so that I can ensure it meets accessibility, functionality, usability, responsiveness and data management standards as well as meeting project MVP targets                             | &check; |
+| [**Clean and Prestentable Code**](https://github.com/eosull/Something-Like/issues/68) |                                                                                                                       | &check; |
+|                   | As a Site Admin I want my code and documentation to be clean and readable so anyone viewing the code can understand and navigate the code easily                             | &check; |
+|**_Iteration 4_**|
 | [**UX and Front End Design**](https://github.com/eosull/Something-Like/issues/34) |                                                                                                                       | &cross; |
-|                   | As a User I want to be met with content that evokes a positive emotional response so that I enjoy navigating and interacting with the site                              | &cross; |
+|                   | As a Site User I want to experience a positive response when using the site, navigating easily and adding to content easily so that I can enjoy the content on the site and interact with other users                            | &cross; |
 | [**Site Testing**](https://github.com/eosull/Something-Like/issues/37) |                                                                                                                       | &cross; |
-|                   | As a Site Admin I want to test my code so that I can ensure it meets accessibility, functionality, usability, responsiveness and data management standards as well as meeting project MVP targets                             | &cross; |
+|                   | As a Site Developer I want to Manually and Automatically Test My code so that any changes made in this iteration meet accessibility, functionality, usability, responsiveness and project goals                            | &cross; |
 | [**Clean and Prestentable Code**](https://github.com/eosull/Something-Like/issues/68) |                                                                                                                       | &cross; |
-|                   | As a Site Admin I want my code and documentation to be clean and readable so anyone viewing the code can understand and navigate the code easily                             | &cross; |
+|                   | As a Developer I want to refactor and tidy up my code so that my code is as efficient and readable as possible                        | &cross; |
+|                   | As a Site Admin I want to Write a clear and well-structured ReadMe so that I can Document the development process and explain the motivations of the project                      | &cross; |
 
 
 ## Sprints
@@ -227,6 +233,9 @@ After Sprint 6, the decision was taken to broaden the scope of Sprints, Epics an
 
 ### Sprint 8 Iteration 3 Sprint (07/06/2023-19/06/2023) - [Iteration 3 Sprint](https://github.com/eosull/Something-Like/milestone/7)
 Iteration 3 Sprint. This sprint inherits Epics from iteration 2 that deals with core site content and adds iteration specific user stories to these. New epics that deal with submission preparation are also created as the project comes into the final month of development. Included in this sprint is development on the automated tested started in iteration 2 and continuing manual testing.  It also includes work on the core site content of posts and comments (creation and display). The Front end development will continue and a code tidy up including refactoring, commenting and structuring will begin.
+
+### Sprint 9 Iteration 4 Sprint (19/06/2023-03/07/2023) - [Iteration 4 Sprint](https://github.com/eosull/Something-Like/milestone/8)
+Iteration 4 Sprint, finishes on project submission. This sprint also deals with the Epics laid out in Iteration 2, adding user stories specific to the development stage. This includes writing a clear and concise ReadMe file, Ensuring the site is up to accessibility and code structuring standards. Also included is a final front-end development phase, polishing up where possible and ensuring site is responsive and meets the core project goals. Refactoring and commenting with finish in this sprint, ready for the code to be graded.
 
 # Features
 These are some of the features of the project.
