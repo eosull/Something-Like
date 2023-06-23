@@ -368,7 +368,7 @@ Editing: I used 2 auto-generated time-stamps (one set at creation and one that c
 |:--:|
 |Microsecond Discrepancy For Created Time and Edited Time|
 
-Static File Heroku Delivery: Static files not being delivered to Heroku, so live site appears with no styling. **Must be addressed**
+Static File Heroku Delivery: Static files not being delivered to Heroku, so live site appears with no styling. Disable collect static config var on Heroku deleted and code with Debug set to False deployed, Static files now being served with live site showing styling.
 
 # Deployment
 This is how the project was deployed.
