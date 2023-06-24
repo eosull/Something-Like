@@ -163,6 +163,7 @@ https://codepen.io/orchard/pen/LoNdQZ?page=1 */
 
 .roll {
     animation: 10s infinite alternate roll-up-one;
+    padding-left: 0;
 }
 
 @keyframes roll-up-one {
