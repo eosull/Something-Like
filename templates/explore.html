@@ -28,11 +28,11 @@
                     <div class="row">
                         {% for post in post_list %}
                         <hr class="mt-1 mb-1">
-                        <div class="col-md-12">
+                        <div class="col-md-12 px-0">
                             <div class="card-body">
                                 <a class="nav-link" href="{% url 'post_detail' post.slug %}">
                                     <h2 class="card-title d-inline fs-5 fw-light">{{ post.title }}</h2>
-                                    <p class="card-text fw-lighter d-inline float-end explore-details">
+                                    <p class="card-text fw-lighter d-inline float-end explore-details explore-date">
                                         {{ post.created_at.date|date:"d/m/Y" }}</p>
                                 </a>
                                 <p class="card-text d-inline float-start fw-bold mx-2 {{post.category}}-post">|</p>

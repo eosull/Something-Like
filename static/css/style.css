@@ -11,15 +11,30 @@
     --green: #4c7f43;
     --orange: #D78649;
     --red: #EC6369;
-
 }
 
 /* Base Template and sitewide styling */
+
+h1,
+h2,
+h3 {
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+h1 {
+    letter-spacing: 4px;
+}
+
+h2,
+h3 {
+    letter-spacing: 2px;
+}
 
 body {
     font-weight: 200;
     color: var(--black);
     background-color: var(--white);
+    font-family: 'Montserrat', sans-serif;
 }
 
 .navbar-nav {
@@ -164,6 +179,7 @@ https://codepen.io/orchard/pen/LoNdQZ?page=1 */
 .roll {
     animation: 10s infinite alternate roll-up-one;
     padding-left: 0;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 @keyframes roll-up-one {
@@ -248,4 +264,10 @@ li div {
     border-bottom: 5px solid var(--d-blue);
     margin: 10px auto 10px auto;
     color: var(--black);
+}
+
+@media only screen and (max-width:767px) {
+    .explore-date {
+        display: none!important;
+    }    
 }
