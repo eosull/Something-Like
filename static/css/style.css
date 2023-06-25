@@ -5,19 +5,21 @@
     --white: #fdf2f2;
     --grey: #a8a4a464;
     --black: #100f0f;
-    --d-blue: #6381A6;
-    --d-blue-opaque: #6381a674;
-    --l-blue: #66B6AF;
-    --green: #4c7f43;
-    --orange: #D78649;
-    --red: #EC6369;
+    --d-blue: #3f5673;
+    --d-blue-opaque: #3f567396;
+    --l-blue: #2b7f78;
+    --green: #45703e;
+    --orange: #bc5201;
+    --red: #c52f36;
 }
 
 /* Base Template and sitewide styling */
 
 h1,
 h2,
-h3 {
+h3,
+.btn,
+.explore-category {
     font-family: 'Bebas Neue', sans-serif;
 }
 
@@ -26,7 +28,8 @@ h1 {
 }
 
 h2,
-h3 {
+h3,
+.btn {
     letter-spacing: 2px;
 }
 
@@ -79,6 +82,10 @@ body {
     box-shadow: none;
 }
 
+.btn {
+    color: white;
+}
+
 /* Landing Page styling */
 
 .index-banner {
@@ -90,7 +97,7 @@ body {
 }
 
 .index-post-design {
-    background-image: url("https://source.boringavatars.com/bauhaus/400?colors=66B6AF,4c7f43,D78649,EC6369,6381a674");
+    background-image: url("https://source.boringavatars.com/bauhaus/400?colors=3f5673,2b7f78,45703e,bc5201,c52f36");
 }
 
 .landing-card {

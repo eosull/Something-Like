@@ -35,7 +35,7 @@
                                     <p class="card-text fw-lighter d-inline float-end explore-details explore-date">
                                         {{ post.created_at.date|date:"d/m/Y" }}</p>
                                 </a>
-                                <p class="card-text d-inline float-start fw-bold mx-2 {{post.category}}-post">|</p>
+                                <p class="explore-category card-text d-inline float-start mx-2 {{post.category}}-post">//</p>
                                 <p class="card-text d-inline" id="preview-category"> {{ post.category }}</p>
                                 <p class="card-text d-inline float-end explore-details">{{ post.comments.count }} <i
                                         class="bi bi-chat-left"></i> {{ post.number_of_likes }} <i
