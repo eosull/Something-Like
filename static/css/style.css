@@ -264,8 +264,15 @@ li div {
     border-radius: 10px;
 }
 
+.account-form-input {
+    display: block;
+    border: 1px solid #ced4da;
+    padding: 0.375rem 0.75rem;
+}
+
 .new-post-form-inputs,
-.comment-form-input {
+.comment-form-input,
+.account-form-input {
     background-color: var(--white);
     border-radius: 5px;
     border-bottom: 5px solid var(--d-blue);

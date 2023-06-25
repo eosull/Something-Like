@@ -408,6 +408,8 @@ Resources used in the creation of the data model include:
 
 Rolodex Effect on site homepage was based on code [posted on codepen.io](https://codepen.io/orchard/pen/LoNdQZ?page=1) by user Adam Orchard.
 
+Custom Login/Register Forms created with help from [this post by Adam Wiener](https://gavinwiener.medium.com/modifying-django-allauth-forms-6eb19e77ef56)
+
 User Avatars generated using [Boring Avatars](https://github.com/boringdesigners/boring-avatars-service) by Boring Designers
 
 Site colour palette generated using [Colormind](http://colormind.io/)

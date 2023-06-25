@@ -2,6 +2,7 @@ from .models import Comment, Post, Category
 from django import forms
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Fieldset, Submit
+from allauth.account.forms import SignupForm, LoginForm
 
 
 # Inheriting from Django ModelForm to create a new post form
@@ -108,3 +109,27 @@ class PostCategoryFilterForm(forms.Form):
         initial=False,
         required=False
     )
+
+
+# Creating custom Signup form inheriting from Allauth Forms
+class CustomRegisterForm(SignupForm):
+
+    # Adding css class to input fields to style
+    def __init__(self, *args, **kwargs):
+        super(CustomRegisterForm, self).__init__(*args, **kwargs)
+        for fieldname, field in self.fields.items():
+            field.widget.attrs.update({
+                'class': 'account-form-input',
+            })
+
+
+# Creating custom Login form inheriting from Allauth Forms
+class CustomLoginForm(LoginForm):
+
+    # Adding css class to input fields to style
+    def __init__(self, *args, **kwargs):
+        super(CustomLoginForm, self).__init__(*args, **kwargs)
+        for fieldname, field in self.fields.items():
+            field.widget.attrs.update({
+                'class': 'account-form-input'
+            })
