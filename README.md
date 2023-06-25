@@ -142,6 +142,17 @@ The site has core colouring of an off-white and black for background and text, w
 |:--:|
 |Colormind Colour Palette|
 
+Colour Scheme was altered as part of Iteration 4, in order to increase contrast between elements and improve accessibility. The colour scheme is as follows:
+- White: #fdf2f2
+- Grey: #a8a4a464
+- Black: #100f0f
+- Dark blue: #3f5673
+- Dark blue opaque: #3f567396
+- Light blue: #2b7f78
+- Green: #45703e
+- Orange: #bc5201
+- Red: #c52f36
+
 ### Font Styling
 Google Fonts was used to import fonts. Initially a simplistic Roboto Mono was chosen to keep the site looking clean. Different font weights were used to highlight specific elements with a heavier weight for titles, headings and nav links and a lighter weight for post content and messages. The Roboto Mono was removed and default bootstrap font is now in place as it is most suited to site design. If a more appropriate font is found it will be added.
 
