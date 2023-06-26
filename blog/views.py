@@ -13,7 +13,6 @@ class IndexList(generic.ListView):
     queryset = Post.objects.order_by('created_at').reverse()[:3]
     template_name = "index.html"
 
-
 # Function for Explore page
 def explore(request):
     # Check if category & date_order specified from filter form

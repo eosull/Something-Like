@@ -15,8 +15,8 @@
                     <hr>
                     <div class="post-details w-100">
                         <div class="d-inline float-start">
-                            <div class="post-profile-img text-center">
-                                <p class="fw-bolder">{{ post.author }}</p>
+                            <div class="post-profile-img">
+                                <p class="fw-bolder profile-name">{{ post.author }}</p>
                             </div>
                         </div>
 
@@ -90,7 +90,7 @@
                             {{ comment_form | crispy }}
                             {% csrf_token %}
                             <button class="btn crud-button d-inline float-end fs-5 submit-comment-button"
-                                type="submit"><i class="bi bi-send"></i></button>
+                                type="submit"><i class="bi bi-send send-btn"></i></button>
                         </form>
                         {% endif %}
                         {% endif %}
