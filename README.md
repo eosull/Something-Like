@@ -5,6 +5,8 @@ Once a user sign up, they can create posts about something they enjoyed which se
 
 Unregistered users can view content on the site, but are unable to create or edit any content. Posts can be found on the 'Explore' page which shows a list of posts on the site, with a filter feature allowing users to filter the posts by date, category or both.
 
+The live site can be found [here](https://something-like-pp4.herokuapp.com/)
+
 # Table of Contents
 - [About](#something-like)
 - [Design](#design)
@@ -17,7 +19,7 @@ Unregistered users can view content on the site, but are unable to create or edi
 - [Credits/References](#credits-and-references)
 
 # Design
-This section provides information on the design process of the project. It will be outlined using the five planes of UX; **Strategy, Scope, Structure, Skeleton & Surface**.
+This section provides information on the design process of the project. It will be outlined using the five planes of UX - **Strategy, Scope, Structure, Skeleton & Surface**.
 
 ## Strategy
 The strategy plane focuses on what the project aims to acheive, and for whom. Following design thinking practices a problem statement was generated to summarise the needs of a user:
@@ -417,3 +419,5 @@ Custom Login/Register Forms created with help from [this post by Adam Wiener](ht
 User Avatars generated using [Boring Avatars](https://github.com/boringdesigners/boring-avatars-service) by Boring Designers
 
 Site colour palette generated using [Colormind](http://colormind.io/)
+
+Site Favicon generated using [Favicon.io](assets/favicon/favicon.ico)
