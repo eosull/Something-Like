@@ -1,5 +1,12 @@
+# Something Like
+**Something Like** is a forum website that allows users to share recommendations and discuss works of art they enjoy. The target audience is people who want personalised recommendations and discussion about books, tv shows, albums or films they enjoy.
+
+Once a user sign up, they can create posts about something they enjoyed which serves as an invitation for others to leave comments underneath recommending similar works. They can also comment underneath other users' posts which, once approved by the site admin, will join the conversation underneath each post.
+
+Unregistered users can view content on the site, but are unable to create or edit any content. Posts can be found on the 'Explore' page which shows a list of posts on the site, with a filter feature allowing users to filter the posts by date, category or both.
+
 # Table of Contents
-- [About](#about)
+- [About](#something-like)
 - [Design](#design)
 - [Agile](#agile-implementation)
 - [Features](#features)
@@ -8,9 +15,6 @@
 - [Bugs](#bugs)
 - [Deployment](#deployment)
 - [Credits/References](#credits-and-references)
-
-# About
-This is some info about this project.
 
 # Design
 This section provides information on the design process of the project. It will be outlined using the five planes of UX; **Strategy, Scope, Structure, Skeleton & Surface**.
