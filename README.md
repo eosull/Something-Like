@@ -1,4 +1,9 @@
 # Something Like
+
+| ![Screen Size Responsiveness](/assets/readme_images/screen_size_mock_ups.png) |
+|:--:|
+|Something Like...|
+
 **Something Like** is a forum website that allows users to share recommendations and discuss works of art they enjoy. The target audience is people who want personalised recommendations and discussion about books, tv shows, albums or films they enjoy.
 
 Once a user sign up, they can create posts about something they enjoyed which serves as an invitation for others to leave comments underneath recommending similar works. They can also comment underneath other users' posts which, once approved by the site admin, will join the conversation underneath each post.
@@ -421,3 +426,5 @@ User Avatars generated using [Boring Avatars](https://github.com/boringdesigners
 Site colour palette generated using [Colormind](http://colormind.io/)
 
 Site Favicon generated using [Favicon.io](assets/favicon/favicon.ico)
+
+Site responsiveness mock up generated using [Am I Responsive](https://ui.dev/amiresponsive)
