@@ -39,17 +39,17 @@
     <div class="row">
         <div class="container-fluid px-4 my-3 index-buttons">
             <div class="col-12">
-                <h3 class=" text-center fw-lighter my-3">Explore</h3>
-                <div class="d-flex flex-column flex-md-row justify-content-evenly index-button-bank">
-                    <a class="btn btn-primary mt-4" href="{% url 'explore' %}">All Posts</a>
+                <h3 class=" text-center fw-lighter my-3">Explore Posts</h3>
+                <div class="d-flex flex-column flex-lg-row justify-content-evenly index-button-bank">
+                    <a class="btn btn-primary mt-4" href="{% url 'explore' %}">All</a>
                     <a class="btn btn-primary Music-post-explore mt-4"
-                        href="{% url 'explore' %}?category={{ 'Music' }}">Music Posts</a>
+                        href="{% url 'explore' %}?category={{ 'Music' }}">Music</a>
                     <a class="btn btn-primary Tv-post-explore mt-4" href="{% url 'explore' %}?category={{ 'Tv' }}">Tv
-                        Posts</a>
+                    </a>
                     <a class="btn btn-primary Films-post-explore mt-4"
-                        href="{% url 'explore' %}?category={{ 'Films' }}">Film Posts</a>
+                        href="{% url 'explore' %}?category={{ 'Films' }}">Film</a>
                     <a class="btn btn-primary Books-post-explore mt-4"
-                        href="{% url 'explore' %}?category={{ 'Books' }}">Book Posts</a>
+                        href="{% url 'explore' %}?category={{ 'Books' }}">Books</a>
                 </div>
             </div>
         </div>

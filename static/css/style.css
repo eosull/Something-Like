@@ -19,7 +19,8 @@ h1,
 h2,
 h3,
 .btn,
-.explore-category {
+.explore-category,
+.profile-name {
     font-family: 'Bebas Neue', sans-serif;
 }
 
@@ -31,6 +32,10 @@ h2,
 h3,
 .btn {
     letter-spacing: 2px;
+}
+
+.profile-name {
+    letter-spacing: 1px;
 }
 
 body {
@@ -82,8 +87,16 @@ body {
     box-shadow: none;
 }
 
-.btn {
+.btn-primary {
     color: white;
+}
+
+.send-btn {
+    color: var(--d-blue);
+}
+
+.send-btn:hover {
+    color: var(--d-blue-opaque);
 }
 
 /* Landing Page styling */
@@ -106,7 +119,7 @@ body {
 }
 
 .index-card-body {
-    background-color: rgba(255, 255, 255, 0.355);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .info-card p {
@@ -238,15 +251,17 @@ li div {
 /* Post Detail Info */
 
 .post-profile-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 60px;
     width: 60px;
     background-image: url("https://source.boringavatars.com/bauhaus/60?colors=66B6AF,EDDA68,D78649,EC6369,6381a674");
 }
 
-.post-profile-img p {
-    position: absolute;
-    margin: 15px;
+.profile-name {
     color: var(--white);
+    margin-bottom: 0;
 }
 
 .post-details {
