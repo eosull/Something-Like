@@ -21,7 +21,7 @@ The live site can be found [here](https://something-like-pp4.herokuapp.com/)
 - [Testing](#testing)
 - [Bugs](#bugs)
 - [Deployment](#deployment)
-- [Credits/References](#credits-and-references)
+- [Credits](#credits)
 
 # Features
 ## Navigation
@@ -370,26 +370,21 @@ Static File Heroku Delivery: Static files not being delivered to Heroku, so live
 # Deployment
 This is how the project was deployed.
 
-# Credits and References
+# Credits
 
+## Code/Resource References
+- Commit messages formatted based on [Conventional Commit Standards](https://www.conventionalcommits.org/en/v1.0.0/#summary) - useful cheatsheet for formatting these messages by Github user Zekfad [Here](https://gist.github.com/Zekfad/f51cb06ac76e2457f11c80ed705c95a3)
+- Creation of Entity Relationship Diagram was completed using LucidChart resources [Youtube tutorial](https://www.youtube.com/watch?v=QpdhBUYk7Kk&ab_channel=LucidSoftware) and [associated article](https://www.lucidchart.com/pages/how-to-draw-ERD).
+- Rolodex Effect on site homepage was based on code [posted on codepen.io](https://codepen.io/orchard/pen/LoNdQZ?page=1) by user Adam Orchard.
+- Custom Login/Register Forms created with help from [this post by Adam Wiener](https://gavinwiener.medium.com/modifying-django-allauth-forms-6eb19e77ef56)
+- [W3 Validation](https://validator.w3.org/) used to validate HTML code
+- [Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) used to validate CSS code
+
+## Media
+- User Avatars generated using [Boring Avatars](https://github.com/boringdesigners/boring-avatars-service) by Boring Designers
+- Site colour palette generated using [Colormind](http://colormind.io/)
+- Site Favicon generated using [Favicon.io](assets/favicon/favicon.ico)
+- Site responsiveness mock up generated using [Am I Responsive](https://ui.dev/amiresponsive)
+
+## Acknowledgments
 Many thanks to my Code Institute mentor Adegbenga Adeye who provided feedback and support throughout the development of this project.
-
-Commit messages formatted based on [Conventional Commit Standards](https://www.conventionalcommits.org/en/v1.0.0/#summary) - useful cheatsheet for formatting these messages by Github user Zekfad [Here](https://gist.github.com/Zekfad/f51cb06ac76e2457f11c80ed705c95a3)
-
- Of particular use for creation of Entity Relationship Diagram was LucidChart [Youtube tutorial](https://www.youtube.com/watch?v=QpdhBUYk7Kk&ab_channel=LucidSoftware) and [associated article](https://www.lucidchart.com/pages/how-to-draw-ERD).
-
-[W3 Validation](https://validator.w3.org/) used to validate HTML code
-
-[Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) used to validate CSS code
-
-Rolodex Effect on site homepage was based on code [posted on codepen.io](https://codepen.io/orchard/pen/LoNdQZ?page=1) by user Adam Orchard.
-
-Custom Login/Register Forms created with help from [this post by Adam Wiener](https://gavinwiener.medium.com/modifying-django-allauth-forms-6eb19e77ef56)
-
-User Avatars generated using [Boring Avatars](https://github.com/boringdesigners/boring-avatars-service) by Boring Designers
-
-Site colour palette generated using [Colormind](http://colormind.io/)
-
-Site Favicon generated using [Favicon.io](assets/favicon/favicon.ico)
-
-Site responsiveness mock up generated using [Am I Responsive](https://ui.dev/amiresponsive)
