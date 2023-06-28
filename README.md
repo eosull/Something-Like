@@ -24,7 +24,79 @@ The live site can be found [here](https://something-like-pp4.herokuapp.com/)
 - [Credits/References](#credits-and-references)
 
 # Features
-These are some of the features of the project.
+## Navigation
+A navbar is present at the top of all pages, allowing users to move between pages on the site at all stages. The navbar shows 'login' and 'register' for unauthorised users and 'logout' if user is authorised.
+
+| ![Unauthorised Navbar](/assets/readme_images/navbar_unauthorised.png) |
+|:--:|
+|Unauthorised Navbar|
+
+| ![Authorised Navbar](/assets/readme_images/navbar_authorised.png) |
+|:--:|
+|Authorised Navbar|
+
+This menu turns into an expandable hamburger icon on smaller screens.
+
+| ![Mobile Navbar](/assets/readme_images/navbar_mobile.png) |
+|:--:|
+|Mobile Navbar|
+
+## Landing Page
+The landing page has an animation that shows all post categories as well as a link to create a new post. Unauthorised users are shown a link to sign up.
+
+| ![Landing Page New Post](/assets/readme_images/landing_page_new_post.png) |
+|:--:|
+|Landing Page New Post|
+
+The landing page also provides links to posts of specific categories and gives a preview of the 3 most recent posts, inviting the user to explore posts further.
+
+| ![Landing Page Explore](/assets/readme_images/landing_page_explore.png) |
+|:--:|
+|Landing Page Explore|
+
+## Explore
+The Explore page has a list of posts, ordered by date of posting with newest at the top. Each post has coloured dashes beside the category and amount of comments/likes.
+
+| ![Explore Post List](/assets/readme_images/explore_post_list.png) |
+|:--:|
+|Explore Post List|
+
+This list can also be filtered by date and category using the filter form at the top of the page.
+
+| ![Explore Filter](/assets/readme_images/explore_filter.png) |
+|:--:|
+|Explore Filter|
+
+## Post Details
+Each post has a detailed view including information such as user (with avatar generated using [Boring Avatars](https://github.com/boringdesigners/boring-avatars-service)), date of posting and like count. Authorised users can add a like to the post. Comments are displayed underneath the post and authorised users can also add to these comments.
+
+| ![Post Detail](/assets/readme_images/post_detail.png) |
+|:--:|
+|Post Detail|
+
+## Creating/Editing Post
+Authorised users can create new posts on the site, this consists of filling out a form that asks for a title, category and some information.
+
+| ![New Post Page](/assets/readme_images/new_post.png) |
+|:--:|
+|New Post Page|
+
+Authorised users can also edit posts they have created with a similar form that is pre-populated with post information. If the user clicks 'delete', they are sent to a confirmation page where they must confirm they want to delete the post.
+
+| ![Edit Post Page](/assets/readme_images/edit_post.png) |
+|:--:|
+|Edit Post Page|
+
+## Account Registration/Login
+Users can register and login to access features only accesible to authorised users using front-end forms, shown below.
+
+| ![Login Page](/assets/readme_images/signin_page.png) |
+|:--:|
+|Login Page|
+
+| ![Register Page](/assets/readme_images/signup_page.png) |
+|:--:|
+|Register Page|
 
 # Design
 The design process was structured using the five planes of UX - **Strategy, Scope, Structure, Skeleton & Surface**. Each Section is discussed more in depth in the Design document in the repository, which can be found [here](DESIGN.md). A summary will be outlined below.
