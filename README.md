@@ -222,7 +222,23 @@ Iteration 3 Sprint. This sprint inherits Epics from iteration 2 that deals with 
 Iteration 4 Sprint, finishes on project submission. This sprint also deals with the Epics laid out in Iteration 2, adding user stories specific to the development stage. This includes writing a clear and concise ReadMe file, Ensuring the site is up to accessibility and code structuring standards. Also included is a final front-end development phase, polishing up where possible and ensuring site is responsive and meets the core project goals. Refactoring and commenting with finish in this sprint, ready for the code to be graded.
 
 # Tools and Technologies
-These are the tools and technologies used in the development of the project.
+- [HTML5](https://en.wikipedia.org/wiki/HTML): Markup Language
+- [CSS3](https://en.wikipedia.org/wiki/CSS): Styling
+- [Javascript](https://en.wikipedia.org/wiki/JavaScript): Dynamic site content
+- [Python](https://www.python.org/): Used in conjunction with Django to render site
+- [Django 4.2](https://docs.djangoproject.com/en/4.2/): Database-orientated framework to build site
+  - [Django AllAuth](https://django-allauth.readthedocs.io/en/latest/): Django application to handle account management
+  - [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/): Django application to handle form rendering
+  - [Django Summernote](https://pypi.org/project/django-summernote/): Text formatting in Django admin panel
+  - [Django Nose](https://pypi.org/project/django-nose/): Automated testing
+- [Bootstrap](https://getbootstrap.com/): Front-end toolkit
+- [Cloudinary](https://cloudinary.com/): Hosting of Media and Static files
+- [Coverage](https://coverage.readthedocs.io/en/7.2.7/): Monitoring automated Python testing coverage
+- [Psycopg2](https://pypi.org/project/psycopg2/): PostgreSQL database adapter for Python
+- [Google Fonts](https://fonts.google.com/): Import fonts to use on site
+- [Bootstrap Icons](https://icons.getbootstrap.com/) Icons on the site
+- [LucidChart](https://www.lucidchart.com/): Diagrams, flowcharts and wireframes 
+- [Code Institute Student Template](https://github.com/Code-Institute-Org/gitpod-full-template): Template for repository
 
 # Testing
 These are the testing processes that were carried out.
@@ -358,19 +374,9 @@ This is how the project was deployed.
 
 Many thanks to my Code Institute mentor Adegbenga Adeye who provided feedback and support throughout the development of this project.
 
-Repository created using the [Code Institute Student Template](https://github.com/Code-Institute-Org/gitpod-full-template)
-
 Commit messages formatted based on [Conventional Commit Standards](https://www.conventionalcommits.org/en/v1.0.0/#summary) - useful cheatsheet for formatting these messages by Github user Zekfad [Here](https://gist.github.com/Zekfad/f51cb06ac76e2457f11c80ed705c95a3)
 
-Diagrams, flowcharts and wireframes created using [LucidChart](https://www.lucidchart.com/). Of particular use for creation of Entity Relationship Diagram was their [Youtube tutorial](https://www.youtube.com/watch?v=QpdhBUYk7Kk&ab_channel=LucidSoftware) and [associated article](https://www.lucidchart.com/pages/how-to-draw-ERD).
-
-Resources used in the creation of the data model include:
-- [UUID as Primary Key](https://tech.serhatteker.com/post/2020-01/uuid-primary-key/)
-- [Custom User Model Using Django Default User](https://learndjango.com/tutorials/django-custom-user-model#:~:text=There%20are%20two%20modern%20ways,know%20what%20you're%20doing.)
-
-[Google Fonts](https://fonts.google.com/) was used to import fonts for the project.
-
-[Bootstrap Icons](https://icons.getbootstrap.com/) used for icons on the site
+ Of particular use for creation of Entity Relationship Diagram was LucidChart [Youtube tutorial](https://www.youtube.com/watch?v=QpdhBUYk7Kk&ab_channel=LucidSoftware) and [associated article](https://www.lucidchart.com/pages/how-to-draw-ERD).
 
 [W3 Validation](https://validator.w3.org/) used to validate HTML code
 
