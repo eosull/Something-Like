@@ -30,7 +30,7 @@ These are some of the features of the project.
 The design process was structured using the five planes of UX - **Strategy, Scope, Structure, Skeleton & Surface**. Each Section is discussed more in depth in the Design document in the repository, which can be found [here](DESIGN.md). A summary will be outlined below.
 
 From brainstorming sessions and using design thinking a central site goal emerged:
--  **Provide a platform for users looking for film, music or book recommendations to share personalised recommendations with one another**.
+-  **Provide a platform for users looking for film, tv, music or book recommendations to share personalised recommendations with one another**.
 
 It is hoped by developing an intuitive and responsive site where users can create and interact with content this goal will be acheived. There are two main pieces of content on the site that users can contribute to. These are posts and comments which serve as conversation starters, invitations to discuss and opportunities to share recommendations.
 
@@ -43,11 +43,21 @@ The colour palette (seen below) which was combined with neutral black, grey and 
 The central goal of the site, sharing recommendations, was kept in mind throughout the design process. This means significant work was put into making sure the process of creating posts and interacting with other users was made as simple as possible. In the [design document](DESIGN.md) you can see how these core features developed from wireframes through 4 iterations making sure these features are as intuitive and enjoyable to use as possible.
 
 # Agile Implementation
-This is some info about the implementation of Agile processes in the project.
+An Agile methodology was used in the development of this site, structuring and scheduling the workflow. This was my first time working in this way, so it took roughly a month for me to find out the most productive way to use this way of working.
+
+At the beginning my focus was on completing tasks so that User Stories would be completed within a Sprint timeframe. After a month or so of working this way, I decided to move to working in iterations instead. This meant lengthening the Sprints and reducing the specificity of the tasks attached to User Stories.
+
+By iteration 4 (sprint finishing submission date) I had found a more efficient way of working. This went as follows:
+- 2 Week Sprints
+- Working MVP iteration at the end of each sprint
+- Themed Epics for most important aspects of project
+- Iteration-Specific User Stories mapped to themed Epics
+- Clear tasks and MoSCoW prioritization assigned to each User Story
+- Acceptance Criteria included for most
+
+The implementation of this process can be seen clearly on my [GitHub project board](https://github.com/users/eosull/projects/7). Below is the details of User Stories and Sprints from the project, clicking on Epic or Sprint titles will bring you to the associated page on GitHub to see info in more detail.
 
 ## User Stories
-Below is a table containing project epics and associated user stories. Clicking on the epic title will take you to the Github epic page where you can investigate user stories further and see their tasks and acceptance criteria.
-
 
 | **EPIC**          | **User Story**                                                                                                        | **Completed** |
 |-------------------|-----------------------------------------------------------------------------------------------------------------------|---------------|
@@ -95,17 +105,22 @@ Below is a table containing project epics and associated user stories. Clicking 
 | [**Clean and Prestentable Code**](https://github.com/eosull/Something-Like/issues/68) |                                                                                                                       | &check; |
 |                   | As a Site Admin I want my code and documentation to be clean and readable so anyone viewing the code can understand and navigate the code easily                             | &check; |
 |**_Iteration 4_**|
-| [**UX and Front End Design**](https://github.com/eosull/Something-Like/issues/34) |                                                                                                                       | &cross; |
-|                   | As a Site User I want to experience a positive response when using the site, navigating easily and adding to content easily so that I can enjoy the content on the site and interact with other users                            | &cross; |
+| [**UX and Front End Design**](https://github.com/eosull/Something-Like/issues/34) |                                                                                                                       | &check; |
+|                   | As a Site User I want to experience a positive response when using the site, navigating easily and adding to content easily so that I can enjoy the content on the site and interact with other users                            | &check; |
 | [**Site Testing**](https://github.com/eosull/Something-Like/issues/37) |                                                                                                                       | &cross; |
 |                   | As a Site Developer I want to Manually and Automatically Test My code so that any changes made in this iteration meet accessibility, functionality, usability, responsiveness and project goals                            | &cross; |
 | [**Clean and Prestentable Code**](https://github.com/eosull/Something-Like/issues/68) |                                                                                                                       | &cross; |
 |                   | As a Developer I want to refactor and tidy up my code so that my code is as efficient and readable as possible                        | &cross; |
 |                   | As a Site Admin I want to Write a clear and well-structured ReadMe so that I can Document the development process and explain the motivations of the project                      | &cross; |
+|**Unfinished User Stories**|
+|                   | As a User I want to See a set number of posts on a page and click to see more so that the page does not contain too many posts and become very long                           | &cross; |
+|                   | As an Authorised User I want to Edit and Delete comments so I can manage content I have created                           | &cross; |
+|                   | As a User I want to see suggested posts related to the content I'm viewing so that I can explore and engage with the content further                          | &cross; |
+|                   | As a Site Admin I want to be able to access admin features without accessing back-end admin panel so that I can approve comments and manage content from the main site                          | &cross; |
 
+- These unfinished User Stories were categorised as 'Would be Nice to Have' and considered extras to the MVP. They will be developed on in future iterations.
 
 ## Sprints
-Working sprints were undertaken with the MVP of the project in mind to complete the development. They are as follows:
 
 ### Sprint 1 (17/04/2023-23/04/2023) - [Design](#design)
 This sprint consisted of brainstorming sessions, project requirement consideration and research. Emerging from this was a site concept, basic wireframes, ERD and Epics with user stories.
