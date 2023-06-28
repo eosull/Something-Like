@@ -232,6 +232,7 @@ Iteration 4 Sprint, finishes on project submission. This sprint also deals with 
   - [Django Summernote](https://pypi.org/project/django-summernote/): Text formatting in Django admin panel
   - [Django Nose](https://pypi.org/project/django-nose/): Automated testing
 - [Bootstrap](https://getbootstrap.com/): Front-end toolkit
+- [Elephantsql](https://www.elephantsql.com/): PostgreSQL database hosting
 - [Cloudinary](https://cloudinary.com/): Hosting of Media and Static files
 - [Coverage](https://coverage.readthedocs.io/en/7.2.7/): Monitoring automated Python testing coverage
 - [Psycopg2](https://pypi.org/project/psycopg2/): PostgreSQL database adapter for Python
@@ -368,7 +369,24 @@ Editing: I used 2 auto-generated time-stamps (one set at creation and one that c
 Static File Heroku Delivery: Static files not being delivered to Heroku, so live site appears with no styling. Disable collect static config var on Heroku deleted and code with Debug set to False deployed, Static files now being served with live site showing styling.
 
 # Deployment
-This is how the project was deployed.
+
+**Heroku Deployment**
+1. Create Heroku App
+2. Create database (I used Elephant SQl)
+3. Configure Cloudinary for media and static hosting
+4. Link database/cloudinary to app in Heroku config vars
+5. Add Django secret key to Heroku config vars
+6. Link Heroku to GitHub Repository
+7. Set up Automatic deployments or make manual deployments
+
+**Forking**
+1. Navigate to the [GitHub Repository](https://github.com/eosull/Something-Like) and click 'fork' in the top right of the page
+
+**Cloning**
+1. Navigate to the [GitHub Repository](https://github.com/eosull/Something-Like) and click the green 'code' dropdown
+2. Choose your format from HTTPS, SSH or GitHub CLI and copy
+3. Open your terminal in your IDE and use git clone followed by this link
+
 
 # Credits
 
