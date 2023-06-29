@@ -53,7 +53,7 @@ class NewPost(View):
             }
         )
 
-    # Posting new post form 
+    # Posting new post form
     def post(self, request, *arg, **kwargs):
 
         # Defining form imported from .forms
