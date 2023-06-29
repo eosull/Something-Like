@@ -1,6 +1,32 @@
 # Manual Testing
 
-## Iteration 1
+Below are the manual tests carried out on Iteration 4 and the results of the tests. These tests were carried out to test the core functionality of the site.
+
+| Page  | HTML Validation | Accesibility Score | Links functioning | Forms Functioning
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Index  | &check; | 100 | &check; | NA |
+| Explore  | &check; | 100 | &check; | &check; |
+| Login  | &check; | 100  | &check; | &check; |
+| Register  | &check; | 100 | &check; | &check; |
+| Post Detail  | &check; | 100 | &check; | &check; |
+| New Post  | &check; | 100 | &check; | &check; |
+| Edit Post  | &check; | 100 | &check; | &check; |
+
+**Note** - HTML validation presents errors on some pages due to extension from Django base template or rendering of forms. Any errors shown that could be fixed were.
+
+Using Code validation tools detailed in [README](README.md#testing) the following results were acheived:
+
+| CSS  | Python | Javascript |
+| ------------- | ------------- | ------------- |
+| &check; | &check; | &check; |
+
+Python manual functionality testing is detailed below:
+
+
+Testing carried out during each iteration is detailed here:
+
+<details>
+<summary>Iteration 1</summary>
 
 ### Accessibility 
 
@@ -23,22 +49,15 @@ The code at this stage of development was passed into the [W3 HTML Validator](ht
 |Iteration 1 HTML Form Action Error|
 
 The other issues highlighted by the validator were related to the use of Django templating in the HTML files.
+</details>
 
-## Iteration 2
+<details>
+
+<summary>Iteration 2</summary>
 
 ### Python
 
 Manual testing was completed to ensure views, urls and templates were hooked up properly. Forms were also tested to ensure they functioned as intended.
-
-The [Django testing modules](https://docs.djangoproject.com/en/4.2/topics/testing/overview/) were used to automate testing of python code. These use the Python standard library module unittest. A separate testing database is used while test cases are run and then deleted. For testing the views the django Client module was used simulating get and post requests. I used a [combination of coverage and django-nose](https://django-testing-docs.readthedocs.io/en/latest/coverage.html) to measure test coverage for my app as I built the tests.
-
-The first tests were built for the models in the test_models.py file, testing methods like string return and counting functionality. Then the basic functionality for the views such as redirects and correct template usage were built in test_views.py.
-
-This resulted in the models having 100% test coverage and views having 62% coverage, as seen in ouput below.
-
-| ![Iteration 1 Coverage Report](/assets/readme_images/coverage_report_1.png) |
-|:--:|
-|Iteration 1 Python Testing Coverage|
 
 ### Javascript
 
@@ -71,13 +90,17 @@ A user can register and login, becoming authorised. They can then create a categ
 #### Content
 The site contains core content of post previews, post details categorised posts and comments underneath posts
 
-## Iteration 3 Testing
+</details>
+
+<details>
+
+<summary>Iteration 3</summary>
 
 ### Python
 
 Manual testing was again performed to ensure views, urls and templates were hooked up properly. Forms were also tested to ensure they still functioned as intended.
 
-No additional automated testing was added in this iteration, it will be developed on further if time is available in iteration 4.
+No additional automated testing was added in this iteration.
 
 ### Javascript
 
@@ -107,27 +130,22 @@ Running lighthouse test on the site at this stage produced a score of 97 for acc
 
 The site still meets the goals set out at the beginning of development, as laid out in Iteration 2 Site Goal Testing.
 
-## Iteration 4 Testing 
+</details>
 
-Below are the manual tests carried out on Iteration 4 and the results of the tests. These tests were carried out to ensure the MVP of the site is met and users can create an account, explore posts intuitively and have CRUD functionality on all content.
+# Automated Testing
 
-| Page  | HTML Validation | Accesibility Score | Links functioning | Forms Functioning
-| ------------- | ------------- | ------------- | ------------- | ------------- |
-| Index  | &check; | 100 | &check; | NA |
-| Explore  | &check; | 100 | &check; | &check; |
-| Login  | &check; | 100  | &check; | &check; |
-| Register  | &check; | 100 | &check; | &check; |
-| Post Detail  | &check; | 100 | &check; | &check; |
-| New Post  | &check; | 100 | &check; | &check; |
-| Edit Post  | &check; | 100 | &check; | &check; |
+The [Django testing modules](https://docs.djangoproject.com/en/4.2/topics/testing/overview/) were used to automate testing of python code. These use the Python standard library module unittest. A separate testing database is used while test cases are run and then deleted. For testing the views the django Client module was used simulating get and post requests. I used a [combination of coverage and django-nose](https://django-testing-docs.readthedocs.io/en/latest/coverage.html) to measure test coverage for my app as I built the tests.
 
-**Note** - HTML validation presents errors on some pages due to extension from Django base template or rendering of forms. Any errors shown that could be fixed were.
+The first tests were built for the models in the test_models.py file, testing methods like string return and counting functionality. Then the basic functionality for the views such as redirects and correct template usage were built in test_views.py.
 
-Using Code validation tools detailed in [README](README.md#testing) the following results were acheived:
+This resulted in the models having 100% test coverage and views having 62% coverage, as seen in ouput below.
 
-| CSS  | Python | Javascript |
-| ------------- | ------------- | ------------- |
-| &check; | &check; | &check; |
+| ![Coverage Report](/assets/readme_images/coverage_report_1.png) |
+|:--:|
+|Python Testing Coverage|
 
+# Site Goals & User Story testing
 
+As can be seen in [Readme User Story section](README.md#user-stories), User story completion was tracked in a table as well on the [project board](https://github.com/users/eosull/projects/7). On review of these records, it can be seen that the site hits the goal of providing a platform for users looking for film, tv, music or book recommendations to share personalised recommendations with one another.
 
+The User stories not completed were considered to be features that were extra or 'nice to have'. 
