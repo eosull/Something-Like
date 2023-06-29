@@ -7,4 +7,4 @@ setTimeout(function() {
     let alert = new bootstrap.Alert(messages);
     alert.close();
     // Keep open for 3 seconds
-}, 3000)
+}, 3000);

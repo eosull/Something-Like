@@ -242,116 +242,10 @@ Iteration 4 Sprint, finishes on project submission. This sprint also deals with 
 - [Code Institute Student Template](https://github.com/Code-Institute-Org/gitpod-full-template): Template for repository
 
 # Testing
-These are the testing processes that were carried out.
+Testing was completed throughout the development of the site as can be seen in the [Testing](TESTING.md) file. This included manual and automated tests for functionality, accessibility, code validation and site goals.
 
-## Iteration 1 Testing 
-
-### Accessibility 
-
-Lighthouse Testing was conducted on the first iteration of the site to detect accessibility issues with the initial design. A score of 100 was acheived with nothing to address at this stage of development.
-
-| ![Iteration 1 Lighthouse](/assets/readme_images/iteration_1_lighthouse.png) |
-|:--:|
-|Iteration 1 Lighthouse Test|
-
-### HTML 
-
-The code at this stage of development was passed into the [W3 HTML Validator](https://validator.w3.org/), with 2 solvable issues being presented - button hierarchy on Edit Post page and form action on Delete Post page. Both of these issues were resolved.
-
-| ![Iteration 1 HTML Button Error](/assets/readme_images/iteration1_button_html_error.png) |
-|:--:|
-|Iteration 1 HTML Button Error|
-
-| ![Iteration 1 HTML Form Action Error](/assets/readme_images/iteration1_form_action_error.png) |
-|:--:|
-|Iteration 1 HTML Form Action Error|
-
-The other issues highlighted by the validator were related to the use of Django templating in the HTML files.
-
-Python testing will commence at the completion of Iteration 2 of the site.
-
-## Iteration 2 Testing
-
-### Python
-
-Manual testing was completed to ensure views, urls and templates were hooked up properly. Forms were also tested to ensure they functioned as intended.
-
-The [Django testing modules](https://docs.djangoproject.com/en/4.2/topics/testing/overview/) were used to automate testing of python code. These use the Python standard library module unittest. A separate testing database is used while test cases are run and then deleted. For testing the views the django Client module was used simulating get and post requests. I used a [combination of coverage and django-nose](https://django-testing-docs.readthedocs.io/en/latest/coverage.html) to measure test coverage for my app as I built the tests.
-
-The first tests were built for the models in the test_models.py file, testing methods like string return and counting functionality. Then the basic functionality for the views such as redirects and correct template usage were built in test_views.py.
-
-This resulted in the models having 100% test coverage and views having 62% coverage, as seen in ouput below. This will be developed on further in Iteration 3.
-
-| ![Iteration 1 Coverage Report](/assets/readme_images/coverage_report_1.png) |
-|:--:|
-|Iteration 1 Python Testing Coverage|
-
-### Javascript
-
-Javascript automated testing using Jest was not implemented in this Iteration due to the minimal amount of JS present (One function to time out messages). This was manually tested and further JS added will be subject to automated testing.
-
-### HTML 
-
-The code at this stage of development was passed into the [W3 HTML Validator](https://validator.w3.org/), some small issues were presented such as extra closing tags and unecessary closing slash on input elements. These were resolved and no issues currently showing. 
-
-### CSS
-
-CSS code was passed into the [Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/). No errors were found.
-
-### Accessibility 
-
-Running lighthouse test on the site at this stage produced a score of 100 for accessibility.
-
-| ![Iteration 2 Lighthouse](/assets/readme_images/iteration_2_lighthouse.png) |
-|:--:|
-|Iteration 2 Lighthouse Test|
-
-### Site Goal testing
-
-#### User Experience
-The site should is intuitive and easily navigable, provides feedback to user actions, responsive to different screen sizes and accessible.
-
-#### Functionality
-A user can register and login, becoming authorised. They can then create a categorised post detailing a piece of work they like. They can also comment on other posts as well as edit and delete their posts and comments. Unauthorised users can view posts and comments on the site.
-
-#### Content
-The site contains core content of post previews, post details categorised posts and comments underneath posts
-
-## Iteration 3 Testing
-
-### Python
-
-Manual testing was again performed to ensure views, urls and templates were hooked up properly. Forms were also tested to ensure they still functioned as intended.
-
-No additional automated testing was added in this iteration, it will be developed on further if time is available in iteration 4.
-
-### Javascript
-
-JS functionality tested manual and functioning. No automated tests developed.
-
-### HTML 
-
-The code at this stage of development was passed into the [W3 HTML Validator](https://validator.w3.org/), no issues were found.
-
-### CSS
-
-CSS code was passed into the [Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/). The following error was presented, where 'center' had been used as a value for float when this is not a valid value. Removing this line removed the error and meant the code passed.
-
-| ![Iteration 3 CSS](/assets/readme_images/iteration_3_CSS_error.png) |
-|:--:|
-|Iteration 3 CSS Error|
-
-### Accessibility 
-
-Running lighthouse test on the site at this stage produced a score of 97 for accessibility. The failing issues were related to contrast ratio between background and foreground elements. This will be addressed in Iteration 4 development.
-
-| ![Iteration 3 Lighthouse](/assets/readme_images/iteration_3_lighthouse.png) |
-|:--:|
-|Iteration 3 Lighthouse Test|
-
-### Site Goal testing
-
-The site still meets the goals set out at the beginning of development, as laid out in Iteration 2 Site Goal Testing.
+## Manual Testing
+Accesibility testing completed using Chrome Developer Tools [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) feature. HTML code was validated using [W3 Validation](https://validator.w3.org/) and [Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) was used to validate CSS code. Javascript code was tested using [JSHint](https://jshint.com/) while Python code formatting was tested tested continuously during development using [pycodestyle](https://pypi.org/project/pycodestyle/) extenstion in VS code for Gitpod.
 
 # Bugs
 Deployment to Heroku: build was failing on Heroku and I was met with the following error: *ERROR: Could not build wheels for backports.zoneinfo, which is required to install pyproject.toml-based projects*. A search on slack [found a student](https://code-institute-room.slack.com/archives/CHDVDV2Q4/p1681717148021239) who had faced a similar issue, the cause being heroku is using a new version of Python and needs to be told to use an older version for backports.zoneinfo to run. Good info and possible solution found on [Stack Overflow](https://stackoverflow.com/questions/71712258/error-could-not-build-wheels-for-backports-zoneinfo-which-is-required-to-insta). Added runtime.txt file in directory and specified use of python-3.11.3 to resolve. This didn't work as I was getting the same error. Found more people facing the same issue on Slack and avoiding the install of backports if python version is greater that 3.9 [was suggested](https://code-institute-room.slack.com/archives/C026PTF46F5/p1677505066005429). This worked and project was successfully deployed to Heroku.
@@ -395,8 +289,6 @@ Static File Heroku Delivery: Static files not being delivered to Heroku, so live
 - Creation of Entity Relationship Diagram was completed using LucidChart resources [Youtube tutorial](https://www.youtube.com/watch?v=QpdhBUYk7Kk&ab_channel=LucidSoftware) and [associated article](https://www.lucidchart.com/pages/how-to-draw-ERD).
 - Rolodex Effect on site homepage was based on code [posted on codepen.io](https://codepen.io/orchard/pen/LoNdQZ?page=1) by user Adam Orchard.
 - Custom Login/Register Forms created with help from [this post by Adam Wiener](https://gavinwiener.medium.com/modifying-django-allauth-forms-6eb19e77ef56)
-- [W3 Validation](https://validator.w3.org/) used to validate HTML code
-- [Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) used to validate CSS code
 
 ## Media
 - User Avatars generated using [Boring Avatars](https://github.com/boringdesigners/boring-avatars-service) by Boring Designers

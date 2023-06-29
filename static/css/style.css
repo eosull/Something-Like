@@ -295,6 +295,10 @@ li div {
     color: var(--black);
 }
 
+.text-muted {
+    color: var(--black)!important;
+}
+
 @media only screen and (max-width:767px) {
     .explore-date {
         display: none!important;

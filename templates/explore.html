@@ -10,11 +10,11 @@
             <a class="btn btn-primary d-md-none" data-bs-toggle="collapse" href="#filter-form-collapse" role="button"
                 aria-expanded="false" aria-controls="filter-form-collapse">Filter</a>
             <div class="filter-form-container collapse d-md-block" id="filter-form-collapse">
-                <h3>Filter</h3>
+                <h2>Filter</h2>
                 <form class="d-inline" method='GET' action="{% url 'explore' %}">
-
+                    <ul>
                     {{ form.as_ul }}
-
+                    </ul>
                     <input type="submit" value="Apply" class="btn btn-primary">
                 </form>
             </div>
