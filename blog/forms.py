@@ -83,7 +83,7 @@ class PostCategoryFilterForm(forms.Form):
         ("All", "All"),
         ("Music", "Music"),
         ("Tv", "Tv"),
-        ("Films", "Films"),
+        ("Film", "Film"),
         ("Books", "Books"),
     )
 
