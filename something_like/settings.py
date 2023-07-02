@@ -85,8 +85,7 @@ MESSAGE_TAGS = {
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 ACCOUNT_FORMS = {'signup': 'blog.forms.CustomRegisterForm',
-                 'login': 'blog.forms.CustomLoginForm',
-}
+                 'login': 'blog.forms.CustomLoginForm', }
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
