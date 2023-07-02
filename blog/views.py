@@ -68,7 +68,8 @@ class NewPost(View):
             new_post_form.instance.author_id = request.user.id
             # slug generated from title, removing string characters from title
             new_post_form.instance.slug = new_post_form.instance.title.translate(
-                str.maketrans('', '', string.punctuation)).lower()
+                str.maketrans(
+                        '', '', string.punctuation)).lower().replace(" ", "-")
             # saving new post
             new_post = new_post_form.save(commit=False)
             new_post.save()
