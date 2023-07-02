@@ -37,11 +37,11 @@ class Post(models.Model):
     # Ordered by category
     class Meta:
         ordering = ['category']
-    
+
     # String returns post title
     def __str__(self):
         return self.title
-    
+
     # Counts and returns amount of likes on a post
     def number_of_likes(self):
         return self.likes.count()
