@@ -83,7 +83,6 @@ class PostCategoryFilterForm(forms.Form):
         ("Tv", "Tv"),
         ("Films", "Films"),
         ("Books", "Books"),
-        ("Test", "Test"),
     )
 
     # Declaring Date options to be used
