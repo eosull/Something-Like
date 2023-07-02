@@ -34,8 +34,10 @@ DEBUG = True
 
 # Adding Allowed_Hosts and Trusted Origins for development servers
 ALLOWED_HOSTS = ["something-like-pp4.herokuapp.com",
+                 '8000-eosull-somethinglike-eaqot6kiyaa.ws-eu101.gitpod.io',
                  'localhost']
-CSRF_TRUSTED_ORIGINS = ["http://something-like-pp4.herokuapp.com",]
+CSRF_TRUSTED_ORIGINS = ["http://something-like-pp4.herokuapp.com",
+                        "https://8000-eosull-somethinglike-eaqot6kiyaa.ws-eu101.gitpod.io",]
 
 # Application definition
 

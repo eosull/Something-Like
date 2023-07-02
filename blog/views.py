@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.http import HttpResponseRedirect
 from django.views import generic, View
 from django.contrib import messages
+import string
 
 from .models import Post, Category, Comment
 from .forms import CommentForm, PostForm, PostCategoryFilterForm
@@ -65,9 +66,9 @@ class NewPost(View):
             new_post_form.instance.email = request.user.email
             new_post_form.instance.name = request.user.username
             new_post_form.instance.author_id = request.user.id
-            # slug generated from title
-            new_post_form.instance.slug = new_post_form.instance.title.replace(
-                ' ', '-').lower()
+            # slug generated from title, removing string characters from title
+            new_post_form.instance.slug = new_post_form.instance.title.translate(
+                str.maketrans('', '', string.punctuation)).lower()
             # saving new post
             new_post = new_post_form.save(commit=False)
             new_post.save()
