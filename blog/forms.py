@@ -28,7 +28,9 @@ class PostForm(forms.ModelForm):
         placeholders = {
             'title': 'Name and Creator of book, album, film, song....',
             'category': '',
-            'body_text': 'Tell everyone what you like - style, length, actors etc. The more info you give the better recommendations you\'ll get!'
+            'body_text': """Tell everyone what you like - 
+            style, length, actors etc. The more info you give
+            the better recommendations you\'ll get!"""
         }
 
         # Autofocus 'title' field when page loaded
@@ -56,7 +58,7 @@ class CommentForm(forms.ModelForm):
     # Using __init__ to customise form
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        
+
         # Adding placeholder texts for input field
         placeholders = {
             'body_text': 'Add a recommendation or join the conversation....'
@@ -98,7 +100,7 @@ class PostCategoryFilterForm(forms.Form):
         choices=CATEGORIES,
         required=False
     )
-    
+
     # Creating the input fields using radio select widget
     # and pulling from date options above
     date_order = forms.ChoiceField(
