@@ -28,9 +28,7 @@ class PostForm(forms.ModelForm):
         placeholders = {
             'title': 'Name and Creator of book, album, film, song....',
             'category': '',
-            'body_text': """Tell everyone what you like - 
-            style, length, actors etc. The more info you give
-            the better recommendations you\'ll get!"""
+            'body_text': 'Tell everyone what you like - style, length, actors etc. The more info you give the better recommendations you\'ll get!'
         }
 
         # Autofocus 'title' field when page loaded
